@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
+             x:Class="HuCoin.Views.LoginPage"
+             Title="LoginPage" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <ViewModels:LoginPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="0" Padding="0" Spacing="0">
+            <Frame Margin="0" Padding="20" BackgroundColor="#2E3058" CornerRadius="20">
+                <StackLayout Margin="0" Padding="0" Spacing="20">
+                    <Image Source="icon" />
+                    <StackLayout Margin="0" Padding="0" Spacing="10">
+                        <Label Text="Mobile Number" TextColor="White"/>
+                        <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
+                            <Entry Keyboard="Telephone"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Margin="0" Padding="0" Spacing="10">
+                        <Label Text="Password" TextColor="White"/>
+                        <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
+                            <Entry IsPassword="True"/>
+                        </Frame>
+                    </StackLayout>
+                    <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">
+                        <StackLayout Orientation="Horizontal" Grid.Column="0" Margin="0" Padding="0" Spacing="10">
+                            <CheckBox Color="#E6611A"/>
+                            <Label Text="Remember me" TextColor="White" FontAttributes="Bold"
+                                   VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                        <Label Grid.Column="1" Text="Forget Password?" 
+                               HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                               TextColor="#E6611A" FontAttributes="Bold"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <Label Text="Don't have an account? Register Now"
+                   TextColor="#2E3058" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
