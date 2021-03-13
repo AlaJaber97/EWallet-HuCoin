@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              x:Class="HuCoin.Views.LoginPage"
-             Title="LoginPage" 
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
         <ViewModels:LoginPageViewModel/>
