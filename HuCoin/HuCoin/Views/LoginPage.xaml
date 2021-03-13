@@ -8,8 +8,10 @@
         <ViewModels:LoginPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0" Padding="0" Spacing="0">
-            <Frame Margin="0" Padding="20" BackgroundColor="#2E3058" CornerRadius="20">
+        <StackLayout Margin="0,-50,0,0" Padding="0,0,0,50" Spacing="50">
+            <Frame Margin="0" Padding="20,50,20,20" 
+                   VerticalOptions="FillAndExpand"
+                   BackgroundColor="#2E3058" CornerRadius="50">
                 <StackLayout Margin="0" Padding="0" Spacing="20">
                     <Image Source="icon" />
                     <StackLayout Margin="0" Padding="0" Spacing="10">
@@ -34,6 +36,9 @@
                                HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                                TextColor="#E6611A" FontAttributes="Bold"/>
                     </Grid>
+                    <Button Text="Sign in" TextTransform="None" CornerRadius="5"
+                            BackgroundColor="#E6611A" TextColor="White" 
+                            FontSize="Medium" FontAttributes="Bold"/>
                 </StackLayout>
             </Frame>
             <Label Text="Don't have an account? Register Now"
