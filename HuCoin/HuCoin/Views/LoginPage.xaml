@@ -8,12 +8,11 @@
         <ViewModels:LoginPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0,-50,0,0" Padding="0,0,0,50" Spacing="50">
-            <Frame Margin="0" Padding="20,50,20,20" 
-                   VerticalOptions="FillAndExpand"
-                   BackgroundColor="#2E3058" CornerRadius="50">
+        <StackLayout Margin="0,-20,0,0" Padding="0,0,0,30" Spacing="10">
+            <Frame Margin="0" Padding="20,50,20,30" VerticalOptions="FillAndExpand"
+                   BackgroundColor="#2E3058" CornerRadius="20">
                 <StackLayout Margin="0" Padding="0" Spacing="20">
-                    <Image Source="icon" />
+                    <Image Source="logo_hu" />
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Mobile Number" TextColor="White"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
@@ -41,9 +40,16 @@
                             FontSize="Medium" FontAttributes="Bold"/>
                 </StackLayout>
             </Frame>
-            <Label Text="Don't have an account? Register Now"
-                   TextColor="#2E3058" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
+            <Label TextColor="#2E3058" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Don't have an account? "/>
+                            <Span Text="Register Now" TextDecorations="Underline" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
