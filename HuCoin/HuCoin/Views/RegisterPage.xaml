@@ -1,12 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuCoin.Views.RegisterPage">
+             x:Class="HuCoin.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="0" Padding="0" Spacing="10">
+            <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
+                <Image Source="arrow_to_left" Aspect="AspectFit"/>
+                <Label Text="Registration" TextColor="#2E3058" FontAttributes="Bold"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <ScrollView Margin="0" Padding="10" VerticalScrollBarVisibility="Never">
+                <StackLayout Margin="0" Padding="0" Spacing="0">
+                    <!--Image User-->
+                    <StackLayout Margin="0" Padding="0" Spacing="0">
+                        <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0"
+                              HorizontalOptions="Center" VerticalOptions="Start"
+                              ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto,3*">
+                            <Image Source="empty_list" Aspect="Fill"
+                                   HeightRequest="120" WidthRequest="120"
+                                   VerticalOptions="Start" HorizontalOptions="Start"
+                                   Grid.Column="0" Grid.ColumnSpan="2"
+                                   Grid.Row="0" Grid.RowSpan="3">
+                                <Image.Clip>
+                                    <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60"/>
+                                </Image.Clip>
+                            </Image>
+                            <Frame Margin="0" Padding="0"
+                                   BorderColor="White" BackgroundColor="#707070"
+                                   HeightRequest="32" WidthRequest="32"
+                                   VerticalOptions="Start" HorizontalOptions="Start"
+                                   CornerRadius="16"                           
+                                   Grid.Column="1" Grid.Row="1">
+                                <Image Source="camera" Aspect="AspectFit"
+                                       VerticalOptions="Center" HorizontalOptions="Center"
+                                       HeightRequest="16" WidthRequest="16"/>
+                            </Frame>
+                        </Grid>
+                    </StackLayout>
+                    <!--info user-->
+                    <StackLayout Margin="0" Padding="0" Spacing="10">
+                        <!--First Name-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="First Name" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" 
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry />
+                            </Frame>
+                        </StackLayout>
+                        <!--Second Name-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Second Name" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" 
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry />
+                            </Frame>
+                        </StackLayout>
+                        <!--Family Name-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Family Name" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" 
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry />
+                            </Frame>
+                        </StackLayout>
+                        <!--Mobile Number-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Mobile Number" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" 
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry Keyboard="Telephone"/>
+                            </Frame>
+                        </StackLayout>
+                        <!--University ID-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold" Text="University ID" TextColor="#2E3058"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="White"
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry Keyboard="Numeric"/>
+                            </Frame>
+                        </StackLayout>
+                        <!--Password-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Password" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" 
+                           CornerRadius="5" BorderColor="Gray">
+                                <Entry IsPassword="True" />
+                            </Frame>
+                        </StackLayout>
+
+                        <Button Text="Sing up" TextColor="White" BackgroundColor="#E6611A"
+                        FontAttributes="Bold" CornerRadius="5"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
