@@ -37,7 +37,8 @@
                     </Grid>
                     <Button Text="Sign in" TextTransform="None" CornerRadius="5"
                             BackgroundColor="#E6611A" TextColor="White" 
-                            FontSize="Medium" FontAttributes="Bold"/>
+                            FontSize="Medium" FontAttributes="Bold"
+                            Command="{Binding SignInCommand}"/>
                 </StackLayout>
             </Frame>
             <Label TextColor="#2E3058" HorizontalTextAlignment="Center">
@@ -49,6 +50,9 @@
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenRegisterPageCommand}"/>
+                </Label.GestureRecognizers>
             </Label>
         </StackLayout>
     </ContentPage.Content>

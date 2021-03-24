@@ -3,10 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.SettingsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20,10" Padding="0" Spacing="10">
+            <Image Source="settings" Margin="30,10" HorizontalOptions="Center"/>
+            <Grid Margin="0" Padding="0" ColumnDefinitions="*,*" ColumnSpacing="0">
+                <Button Grid.Column="0" Text="English" BackgroundColor="#E6611A" TextColor="White" CornerRadius="5"/>
+                <Button Grid.Column="1" Text="عربي" BackgroundColor="#F5F5F5" TextColor="#39374D" CornerRadius="5"/>
+            </Grid>
+            <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
+                   CornerRadius="10" HasShadow="True">
+                <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
+                    <Image Source="padlock" 
+                           HeightRequest="32" WidthRequest="32"
+                           VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label Text="Reset Password" TextColor="#39374D" FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
+                   CornerRadius="10" HasShadow="True">
+                <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
+                    <Image Source="compliant" 
+                           HeightRequest="32" WidthRequest="32"
+                           VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label Text="Privacy Policy" TextColor="#39374D" FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+            
+            <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
+                   CornerRadius="10" HasShadow="True">
+                <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
+                    <Image Source="suggestion" 
+                           HeightRequest="32" WidthRequest="32"
+                           VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label Text="Contact Us" TextColor="#39374D" FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="0" Padding="10" BackgroundColor="#CC2735"
+                   CornerRadius="10" HasShadow="True" VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
+                    <Image Source="logout" 
+                           HeightRequest="32" WidthRequest="32"
+                           VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label Text="Logout" TextColor="White" FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
