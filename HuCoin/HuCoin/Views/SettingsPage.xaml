@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuCoin.Views.SettingsPage">
+             x:Class="HuCoin.Views.SettingsPage"
+             xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <ViewModels:SettingsPageViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="20,10" Padding="0" Spacing="10">
             <Image Source="settings" Margin="30,10" HorizontalOptions="Center"/>
@@ -18,6 +23,9 @@
                     <Label Text="Reset Password" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenChangePasswordCommand}"/>
+                </Frame.GestureRecognizers>
             </Frame>
 
             <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
@@ -29,6 +37,9 @@
                     <Label Text="Privacy Policy" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenPrivacyPolicyCommand}"/>
+                </Frame.GestureRecognizers>
             </Frame>
             
             <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
@@ -40,6 +51,9 @@
                     <Label Text="Contact Us" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenContactUsCommand}"/>
+                </Frame.GestureRecognizers>
             </Frame>
 
             <Frame Margin="0" Padding="10" BackgroundColor="#CC2735"
@@ -51,6 +65,9 @@
                     <Label Text="Logout" TextColor="White" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LogoutCommand}"/>
+                </Frame.GestureRecognizers>
             </Frame>
         </StackLayout>
     </ContentPage.Content>

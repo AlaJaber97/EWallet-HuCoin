@@ -6,20 +6,17 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class BeneficiariesPageViewModel
+    public class BeneficiariesPageViewModel : ViewModels.BaseViewModel
     {
         public ICommand AddNewBeneficiaryCommand { get; set; }
-        public ICommand OpenBeneficiaryDetails { get; set; }
+        public ICommand OpenBeneficiaryDetailsCommand { get; set; }
         public BeneficiariesPageViewModel()
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
-            AddNewBeneficiaryCommand = new Command(OpenBeneficiary);
+            OpenBeneficiaryDetailsCommand = new Command(OpenBeneficiaryDetails);
         }
-        private void AddNewBeneficiary()
-        {
-        
-        }
-        private void OpenBeneficiary()
+        private void AddNewBeneficiary()=> OpenPage(new Views.AddBeneficiaryPage());
+        private void OpenBeneficiaryDetails()
         {
         
         }

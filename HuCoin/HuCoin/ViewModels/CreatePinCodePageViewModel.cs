@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HuCoin.ViewModels
 {
-    public class ChangePasswordPageViewModel : ViewModels.BaseViewModel
+    public class CreatePinCodePageViewModel : ViewModels.BaseViewModel
     {
-        public ChangePasswordPageViewModel()
+        public CreatePinCodePageViewModel()
         {
 
         }

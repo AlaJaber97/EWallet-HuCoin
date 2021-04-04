@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuCoin.Views.VerficationPinPage"
+             x:Class="HuCoin.Views.CreatePinCodePage"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
-        <ViewModels:VerficationPinPageViewModel/>
+        <ViewModels:CreatePinCodePageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="0">
@@ -15,27 +15,11 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label TextColor="#2E3058" HorizontalOptions="EndAndExpand"
-                       FontAttributes="Bold" VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Forget your PIN?"/>
-                                <Span Text=" "/>
-                                <Span Text="Click Here" TextDecorations="Underline"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenForgetPinCodePageCommand}"/>
-                    </Label.GestureRecognizers>
-                </Label>
-
             </StackLayout>
             <StackLayout Margin="20,-120,20,0" Padding="0" Spacing="50"
                          VerticalOptions="CenterAndExpand">
                 <StackLayout Margin="0" Padding="0" Spacing="10">
-                    <Label Text="Verification Required" TextColor="#2E3058" FontAttributes="Bold"
+                    <Label Text="Create pin code" TextColor="#2E3058" FontAttributes="Bold"
                        FontSize="Medium" HorizontalTextAlignment="Center"/>
                     <Label Text="Please enter your PIN code" TextColor="#2E3058"
                        FontAttributes="Bold" HorizontalTextAlignment="Center"/>

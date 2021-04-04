@@ -4,7 +4,11 @@ using System.Text;
 
 namespace HuCoin.ViewModels
 {
-    class VerificationPhoneCodePageViewModel
+    public class VerificationPhoneCodePageViewModel : ViewModels.BaseViewModel
     {
+        public VerificationPhoneCodePageViewModel()
+        {
+
+        }
     }
 }

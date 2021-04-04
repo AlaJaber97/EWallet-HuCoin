@@ -15,7 +15,7 @@ namespace HuCoin.ViewModels
         }
         private void SingUp()
         {
-
+            OpenPage(new Views.VerificationPhoneCodePage());
         }
     }
 }

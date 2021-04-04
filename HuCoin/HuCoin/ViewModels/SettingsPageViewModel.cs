@@ -31,7 +31,7 @@ namespace HuCoin.ViewModels
         }
         private void OpenPrivacyPolicy()
         {
-            Xamarin.Essentials.Launcher.TryOpenAsync("www.google.com");
+            Xamarin.Essentials.Browser.OpenAsync("https://www.google.com");
         }
         private void OpenContactUs()
         {
@@ -39,7 +39,7 @@ namespace HuCoin.ViewModels
         }
         private void Logout()
         {
-
+            OpenPageAsMainPage(new Views.LoginPage());
         }
     }
 }

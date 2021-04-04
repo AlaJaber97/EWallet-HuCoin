@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class TransferServicePageViewModel
+    public class TransferServicePageViewModel : ViewModels.BaseViewModel
     {
         public ICommand AddNewBeneficiaryCommand { get; set; }
         public ICommand TransferServiceCommand { get; set; }

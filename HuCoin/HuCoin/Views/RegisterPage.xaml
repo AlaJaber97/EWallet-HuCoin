@@ -15,8 +15,7 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Registration" TextColor="#2E3058" FontAttributes="Bold"
-                       FontSize="Medium"/>
+                <Label Text="Registration" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <ScrollView Margin="0" Padding="10" VerticalScrollBarVisibility="Never">
                 <StackLayout Margin="0" Padding="0" Spacing="0">
@@ -60,8 +59,7 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Frame Margin="0" Padding="0" 
-                           CornerRadius="5" BorderColor="Gray">
+                            <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
                                 <Entry />
                             </Frame>
                         </StackLayout>
@@ -143,7 +141,7 @@
                         </StackLayout>
 
                         <Button Text="Sing up" TextColor="White" BackgroundColor="#E6611A"
-                        FontAttributes="Bold" CornerRadius="5"/>
+                        FontAttributes="Bold" CornerRadius="5" Command="{Binding SingUpCommand}"/>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

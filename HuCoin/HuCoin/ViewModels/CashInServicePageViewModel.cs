@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class CashInServicePageViewModel
+    public class CashInServicePageViewModel : ViewModels.BaseViewModel
     {
         public ICommand RechargeBalanceCommand { get; set; }
         public CashInServicePageViewModel()

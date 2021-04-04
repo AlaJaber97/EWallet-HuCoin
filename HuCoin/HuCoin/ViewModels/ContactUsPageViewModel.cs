@@ -4,7 +4,11 @@ using System.Text;
 
 namespace HuCoin.ViewModels
 {
-    class ContactUsPageViewModel
+    public class ContactUsPageViewModel : ViewModels.BaseViewModel
     {
+        public ContactUsPageViewModel()
+        {
+
+        }
     }
 }

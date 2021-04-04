@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuCoin.Views.HomePage">
+             x:Class="HuCoin.Views.HomePage"
+             xmlns:ViewModels="clr-namespace:HuCoin.ViewModels">
+    <ContentPage.BindingContext>
+        <ViewModels:HomePageViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="10,20" Spacing="20">
             <Frame Margin="0" Padding="20" BackgroundColor="#F5F5F5"
@@ -64,6 +68,9 @@
                         <Label Text="Cash Out" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenCashOutServiceCommand}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
                 <Frame Grid.Column="1" Grid.Row="0" 
                        HeightRequest="120" WidthRequest="120"
@@ -74,6 +81,9 @@
                         <Label Text="Recharge" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenCashInServiceCommand}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
                 <Frame Grid.Column="0" Grid.Row="1" 
                        HeightRequest="120" WidthRequest="120"
@@ -84,6 +94,9 @@
                         <Label Text="Transfer" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenTransferServiceCommand}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
                 <Frame Grid.Column="1" Grid.Row="1" 
                        HeightRequest="120" WidthRequest="120"
@@ -94,6 +107,9 @@
                         <Label Text="Beneficiaries" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
                     </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenBeneficiariesCommand}"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
             </Grid>
         </StackLayout>

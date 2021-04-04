@@ -4,7 +4,11 @@ using System.Text;
 
 namespace HuCoin.ViewModels
 {
-    class ForgetPinCodePageViewModel
+    public class ForgetPinCodePageViewModel : ViewModels.BaseViewModel
     {
+        public ForgetPinCodePageViewModel()
+        {
+
+        }
     }
 }
