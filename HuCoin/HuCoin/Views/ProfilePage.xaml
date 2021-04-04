@@ -37,6 +37,9 @@
                                        VerticalOptions="Center" HorizontalOptions="Center"
                                        HeightRequest="16" WidthRequest="16"/>
                             </Frame>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PickPhotoCommand}"/>
+                            </Grid.GestureRecognizers>
                         </Grid>
                     </StackLayout>
                     <!--info user-->

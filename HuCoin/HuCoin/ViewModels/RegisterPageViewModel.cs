@@ -8,12 +8,14 @@ namespace HuCoin.ViewModels
 {
     public class RegisterPageViewModel : BaseViewModel
     {
-        public ICommand BackPageCommand { get; set; }
+        public ICommand SingUpCommand { get; set; }
         public RegisterPageViewModel()
         {
-            BackPageCommand = new Command(BackPage);
-            
+            SingUpCommand = new Command(SingUp);
         }
-        private void BackPage() => CloseCurrentPage();
+        private void SingUp()
+        {
+
+        }
     }
 }
