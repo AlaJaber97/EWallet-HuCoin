@@ -38,10 +38,10 @@ namespace API.Controllers
             }
             else
             {
-                if (result.IsLockedOut) return StatusCode((int)HttpStatusCode.InternalServerError, "your account is locked out");
-                if (result.IsNotAllowed) return StatusCode((int)HttpStatusCode.InternalServerError, "your account is not allowed");
-                if (result.RequiresTwoFactor) return StatusCode((int)HttpStatusCode.InternalServerError, "your account is requires two factor");
-                return StatusCode((int)HttpStatusCode.InternalServerError, "username or password not correct");
+                if (result.IsLockedOut) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is locked out");
+                if (result.IsNotAllowed) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is not allowed");
+                if (result.RequiresTwoFactor) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is requires two factor");
+                return StatusCode((int)HttpStatusCode.Unauthorized, "username or password not correct");
             }
         }
 
@@ -57,7 +57,7 @@ namespace API.Controllers
             }
             else
             {
-                return StatusCode((int)HttpStatusCode.InternalServerError, result.Errors);
+                return StatusCode((int)HttpStatusCode.BadRequest, result.Errors);
             }
         }
     }

@@ -16,13 +16,13 @@
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Mobile Number" TextColor="White"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
-                            <Entry Keyboard="Telephone"/>
+                            <Entry Text="{Binding RequestLogin.Username}" Keyboard="Telephone"/>
                         </Frame>
                     </StackLayout>
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Password" TextColor="White"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
-                            <Entry IsPassword="True"/>
+                            <Entry Text="{Binding RequestLogin.Password}" IsPassword="True"/>
                         </Frame>
                     </StackLayout>
                     <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">

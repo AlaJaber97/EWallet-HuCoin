@@ -39,6 +39,7 @@ namespace HuCoin.ViewModels
         }
         private void Logout()
         {
+            AppStatic.Token = string.Empty;
             OpenPageAsMainPage(new Views.LoginPage());
         }
     }

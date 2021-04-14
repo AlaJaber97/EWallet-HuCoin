@@ -17,6 +17,7 @@ namespace HuCoin.ViewModels
         {
             OpenPage(new Views.VerficationPinPage());
             //call-api
+
             //return to home page
         }
     }
