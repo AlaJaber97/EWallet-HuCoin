@@ -6,7 +6,7 @@ namespace BLL.Services
 {
     public static class JWT
     {
-        public static string GenerateToken(BLL.Models.User user, List<BLL.Models.Roles> roles)
+        public static string GenerateToken(BLL.Models.User user)
         {
             var clamis = new List<System.Security.Claims.Claim>
             {

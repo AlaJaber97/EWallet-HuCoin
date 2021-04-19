@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BLL.Models
 {
-    public class User : IdentityUser<Guid>
+    public class User : IdentityUser
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }

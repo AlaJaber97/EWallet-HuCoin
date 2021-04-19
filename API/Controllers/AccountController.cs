@@ -13,7 +13,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(JwtBearerDefaults.AuthenticationScheme)]
     public class AccountController : ControllerBase
     {
         private readonly SignInManager<BLL.Models.User> _signInManager;
@@ -34,7 +34,7 @@ namespace API.Controllers
             if(result.Succeeded)
             {
                 var user = _userManager.Users.Single(user => user.UserName == requestLogin.Username);
-                return Ok(BLL.Services.JWT.GenerateToken(user, null));
+                return Ok(BLL.Services.JWT.GenerateToken(user));
             }
             else
             {
@@ -53,7 +53,7 @@ namespace API.Controllers
             if (result.Succeeded)
             {
                 model.Password = string.Empty;
-                return Ok(BLL.Services.JWT.GenerateToken(model,null));
+                return Ok(BLL.Services.JWT.GenerateToken(model));
             }
             else
             {

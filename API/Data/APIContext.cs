@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace API.Data
 {
-    public class APIContext : IdentityDbContext<BLL.Models.User,BLL.Models.Roles,Guid>
+    public class APIContext : IdentityDbContext<BLL.Models.User>
     {
+        public APIContext(DbContextOptions options):base(options)
+        {
 
+        }
     }
 }
