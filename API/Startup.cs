@@ -48,7 +48,7 @@ namespace API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection(); //redirection from http to https
 
             app.UseRouting();
 

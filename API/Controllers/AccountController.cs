@@ -52,7 +52,6 @@ namespace API.Controllers
             var result = await _userManager.CreateAsync(model, model.Password);
             if (result.Succeeded)
             {
-                model.Password = string.Empty;
                 return Ok(BLL.Services.JWT.GenerateToken(model));
             }
             else

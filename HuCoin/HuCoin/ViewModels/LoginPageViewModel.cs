@@ -31,7 +31,7 @@ namespace HuCoin.ViewModels
                 !string.IsNullOrWhiteSpace(RequestLogin.Password))
             {
                 var httpClient = new HttpClient();
-                var response = await httpClient.PostAsJsonAsync("http://192.168.0.199:5000/api/account/login", RequestLogin);
+                var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/login", RequestLogin);
                 if (response.IsSuccessStatusCode)
                 {
                     AppStatic.Token = await response.Content.ReadAsStringAsync();

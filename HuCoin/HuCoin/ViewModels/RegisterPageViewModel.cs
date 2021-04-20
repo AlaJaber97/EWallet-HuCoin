@@ -9,8 +9,10 @@ namespace HuCoin.ViewModels
     public class RegisterPageViewModel : BaseViewModel
     {
         public ICommand SingUpCommand { get; set; }
+        public BLL.Models.User User { get; set; }
         public RegisterPageViewModel()
         {
+            User = new BLL.Models.User();
             SingUpCommand = new Command(SingUp);
         }
         private void SingUp()
