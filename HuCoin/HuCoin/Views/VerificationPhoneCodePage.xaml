@@ -5,9 +5,6 @@
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              xmlns:XFpin="clr-namespace:XFPINView;assembly=XFPINView"
              NavigationPage.HasNavigationBar="False">
-    <ContentPage.BindingContext>
-        <ViewModels:RegisterPageViewModel/>
-    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="0">
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
@@ -42,7 +39,8 @@
                                PINLength="6" PINValue="{Binding VerificationCode}"/>
                 <Button Text="Submit" TextTransform="None" CornerRadius="5" 
                         BackgroundColor="#E6611A" TextColor="white" 
-                        FontSize="Medium" FontAttributes="Bold"/>
+                        FontSize="Medium" FontAttributes="Bold"
+                        Command="{Binding VerifyPhoneNumberCommand}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

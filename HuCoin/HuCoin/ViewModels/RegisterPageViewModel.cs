@@ -1,6 +1,8 @@
 ﻿using Plugin.FirebaseAuth;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -19,40 +21,80 @@ namespace HuCoin.ViewModels
         {
             User = new BLL.Models.User();
             SingUpCommand = new Command(()=> SingUp().ConfigureAwait(false));
-            VerifyPhoneNumberCommand = new Command(Verification);
+            VerifyPhoneNumberCommand = new Command(()=> Verification().ConfigureAwait(false));
         }
         private async Task SingUp()
         {
             try
             {
-                OpenPage(new Views.VerificationPhoneCodePage());
-                //send phone number to api
-                if (!string.IsNullOrEmpty(User.PhoneNumber))
-                {
-                    var verificationResult = await CrossFirebaseAuth.Current.PhoneAuthProvider.VerifyPhoneNumberAsync(User.PhoneNumber);
-                    VerificationID = verificationResult.VerificationId;
-                }
+                if (!IsValidUser(User)) return;
+                OpenPage(new Views.VerificationPhoneCodePage() { BindingContext = this });
+                var verificationResult = await CrossFirebaseAuth.Current.PhoneAuthProvider.VerifyPhoneNumberAsync(User.PhoneNumber);
+                VerificationID = verificationResult.VerificationId;
             }
             catch (Exception ex)
             {
                 await DisplayAlert(string.Empty, ex.ToString(), "Okay");
             }
         }
-        private void Verification()
+        private bool IsValidUser(BLL.Models.User user)
+        {
+            string ErrorMessage = null;
+            if (string.IsNullOrWhiteSpace(user.FirstName) ||
+                string.IsNullOrWhiteSpace(user.SecondName) ||
+                string.IsNullOrWhiteSpace(user.FamilyName) ||
+                string.IsNullOrWhiteSpace(user.PhoneNumber) ||
+                user.UniversityID.ToString().Length != 7 ||
+                string.IsNullOrWhiteSpace(user.Password))
+                ErrorMessage= "Please fill in the following fields:";
+
+            if (string.IsNullOrWhiteSpace(user.FirstName))
+                ErrorMessage += "\n• First Name";
+            if (string.IsNullOrWhiteSpace(user.SecondName))
+                ErrorMessage += "\n• Second Name";
+            if (string.IsNullOrWhiteSpace(user.FamilyName))
+                ErrorMessage += "\n• Family Name";
+            if (string.IsNullOrWhiteSpace(user.PhoneNumber))
+                ErrorMessage += "\n• Phone Number";
+            if (user.UniversityID.ToString().Length != 7)
+                ErrorMessage += "\n• University ID";
+            if (string.IsNullOrWhiteSpace(user.Password))
+                ErrorMessage += "\n• Password";
+
+            if(ErrorMessage != null)
+            {
+                DisplayAlert("Fields Required", ErrorMessage, "Okay").ConfigureAwait(false);
+                return false;
+            }
+            return true;
+        }
+        private async Task Verification()
         {
             try
             {
                 //send verification id with fake verification code
                 var credential = CrossFirebaseAuth.Current.PhoneAuthProvider.GetCredential(VerificationID, VerificationCode);
-
                 if (credential != null)
                 {
-                    OpenPage(new Views.MainPage());
+                    User.UserName = User.PhoneNumber;
+                    User.PhoneNumberConfirmed = true;
+                    using var httpClient = new HttpClient();
+                    var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/register", User);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        AppStatic.Token = await response.Content.ReadAsStringAsync();
+                        OpenPage(new Views.MainPage());
+                    }
+                    else
+                    {
+                        var error = await response.Content.ReadAsStringAsync();
+                        await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                DisplayAlert(string.Empty, ex.ToString(), "Okay");
+                await DisplayAlert(string.Empty, ex.ToString(), "Okay").ConfigureAwait(false);
             }
         }
     }

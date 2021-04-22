@@ -38,6 +38,18 @@ namespace API
 
             services.AddDbContext<API.Data.APIContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("LocalDatabase")));
+
+            services.Configure<IdentityOptions>(options => 
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequiredLength = 1;
+
+                options.User.RequireUniqueEmail = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

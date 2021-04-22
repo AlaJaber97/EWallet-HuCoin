@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace BLL.Models
@@ -11,7 +12,10 @@ namespace BLL.Models
         public string SecondName { get; set; }
         public string FamilyName { get; set; }
         public int UniversityID { get; set; }
-        public string Password { get; set; }
         public byte[] Image { get; set; }
+
+
+        [NotMapped]
+        public string Password { get; set; }
     }
 }

@@ -121,9 +121,9 @@
                         <!--University ID-->
                         <StackLayout Margin="0" Padding="0" Spacing="10">
                             <Label FontAttributes="Bold" Text="University ID" TextColor="#2E3058"/>
-                            <Frame Margin="0" Padding="0" BackgroundColor="White"
-                           CornerRadius="5" BorderColor="Gray">
-                                <Entry Keyboard="Numeric"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5" BorderColor="Gray">
+                                <Entry Keyboard="Numeric" MaxLength="7" Text="{Binding User.UniversityID}" 
+                                       Placeholder="Enter University ID"/>
                             </Frame>
                         </StackLayout>
                         <!--Password-->
