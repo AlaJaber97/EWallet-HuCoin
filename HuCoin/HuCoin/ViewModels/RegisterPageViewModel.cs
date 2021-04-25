@@ -1,11 +1,13 @@
 ﻿using Plugin.FirebaseAuth;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
@@ -14,6 +16,7 @@ namespace HuCoin.ViewModels
     {
         public ICommand SingUpCommand { get; set; }
         public ICommand VerifyPhoneNumberCommand { get; set; }
+        public ICommand PickPhotoCommand { get; set; }
         public BLL.Models.User User { get; set; }
         public string VerificationID { get; set; }
         public string VerificationCode { get; set; }
@@ -22,7 +25,9 @@ namespace HuCoin.ViewModels
             User = new BLL.Models.User();
             SingUpCommand = new Command(()=> SingUp().ConfigureAwait(false));
             VerifyPhoneNumberCommand = new Command(()=> Verification().ConfigureAwait(false));
+            PickPhotoCommand = new Command(() => PickPhotoAsync().ConfigureAwait(false));
         }
+
         private async Task SingUp()
         {
             try
@@ -35,6 +40,21 @@ namespace HuCoin.ViewModels
             catch (Exception ex)
             {
                 await DisplayAlert(string.Empty, ex.ToString(), "Okay");
+            }
+        }
+        private async Task PickPhotoAsync()
+        {
+            try
+            {
+                var photo = await MediaPicker.PickPhotoAsync();
+                using var SourceStream = await photo.OpenReadAsync();
+                User.Image = new byte[SourceStream.Length];
+                await SourceStream.ReadAsync(User.Image, 0, (int)SourceStream.Length);
+                OnPropertyChanged(nameof(User));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"PickPhotoAsync THREW: {ex.Message}");
             }
         }
         private bool IsValidUser(BLL.Models.User user)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -7,14 +8,14 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class BaseViewModel
+    public class BaseViewModel: INotifyPropertyChanged
     {
         public ICommand BackPageCommand { get; set; }
         public BaseViewModel()
         {
             BackPageCommand = new Command(CloseCurrentPage);
         }
-
+        
         public void OpenPageAsMainPage(Page page)
         {
             App.Current.MainPage = new NavigationPage(page);
@@ -54,6 +55,13 @@ namespace HuCoin.ViewModels
             else
                 isAproved = await Xamarin.Essentials.MainThread.InvokeOnMainThreadAsync(() => App.Current.MainPage.DisplayAlert(title, message, okButton, cancelButton));
             return isAproved;
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged(string propretyname)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propretyname));
         }
     }
 }

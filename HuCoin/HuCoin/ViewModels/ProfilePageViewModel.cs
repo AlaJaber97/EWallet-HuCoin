@@ -12,6 +12,7 @@ namespace HuCoin.ViewModels
     {
         public ICommand UpdateProfileCommand { get; private set; }
         public ICommand PickPhotoCommand { get; set; }
+        public BLL.Models.User User { get; set; }
         public ProfilePageViewModel()
         {
             PickPhotoCommand = new Command(()=> PickPhotoAsync().ConfigureAwait(false));
@@ -22,16 +23,15 @@ namespace HuCoin.ViewModels
             try
             {
                 var photo = await MediaPicker.PickPhotoAsync();
-                await LoadPhotoAsync(photo);
+                using var SourceStream = await photo.OpenReadAsync();
+                User.Image = new byte[SourceStream.Length];
+                await SourceStream.ReadAsync(User.Image, 0, (int)SourceStream.Length);
+                OnPropertyChanged(nameof(User));
             }
             catch(Exception ex)
             {
                 Console.WriteLine($"PickPhotoAsync THREW: {ex.Message}");
             }
-        }
-        private async Task LoadPhotoAsync(FileResult photo)
-        {
-
         }
         private void UpdateProfile()
         {

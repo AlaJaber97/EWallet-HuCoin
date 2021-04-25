@@ -24,7 +24,8 @@
                         <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0"
                               HorizontalOptions="Center" VerticalOptions="Start"
                               ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto,3*">
-                            <Image Source="{Binding User.Image,Converter={StaticResource ByteArrayToImageSourceConverter}}" Aspect="Fill"
+                            <Image Source="{Binding User.Image,ConverterParameter='unkown_user',Converter={StaticResource ByteArrayToImageSourceConverter}}"
+                                   Aspect="AspectFill"
                                    HeightRequest="120" WidthRequest="120"
                                    VerticalOptions="Start" HorizontalOptions="Start"
                                    Grid.Column="0" Grid.ColumnSpan="2"
@@ -32,11 +33,6 @@
                                 <Image.Clip>
                                     <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60"/>
                                 </Image.Clip>
-                                <Image.Triggers>
-                                    <DataTrigger TargetType="Image" Binding="{Binding User.Image,Converter={StaticResource IsNullOrEmptyConverter}}" Value="True">
-                                        <Setter Property="Source" Value="empty_list"/>
-                                    </DataTrigger>
-                                </Image.Triggers>
                             </Image>
                             <Frame Margin="0" Padding="0"
                                    BorderColor="White" BackgroundColor="#707070"
@@ -48,6 +44,9 @@
                                        VerticalOptions="Center" HorizontalOptions="Center"
                                        HeightRequest="16" WidthRequest="16"/>
                             </Frame>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PickPhotoCommand}"/>
+                            </Grid.GestureRecognizers>
                         </Grid>
                     </StackLayout>
                     <!--info user-->
