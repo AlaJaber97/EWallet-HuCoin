@@ -103,7 +103,7 @@ namespace HuCoin.ViewModels
                     if (response.IsSuccessStatusCode)
                     {
                         AppStatic.Token = await response.Content.ReadAsStringAsync();
-                        OpenPage(new Views.MainPage());
+                        OpenPage(new Views.CreatePinCodePage());
                     }
                     else
                     {

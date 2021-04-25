@@ -50,6 +50,8 @@ namespace API
 
                 options.User.RequireUniqueEmail = false;
             });
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +61,11 @@ namespace API
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "HuCoin API");
+            });
             // app.UseHttpsRedirection(); //redirection from http to https
 
             app.UseRouting();

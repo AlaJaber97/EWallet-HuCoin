@@ -21,7 +21,11 @@ namespace API.Controllers
         [HttpGet("Status")]
         public IActionResult GetStatusServer()
         {
-            return Ok("It's work on..");
+            return Ok(
+                $"Name Server: {BLL.Settings.Connections.Server}" + 
+                "\n" +
+                $"IP Server: {BLL.Settings.Connections.GetServerAddress()}"
+                );
         }
 
         [HttpGet("Create")]
