@@ -6,7 +6,7 @@ namespace BLL.Enums
 {
     public enum DevServer
     {
-        Alaa,
+        Ansam,
         Ammar,
     }
 }

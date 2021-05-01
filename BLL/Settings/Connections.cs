@@ -6,13 +6,13 @@ namespace BLL.Settings
 {
     public static class Connections
     {
-        public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.Alaa;
+        public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.Ansam;
         public static string GetServerAddress()
         {
             return Server switch
             {
-                Enums.DevServer.Alaa => "http://192.168.0.199:5000",
-                _ => "http://192.168.0.199:5000",
+                Enums.DevServer.Ansam => "http://192.168.0.171:5000",
+                _ => "http://192.168.0.171:5000",
             };
         }
     }
