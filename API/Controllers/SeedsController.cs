@@ -27,7 +27,10 @@ namespace API.Controllers
                 $"IP Server: {BLL.Settings.Connections.GetServerAddress()}"
                 );
         }
-
+        /// <summary>
+        /// to use this action write in your browser "http://localhost:52600/api/seeds/create"
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Create")]
         public IActionResult CreateDB()
         {

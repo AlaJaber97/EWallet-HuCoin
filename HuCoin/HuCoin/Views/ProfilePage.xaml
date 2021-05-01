@@ -18,7 +18,8 @@
                         <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0"
                               HorizontalOptions="Center" VerticalOptions="Start"
                               ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto,3*">
-                            <Image Source="empty_list" Aspect="AspectFit"
+                            <Image Source="{Binding User.Image,ConverterParameter='unkown_user',Converter={StaticResource ByteArrayToImageSourceConverter}}"
+                                   Aspect="AspectFill"
                                    HeightRequest="120" WidthRequest="120"
                                    VerticalOptions="Start" HorizontalOptions="Start"
                                    Grid.Column="0" Grid.ColumnSpan="2"
@@ -56,9 +57,8 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Frame Margin="0" Padding="0" 
-                           CornerRadius="5" BorderColor="Gray">
-                                <Entry />
+                            <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
+                                <Entry Text="{Binding User.FirstName}"/>
                             </Frame>
                         </StackLayout>
                         <!--Second Name-->
@@ -73,9 +73,8 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Frame Margin="0" Padding="0" 
-                           CornerRadius="5" BorderColor="Gray">
-                                <Entry />
+                            <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
+                                <Entry Text="{Binding User.SecondName}"/>
                             </Frame>
                         </StackLayout>
                         <!--Family Name-->
@@ -90,9 +89,8 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Frame Margin="0" Padding="0" 
-                           CornerRadius="5" BorderColor="Gray">
-                                <Entry />
+                            <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
+                                <Entry Text="{Binding User.FamilyName}"/>
                             </Frame>
                         </StackLayout>
                         <!--Mobile Number-->
@@ -108,14 +106,16 @@
                                 </Label.FormattedText>
                             </Label>
                             <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
-                                <Entry IsEnabled="False" Keyboard="Telephone"/>
+                                <Entry IsEnabled="False" Keyboard="Telephone"
+                                       Text="{Binding User.PhoneNumber}"/>
                             </Frame>
                         </StackLayout>
                         <!--University ID-->
                         <StackLayout Margin="0" Padding="0" Spacing="10">
                             <Label FontAttributes="Bold" Text="University ID" TextColor="#2E3058"/>
                             <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5" BorderColor="Gray">
-                                <Entry IsEnabled="False" Keyboard="Numeric"/>
+                                <Entry IsEnabled="False" Keyboard="Numeric"
+                                       Text="{Binding User.UniversityID}"/>
                             </Frame>
                         </StackLayout>
 
