@@ -1,22 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
-          android:versionCode="1" android:versionName="1.0" 
-          package="com.hashemiteuniversity.hucoin" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
-	<application android:label="HuCoin.Android" android:theme="@style/MainTheme"
-  android:usesCleartextTraffic="true">
-	
-	</application>
-  <queries>
-    <intent >
-      <action android:name="android.intent.action.VIEW" />
-      <data android:scheme="http"/>
-    </intent>
-    <intent>
-      <action android:name="android.intent.action.VIEW" />
-      <data android:scheme="https"/>
-    </intent>
-  </queries>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.hashemiteuniversity.hucoin" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
+	<application android:label="HuCoin" android:theme="@style/MainTheme" 
+	android:usesCleartextTraffic="true" android:icon="@drawable/icon"></application>
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="http" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="https" />
+		</intent>
+	</queries>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

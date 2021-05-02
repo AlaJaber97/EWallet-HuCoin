@@ -38,6 +38,8 @@ namespace HuCoin.ViewModels
         }
         private async Task LoadUserProfile()
         {
+            using var loadingview = new Components.LoadingView();
+
             using var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
             var response = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/profile");
@@ -77,13 +79,16 @@ namespace HuCoin.ViewModels
         }
         private async Task UpdateUserProfile()
         {
-            if (!IsValidUser(User)) return;
+            if (!IsValidUser(User)) return; 
+            using var loadingview = new Components.LoadingView();
+
             using var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
             var response = await httpClient.PutAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/profile", User);
             if (response.IsSuccessStatusCode)
             {
                 await DisplayAlert("Update Profile", "Your profile information update successfully", "Ok").ConfigureAwait(false);
+                MessagingCenter.Send(this, "NotifyProfileInfromationUpdated");
             }
             else
             {

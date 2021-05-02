@@ -32,7 +32,8 @@ namespace HuCoin.ViewModels
         {
             try
             {
-                if (!IsValidUser(User)) return;
+                if (!IsValidUser(User)) return; 
+                using var loadingview = new Components.LoadingView();
                 OpenPage(new Views.VerificationPhoneCodePage() { BindingContext = this });
                 var verificationResult = await CrossFirebaseAuth.Current.PhoneAuthProvider.VerifyPhoneNumberAsync(User.PhoneNumber);
                 VerificationID = verificationResult.VerificationId;
@@ -92,12 +93,14 @@ namespace HuCoin.ViewModels
         {
             try
             {
-                //send verification id with fake verification code
+                if (string.IsNullOrEmpty(VerificationCode)) return;
+
+                using var loadingview = new Components.LoadingView();
                 var credential = CrossFirebaseAuth.Current.PhoneAuthProvider.GetCredential(VerificationID, VerificationCode);
                 if (credential != null)
                 {
                     User.UserName = User.PhoneNumber;
-                    User.PhoneNumberConfirmed = true;
+                    User.PhoneNumberConfirmed = true; 
                     using var httpClient = new HttpClient();
                     var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/register", User);
                     if (response.IsSuccessStatusCode)

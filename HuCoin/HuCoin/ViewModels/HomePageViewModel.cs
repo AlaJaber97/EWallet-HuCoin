@@ -22,10 +22,12 @@ namespace HuCoin.ViewModels
             OpenTransferServiceCommand = new Command(OpenTransferService);
             OpenBeneficiariesCommand = new Command(OpenBeneficiaries);
             LoadUserProfile().ConfigureAwait(false);
+            MessagingCenter.Subscribe<ProfilePageViewModel>(this, "NotifyProfileInfromationUpdated", (sender) => LoadUserProfile().ConfigureAwait(false));
         }
 
         private async Task LoadUserProfile()
         {
+            using var loadingview = new Components.LoadingView();
             using var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
             var response = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/profile");

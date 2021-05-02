@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HuCoin.Components.LoadingView"
+             BackgroundColor="#1AC4C4C4">
+    <ContentPage.Content>
+        <Frame Margin="0" Padding="20,10" CornerRadius="20"
+               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="loading.gif" IsAnimationPlaying="True"
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   HeightRequest="64" WidthRequest="64"/>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

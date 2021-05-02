@@ -30,6 +30,7 @@ namespace HuCoin.ViewModels
             if (!string.IsNullOrWhiteSpace(RequestLogin.Username) &&
                 !string.IsNullOrWhiteSpace(RequestLogin.Password))
             {
+                using var loadingview = new Components.LoadingView();
                 using var httpClient = new HttpClient();
                 var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/login", RequestLogin);
                 if (response.IsSuccessStatusCode)
