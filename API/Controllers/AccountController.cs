@@ -57,6 +57,8 @@ namespace API.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] BLL.Models.User model)
         {
+            model.Wallet = new BLL.Models.Wallet();
+            model.Wallet.Credential = Utils.RSA.KeyGenerate();
             var result = await _userManager.CreateAsync(model, model.Password);
             if (result.Succeeded)
             {

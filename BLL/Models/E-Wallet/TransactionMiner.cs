@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace Miner.Models
+namespace BLL.Models
 {
-    public class Transaction
+    public class TransactionMiner
     {
         public string Recipient { get; set; }
         public string Sender { get; set; }

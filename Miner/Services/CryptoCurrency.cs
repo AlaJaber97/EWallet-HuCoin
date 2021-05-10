@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -122,13 +123,13 @@ namespace Miner.Services
         private void AddTransaction(Transaction transaction)
         {
             CurrentTransactions.Add(transaction);
-            if(transaction.Sender != MinerCredential.PublicKey)
+            if(transaction.Sender != MinerCredential.PublicKey && transaction.Fees > 0)
             {
                 CurrentTransactions.Add(new Transaction
                 {
                     Sender = transaction.Sender,
                     Recipient = MinerCredential.PublicKey,
-                    Amount = transaction.Amount,
+                    Amount = transaction.Fees,
                 });
             }
         }
@@ -140,9 +141,32 @@ namespace Miner.Services
         public string GetFullChain() => System.Text.Json.JsonSerializer.Serialize(new Blockchain(Chain));
         
 
-        //How to connect with other miner (Consensus)
-        //And solve any confilct happen
-        
+        public async Task<object> Consensus()
+        {
+            var isReplaced = await ResolveConflicts();
+            var message = $"Our chain {(isReplaced ? "was replaced" : "is authoritive")}";
+            return new { message = message, chain = Chain };
+        }
+        private async Task<bool> ResolveConflicts()
+        {
+            var isChanged = false;
+            foreach (var node in Nodes)
+            {
+                using var httpClient = new HttpClient();
+                var response = await httpClient.GetAsync($"{node.Address}/chain");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var data = System.Text.Json.JsonSerializer.Deserialize<Blockchain>(json);
+                    if(data.Length > Chain.Count && IsValidChain(data.Chain))
+                    {
+                        Chain = data.Chain;
+                        isChanged = true;
+                    }
+                }
+            }
+            return isChanged;
+        }
         private bool IsValidChain(List<Block> chain)
         {
             var lastBlock = chain.First();
@@ -161,6 +185,6 @@ namespace Miner.Services
         public List<Transaction> GetTransactions() => CurrentTransactions;
         public List<Block> GetBlocks() => Chain;
         public List<Node> GetNodes() => Nodes;
-        public Credential GetCredential() => MinerCredential;
+        public string GetCredential() => MinerCredential.PublicKey;
     }
 }

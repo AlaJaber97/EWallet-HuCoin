@@ -14,6 +14,8 @@ namespace BLL.Models
         public int UniversityID { get; set; }
         public byte[] Image { get; set; }
 
+        public Guid WalletId { get; set; }
+        public Wallet Wallet { get; set; }
 
         [NotMapped]
         public string Password { get; set; }
