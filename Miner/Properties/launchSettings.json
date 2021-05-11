@@ -17,12 +17,22 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Miner": {
+    "Miner_JO": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5000",
+      "applicationUrl": "http://localhost:5555",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Miner_SA": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:4444",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

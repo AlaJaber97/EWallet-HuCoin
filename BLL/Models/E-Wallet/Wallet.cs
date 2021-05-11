@@ -6,7 +6,7 @@ namespace BLL.Models
 {
     public class Wallet
     {
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public Guid CredentialId { get; set; }
         public Credential Credential { get; set; }
     }

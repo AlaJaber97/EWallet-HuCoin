@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,7 +74,10 @@ namespace API.Controllers
         [HttpGet("Profile")]
         public IActionResult GetProfile()
         {
-            var user = _userManager.Users.SingleOrDefault(item => item.Id == UserID);
+            var user = _context.Users
+                        .Include(user=>user.Wallet)
+                        .ThenInclude(wallet=> wallet.Credential)
+                        .SingleOrDefault(item => item.Id == UserID);
             if (user != null)
             { 
                 return Ok(new BLL.Models.User
@@ -84,7 +88,8 @@ namespace API.Controllers
                     PhoneNumber = user.PhoneNumber,
                     PhoneNumberConfirmed = user.PhoneNumberConfirmed,
                     UniversityID = user.UniversityID,
-                    Image = user.Image
+                    Image = user.Image,
+                    Wallet = user.Wallet
                 });
             }
             else return NotFound();
