@@ -32,6 +32,8 @@ namespace API
             services.AddControllers()
                 .AddJsonOptions(option => option.JsonSerializerOptions.PropertyNamingPolicy = null);
             
+            services.AddRazorPages();
+
             services.AddDefaultIdentity<BLL.Models.User>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
@@ -121,7 +123,6 @@ namespace API
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "HuCoin API");
             });
-            // app.UseHttpsRedirection(); //redirection from http to https
 
             app.UseRouting();
 
@@ -130,6 +131,7 @@ namespace API
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
         }

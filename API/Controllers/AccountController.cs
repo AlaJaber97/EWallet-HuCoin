@@ -47,10 +47,10 @@ namespace API.Controllers
             }
             else
             {
-                if (result.IsLockedOut) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is locked out");
-                if (result.IsNotAllowed) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is not allowed");
-                if (result.RequiresTwoFactor) return StatusCode((int)HttpStatusCode.UnavailableForLegalReasons, "your account is requires two factor");
-                return StatusCode((int)HttpStatusCode.Unauthorized, "username or password not correct");
+                if (result.IsLockedOut) return Problem("your account is locked out");
+                if (result.IsNotAllowed) return Problem("your account is not allowed");
+                if (result.RequiresTwoFactor) return Problem("your account is requires two factor");
+                return Unauthorized("username or password not correct");
             }
         }
 
@@ -67,8 +67,20 @@ namespace API.Controllers
             }
             else
             {
-                return StatusCode((int)HttpStatusCode.BadRequest, result.Errors);
+                return Problem(string.Join("\n• ", result.Errors));
             }
+        }
+
+        [HttpPost("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] BLL.Models.ChangePassword model)
+        {
+            var user = await _userManager.FindByNameAsync(model.UserName);
+            if (user == null) return NotFound($"Can not found user {model.UserName}");
+
+            var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+            if (result.Succeeded) return Ok();
+
+            return Problem(string.Join("\n• ", result.Errors));
         }
 
         [HttpGet("Profile")]

@@ -21,12 +21,13 @@
             <StackLayout Margin="0" Padding="0" Spacing="0">
                 <Label Text="Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
                 <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="10">
-                    <Entry/>
+                    <Entry Keyboard="Telephone" Placeholder="+9627********" Text="{Binding PhoneNumber}"/>
                 </Frame>
             </StackLayout>
             <Button Text="Submit" TextTransform="None" CornerRadius="5" 
                     BackgroundColor="#E6611A" TextColor="white" 
-                    FontSize="Medium" FontAttributes="Bold"/>
+                    FontSize="Medium" FontAttributes="Bold"
+                    Command="{Binding SubmitPhoneNumebrCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
