@@ -9,7 +9,7 @@ namespace HuCoin
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Views.LoginPage());
+            MainPage = new NavigationPage(new Views.Walkthorugh.WalkthorughPage());
         }
 
         protected override void OnStart()
