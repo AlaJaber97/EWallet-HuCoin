@@ -27,13 +27,13 @@
                     </StackLayout>
                     <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">
                         <StackLayout Orientation="Horizontal" Grid.Column="0" Margin="0" Padding="0" Spacing="10">
-                            <CheckBox Color="#E6611A"/>
+                            <CheckBox Color="#E6611A" IsChecked="{Binding RequestLogin.IsRememberMe}"/>
                             <Label Text="Remember me" TextColor="White" FontAttributes="Bold"
                                    VerticalTextAlignment="Center"/>
                         </StackLayout>
-                        <Label Grid.Column="1" Text="Forget Password?" 
+                        <!--<Label Grid.Column="1" Text="Forget Password?" 
                                HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                               TextColor="#E6611A" FontAttributes="Bold"/>
+                               TextColor="#E6611A" FontAttributes="Bold"/>-->
                     </Grid>
                     <Button Text="Sign in" TextTransform="None" CornerRadius="5"
                             BackgroundColor="#E6611A" TextColor="White" 

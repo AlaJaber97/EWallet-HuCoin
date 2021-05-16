@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using API.Utils;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -69,6 +72,75 @@ namespace API.Controllers
             {
                 return StatusCode((int)HttpStatusCode.BadRequest, result.Errors);
             }
+        }
+
+        [HttpPost("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] BLL.Models.ChangePassword model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(model.UserName);
+                if (user == null)
+                    return BadRequest("Can not find user");
+
+                var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+
+                if (result.Succeeded)
+                    return Ok(result);
+
+                return BadRequest(result.Errors);
+            }
+
+            return BadRequest("Invalid details");
+        }
+
+        [HttpPost("ForgotPassword")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword([FromQuery]string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user == null)
+                return BadRequest("Can not find user");
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var link = Url.Action("ResetPassword", "Account", new { token, username = user.UserName }, Request.Scheme);
+
+            EmailHelper emailHelper = new EmailHelper();
+            bool emailResponse = emailHelper.SendEmailPasswordReset(user.Email, link);
+
+            if (emailResponse)
+                return Ok("you are send email to your address, please check your email");
+            else
+            {
+                // log email failed 
+            }
+            return Problem("send email to your address failed");
+        }
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromBody] BLL.Models.PasswordReset model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(model.UserName);
+                if (user == null)
+                    return BadRequest("Can not find user");
+
+                var decodedToken = WebEncoders.Base64UrlDecode(model.Token);
+                string normalToken = Encoding.UTF8.GetString(decodedToken);
+
+                if (model.NewPassword != model.ConfirmPassword)
+                    return BadRequest("The new password and confirm password does not matching");
+
+                var result = await _userManager.ResetPasswordAsync(user, normalToken, model.NewPassword);
+
+                if (result.Succeeded)
+                    return Ok(result);
+
+                return BadRequest(result.Errors);
+            }
+
+            return BadRequest("Invalid details");
         }
 
         [HttpGet("Profile")]

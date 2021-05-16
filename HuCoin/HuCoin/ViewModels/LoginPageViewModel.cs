@@ -20,6 +20,12 @@ namespace HuCoin.ViewModels
             RequestLogin = new BLL.Models.RequestLogin();
             OpenRegisterPageCommand = new Command(OpenRegisterPage);
             SignInCommand = new Command(()=> SingIn().ConfigureAwait(false));
+            Xamarin.Essentials.SecureStorage.GetAsync(AppStatic.LastUserLoginKey).ContinueWith(task=>
+            {
+                if (task.IsCompletedSuccessfully) 
+                    RequestLogin.Username = task.Result;
+            });
+
         }
         private void OpenRegisterPage()
         {
@@ -36,6 +42,8 @@ namespace HuCoin.ViewModels
                 if (response.IsSuccessStatusCode)
                 {
                     AppStatic.Token = await response.Content.ReadAsStringAsync();
+                    if (RequestLogin.IsRememberMe)
+                        await Xamarin.Essentials.SecureStorage.SetAsync(AppStatic.LastUserLoginKey,RequestLogin.Username);
                     OpenPageAsMainPage(new Views.MainPage());
                 }
                 else
