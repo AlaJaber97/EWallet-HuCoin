@@ -4,13 +4,13 @@
              x:Class="HuCoin.Views.AddBeneficiaryPage"
              xmlns:Views="clr-namespace:HuCoin.Views"             
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#AAC4C4C4">
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="White">
     <ContentPage.BindingContext>
         <ViewModels:AddBeneficiaryPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Frame Margin="20" Padding="0" BackgroundColor="White" CornerRadius="20">
+        <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="20">
             <StackLayout Margin="0" Padding="0" Spacing="20">
                 <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
                     <Image Source="arrow_to_left" Aspect="AspectFit">

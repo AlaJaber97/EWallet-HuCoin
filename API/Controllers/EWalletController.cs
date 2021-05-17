@@ -41,8 +41,14 @@ namespace API.Controllers
         }
 
         [HttpPost("get/transactions")]
-        public async Task<IActionResult> GetTransactions(string ownerAddress)
+        public async Task<IActionResult> GetTransactions(string PhoneNumber)
         {
+            var userRecipient = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
+                       .SingleOrDefault(user => user.PhoneNumber == PhoneNumber);
+            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {PhoneNumber}");
+
+            var ownerAddress = userRecipient.Wallet.Credential.PublicKey;
+
             using var httpClient = new HttpClient();
             var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetMinerAddress()}/blockchain/get/transactions", ownerAddress);
             var result = await response.Content.ReadAsStringAsync();
