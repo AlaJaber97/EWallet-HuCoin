@@ -11,9 +11,11 @@ namespace HuCoin.ViewModels
     public class BaseViewModel: INotifyPropertyChanged
     {
         public ICommand BackPageCommand { get; set; }
+        public ICommand BackModalCommand { get; set; }
         public BaseViewModel()
         {
             BackPageCommand = new Command(CloseCurrentPage);
+            BackModalCommand = new Command(CloseCurrentModal);
         }
         
         public void OpenPageAsMainPage(Page page)
@@ -61,6 +63,7 @@ namespace HuCoin.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string propretyname)
         {
+            if(PropertyChanged != null)
             PropertyChanged(this, new PropertyChangedEventArgs(propretyname));
         }
     }
