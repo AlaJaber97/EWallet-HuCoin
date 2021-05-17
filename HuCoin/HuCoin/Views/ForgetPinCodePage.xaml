@@ -8,7 +8,7 @@
         <ViewModels:ForgetPinCodePageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0" Padding="0" Spacing="0">
+        <StackLayout Margin="0" Padding="10" Spacing="10">
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
                 <Image Source="arrow_to_left" Aspect="AspectFit">
                     <Image.GestureRecognizers>
@@ -18,16 +18,18 @@
                 <Label Text="Forget PIN Code" TextColor="#2E3058"
                        FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Margin="0" Padding="0" Spacing="0">
-                <Label Text="Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
-                <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="10">
-                    <Entry Keyboard="Telephone" Placeholder="+9627********" Text="{Binding PhoneNumber}"/>
-                </Frame>
-            </StackLayout>
-            <Button Text="Submit" TextTransform="None" CornerRadius="5" 
+            <StackLayout Margin="10" Padding="0" Spacing="20">
+                <StackLayout Margin="0" Padding="0" Spacing="0">
+                    <Label Text="Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
+                    <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="10">
+                        <Entry Keyboard="Telephone" Placeholder="+9627********" Text="{Binding PhoneNumber}"/>
+                    </Frame>
+                </StackLayout>
+                <Button Text="Submit" TextTransform="None" CornerRadius="5" 
                     BackgroundColor="#E6611A" TextColor="white" 
                     FontSize="Medium" FontAttributes="Bold"
                     Command="{Binding SubmitPhoneNumebrCommand}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
