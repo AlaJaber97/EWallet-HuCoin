@@ -2,43 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.AddBeneficiaryPage"
-             xmlns:Views="clr-namespace:HuCoin.Views"
-             
+             xmlns:Views="clr-namespace:HuCoin.Views"             
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#AAC4C4C4">
     <ContentPage.BindingContext>
         <ViewModels:AddBeneficiaryPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0" Padding="0" Spacing="20">
-            <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
-                <Image Source="arrow_to_left" Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
-                    </Image.GestureRecognizers>
-                </Image>
-                <Label Text="Add Beneficiary" TextColor="#2E3058" 
+        <Frame Margin="20" Padding="0" BackgroundColor="White" CornerRadius="20">
+            <StackLayout Margin="0" Padding="0" Spacing="20">
+                <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
+                    <Image Source="arrow_to_left" Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackModalCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Add Beneficiary" TextColor="#2E3058" 
                        FontAttributes="Bold" FontSize="Medium"/>
-            </StackLayout>
-            <StackLayout Margin="10" Padding="0" Spacing="30">
-                <Image Source="identity" Aspect="AspectFit" Margin="30,0"/>
-                <StackLayout Margin="0" Padding="0" Spacing="20" VerticalOptions="CenterAndExpand">
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Beneficiary Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
-                        <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Entry Keyboard="Telephone"/>
-                        </Frame>
-                    </StackLayout>
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Beneficiary Name" TextColor="#2E3058" FontAttributes="Bold"/>
-                        <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Entry/>
-                        </Frame>
-                    </StackLayout>
                 </StackLayout>
-                <Button Text="Save" TextTransform="None" CornerRadius="5" BackgroundColor="#E6611A"                        
-                        TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
+                <StackLayout Margin="10" Padding="0" Spacing="30">
+                    <Image Source="identity" Aspect="AspectFit" Margin="30,0"/>
+                    <StackLayout Margin="0" Padding="0" Spacing="20" VerticalOptions="CenterAndExpand">
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label Text="Beneficiary Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
+                                <Entry Keyboard="Telephone" Placeholder="+9627********" Text="{Binding Beneficiary.PhoneNumber}"/>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label Text="Beneficiary Name" TextColor="#2E3058" FontAttributes="Bold"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
+                                <Entry Text="{Binding Beneficiary.Name}"/>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    <Button Text="Save" TextTransform="None" CornerRadius="5" BackgroundColor="#E6611A"                        
+                            TextColor="white" FontSize="Medium" FontAttributes="Bold"
+                            Command="{Binding SaveBeneficiaryCommand}"/>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

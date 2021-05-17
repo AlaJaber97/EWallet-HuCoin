@@ -20,18 +20,5 @@ namespace API.Utils
                 PublicKey = publicKey.ToString()
             };
         }
-        public static string SignatureGenerate(string PrivateKey, string Message)
-        {
-            var secret = Network.Main.CreateBitcoinSecret(PrivateKey);
-            var signature = secret.PrivateKey.SignMessage(Message);
-            return signature;
-        }
-        public static bool Verify(string pubKey, string originalMessage, string signedMessage)
-        {
-            var address = BitcoinAddress.Create(pubKey, Network.Main);
-            var privateKey = address as IPubkeyHashUsable;
-            var isVerified = privateKey.VerifyMessage(originalMessage, signedMessage);
-            return isVerified;
-        }
     }
 }

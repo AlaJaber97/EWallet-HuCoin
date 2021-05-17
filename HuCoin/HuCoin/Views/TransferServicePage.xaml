@@ -34,7 +34,9 @@
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Beneficiary" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Picker/>
+                            <Picker Title="Select Beneficiary"
+                                    ItemsSource="{Binding Beneficiaries}" SelectedItem="{Binding Beneficiary}"
+                                    ItemDisplayBinding="{Binding Name}" />
                         </Frame>
                         <Label Text="add new beneficiary" TextColor="#E6611A" 
                                FontAttributes="Bold" HorizontalTextAlignment="End">
@@ -46,7 +48,7 @@
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Amount" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Entry Keyboard="Numeric"/>
+                            <Entry Keyboard="Numeric" Placeholder="0.00" Text="{Binding Amount}"/>
                         </Frame>
                     </StackLayout>
                     <Button Text="Transfer" CornerRadius="5" BackgroundColor="#E6611A"

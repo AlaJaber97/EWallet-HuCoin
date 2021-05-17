@@ -21,9 +21,11 @@ namespace HuCoin.ViewModels
         {
             //store pin code on mobile setting/preffrence 
             var original_pincode = await Xamarin.Essentials.SecureStorage.GetAsync(AppStatic.HuCoinPinCodeKey);
-            //back to opration page
-            if (original_pincode != pincode)
+            if (original_pincode == pincode)
+            {
+                MessagingCenter.Send(this, "VerficationPinCode", true);
                 CloseCurrentPage();
+            }
             else
                 await DisplayAlert("Worng Pin Code", "The code you entered appears to be incorrect, please try again", "Okay");
         }
