@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,20 +22,24 @@ namespace HuCoin.ViewModels
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
             TransferServiceCommand = new Command(TransferService);
-            LoadBeneficiaries();
+            LoadBeneficiaries().ConfigureAwait(false);
         }
-        private void LoadBeneficiaries()
+        private async Task LoadBeneficiaries()
         {
             using var loadingview = new Components.LoadingView();
 
             using var db = new Data.DbCon();
-            Beneficiaries = db.Beneficiaries.ToList();
+            Beneficiaries = await db.Beneficiaries.ToListAsync();
             OnPropertyChanged(nameof(Beneficiaries));
         }
         private void AddNewBeneficiary()
         {
-            OpenModal(new Views.AddBeneficiaryPage()); 
-            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries());
+            OpenModal(new Views.AddBeneficiaryPage()
+            {
+                BackgroundColor = Color.FromHex("#AAC4C4C4"),
+                Padding = 10
+            }); 
+            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
 
         }
         private void TransferService()
@@ -63,8 +68,7 @@ namespace HuCoin.ViewModels
             var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/send/transaction", transaction);
             if (response.IsSuccessStatusCode)
             {
-                var message = await response.Content.ReadAsStringAsync();
-                await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
+
             }
             else
             {

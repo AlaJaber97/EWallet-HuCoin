@@ -5,8 +5,7 @@
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="10">
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
-                <Image Source="arrow_to_left" Aspect="AspectFit"/>
-                <Label Text="Transaction History" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+-                <Label Text="Transaction History" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Margin="20,10" Padding="0" Spacing="10">
                 <Frame Margin="0" Padding="10" CornerRadius="10" BackgroundColor="#F5F5F5" HasShadow="True">
