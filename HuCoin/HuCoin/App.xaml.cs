@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +10,21 @@ namespace HuCoin
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Views.Walkthorugh.WalkthorughPage());
+            OpenStartupPage();
+        }
+
+        private void OpenStartupPage()
+        {
+            if (this.Properties.ContainsKey(AppStatic.IsFirstTimeRunApplicationKey))
+            {
+                MainPage = new NavigationPage(new Views.MainPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Views.Walkthorugh.WalkthorughPage());
+                this.Properties.Add(AppStatic.IsFirstTimeRunApplicationKey, true);
+                this.SavePropertiesAsync();
+            }
         }
 
         protected override void OnStart()
