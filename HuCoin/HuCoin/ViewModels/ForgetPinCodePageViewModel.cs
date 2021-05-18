@@ -12,22 +12,37 @@ namespace HuCoin.ViewModels
 {
     public class ForgetPinCodePageViewModel : ViewModels.BaseViewModel
     {
-        public string VerificationID { get; set; }
-        public string PhoneNumber { get; set; }
-        public string VerificationCode { get; set; }
-        public ICommand SubmitPhoneNumberCommand { get; set; }
+        public ICommand SubmitPhoneNumebrCommand { get; set; }
         public ICommand VerifyPhoneNumberCommand { get; set; }
+        public string PhoneNumber { get; set; }
+        public string VerificationID { get; set; }
+        public string VerificationCode { get; set; }
         public ForgetPinCodePageViewModel()
         {
-            SubmitPhoneNumberCommand = new Command(() => SubmitPhoneNumber().ConfigureAwait(false));
+            SubmitPhoneNumebrCommand = new Command(() => SubmitPhoneNumebr().ConfigureAwait(false));
             VerifyPhoneNumberCommand = new Command(() => Verification().ConfigureAwait(false));
-        }
 
-        private async Task SubmitPhoneNumber()
+        }
+        private async Task SubmitPhoneNumebr()
         {
-            OpenPage(new Views.VerificationPhoneCodePage() { BindingContext = this });
-            var verificationResult = await CrossFirebaseAuth.Current.PhoneAuthProvider.VerifyPhoneNumberAsync(PhoneNumber);
-            VerificationID = verificationResult.VerificationId;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(PhoneNumber) || !PhoneNumber.StartsWith("+9627"))
+                {
+                    string ErrorMessage = "Please fill in the following fields:";
+                    ErrorMessage += "\nmust phone number start with +9627 and not be empty field";
+                    await DisplayAlert("Fields Required", ErrorMessage, "Okay").ConfigureAwait(false);
+                    return;
+                }
+                using var loadingview = new Components.LoadingView();
+                OpenPage(new Views.VerificationPhoneCodePage() { BindingContext = this });
+                var verificationResult = await CrossFirebaseAuth.Current.PhoneAuthProvider.VerifyPhoneNumberAsync(PhoneNumber);
+                VerificationID = verificationResult.VerificationId;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(string.Empty, ex.ToString(), "Okay");
+            }
         }
         private async Task Verification()
         {
@@ -43,7 +58,7 @@ namespace HuCoin.ViewModels
                 }
                 else
                 {
-                    await DisplayAlert(string.Empty, "Unfortunately, we were unable to verify your phone number, please try again\nIf the problem recurs, please contact support", "Okay").ConfigureAwait(false);
+                    await DisplayAlert("An error occurred", "Unfortunatley, we were unable to verify your phone number, please try agin\nIf the problem recures, please contact support", "Ok").ConfigureAwait(false);
                 }
             }
             catch (Exception ex)

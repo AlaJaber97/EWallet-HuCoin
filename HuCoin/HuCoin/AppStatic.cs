@@ -12,7 +12,7 @@ namespace HuCoin
         public static BLL.Models.Wallet Wallet { get; set; }
         public static readonly string IsFirstTimeRunApplicationKey = "IsFirstTimeRunApplication";
         public static readonly string HuCoinPinCodeKey = "HuCoinPinCode";
-        public static readonly string LastUserLoginKey = "LastUserLogin";
+        internal static readonly string LastUserLoginKey = "LastUserLogin";
 
         public static AuthenticationHeaderValue GetAuthenticationHeader()
         {
