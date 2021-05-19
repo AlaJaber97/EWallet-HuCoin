@@ -65,7 +65,7 @@ namespace Miner.Controllers
         }
 
         [HttpGet("miner/key")]
-        public IActionResult GetMinerKey(string[] nodes)
+        public IActionResult GetMinerKey()
         {
             return Ok(BlockChain.GetCredential());
         }

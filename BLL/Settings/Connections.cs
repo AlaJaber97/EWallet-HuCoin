@@ -7,7 +7,7 @@ namespace BLL.Settings
     public static class Connections
     {
         public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.Ammar;
-        public static readonly BLL.Enums.MinerServer Miner = BLL.Enums.MinerServer.Miner_JO;
+        public static readonly BLL.Enums.MinerServer Miner = BLL.Enums.MinerServer.Development;
         public static string GetServerAddress()
         {
             return Server switch
@@ -21,6 +21,7 @@ namespace BLL.Settings
         {
             return Miner switch
             {
+                BLL.Enums.MinerServer.Development=> "http://localhost:5378",
                 BLL.Enums.MinerServer.Miner_JO => "http://localhost:5555",
                 BLL.Enums.MinerServer.Miner_SA => "http://localhost:4444",
                 _ => throw new NotImplementedException(),

@@ -21,7 +21,7 @@ namespace HuCoin
             }
             else
             {
-                MainPage = new NavigationPage(new Views.Walkthorugh.WalkthorughPage());
+                MainPage = new Views.Walkthorugh.WalkthorughPage();
                 this.Properties.Add(AppStatic.IsFirstTimeRunApplicationKey, true);
                 this.SavePropertiesAsync();
             }

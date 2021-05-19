@@ -18,16 +18,25 @@ namespace Miner.Services
         private static int BlockCount;
         private static decimal Reward;
         private static Credential MinerCredential;
-        private Block LastBlock => Chain.Last();
+        private Block LastBlock => Chain.LastOrDefault();
 
         public CryptoCurrency()
         {
             CurrentTransactions = new();
             Chain = new();
             Nodes = new();
-
             MinerCredential = Utils.RSA.KeyGenerate();
             Reward = 50;
+
+            CurrentTransactions.Add(new Transaction
+            {
+                Sender = "0",
+                Recipient = MinerCredential.PublicKey,
+                Amount = 150,
+                Fees = 0,
+                Signature = string.Empty
+            });
+            CreateNewBlock(prevProof: 100, prevHash: "1");
         }
         public void RegisterNodes(string[] listAddress) =>
             Array.ForEach(listAddress, address => RegisterNode(address));
@@ -39,7 +48,7 @@ namespace Miner.Services
             {
                 Index = Chain.Count,
                 Timestemp = DateTime.UtcNow,
-                Transactions = CurrentTransactions,
+                Transactions = CurrentTransactions.ToList(),
                 Proof = prevProof,
                 PreviousHash = prevHash ?? GetHash(Chain.Last()),
             };

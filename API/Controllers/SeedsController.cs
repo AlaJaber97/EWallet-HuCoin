@@ -27,6 +27,44 @@ namespace API.Controllers
                 $"IP Server: {BLL.Settings.Connections.GetServerAddress()}"
                 );
         }
+        [HttpGet("Fill")]
+        public IActionResult FillDB()
+        {
+            try
+            {
+                _context.Users.Add(new BLL.Models.User
+                {
+                    FirstName = "Ala'",
+                    SecondName = "Saeed",
+                    FamilyName = "Jaber",
+                    PhoneNumber = "+962785461900",
+                    PhoneNumberConfirmed = true,
+                    UserName = "+962785461900",
+                    Wallet = new BLL.Models.Wallet
+                    {
+                        Credential = Utils.RSA.KeyGenerate()
+                    }
+                });
+                _context.Users.Add(new BLL.Models.User
+                {
+                    FirstName = "Ammar'",
+                    SecondName = "Mohammed",
+                    FamilyName = "Dolat",
+                    PhoneNumber = "+962777192116",
+                    PhoneNumberConfirmed = true,
+                    UserName = "+962777192116",
+                    Wallet = new BLL.Models.Wallet
+                    {
+                        Credential = Utils.RSA.KeyGenerate()
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Problem(detail: ex.ToString(), instance: "FillDB", statusCode: StatusCodes.Status500InternalServerError);
+            }
+            return Ok("Successed Fill Database");
+        }
         /// <summary>
         /// to use this action write in your browser "http://localhost:52600/api/seeds/create"
         /// </summary>

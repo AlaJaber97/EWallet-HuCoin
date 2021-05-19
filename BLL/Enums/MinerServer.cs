@@ -8,5 +8,6 @@ namespace BLL.Enums
     {
         Miner_JO,
         Miner_SA,
+        Development,
     }
 }

@@ -19,10 +19,9 @@ namespace HuCoin.Views.Walkthorugh
         {
             InitializeComponent();
             SkipCommand = new Command(SkipOpration);
-            SkipCommand = new Command(NextOpration);
+            NextCommand = new Command(NextOpration);
             OpenStartUpPageCommand = new Command(OpenStartUpPage);
-            foreach (var child in this.Children)
-                child.BindingContext = this;
+            BindingContext = this;
         }
 
         private void OpenStartUpPage()

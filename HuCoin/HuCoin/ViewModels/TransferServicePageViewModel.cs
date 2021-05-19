@@ -18,6 +18,8 @@ namespace HuCoin.ViewModels
         public decimal Amount { get; set; }
         public ICommand AddNewBeneficiaryCommand { get; set; }
         public ICommand TransferServiceCommand { get; set; }
+        public decimal Balance { get; set; }
+
         public TransferServicePageViewModel()
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
@@ -27,10 +29,13 @@ namespace HuCoin.ViewModels
         private async Task LoadBeneficiaries()
         {
             using var loadingview = new Components.LoadingView();
-
             using var db = new Data.DbCon();
             Beneficiaries = await db.Beneficiaries.ToListAsync();
             OnPropertyChanged(nameof(Beneficiaries));
+
+
+            Balance = await GetBalanceUser();
+            OnPropertyChanged(nameof(Balance));
         }
         private void AddNewBeneficiary()
         {

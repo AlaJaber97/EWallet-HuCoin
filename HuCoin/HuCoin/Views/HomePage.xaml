@@ -54,16 +54,8 @@
                             <Label Text="Current Balance" TextColor="#2E3058"
                                FontAttributes="Bold" VerticalOptions="Center"/>
                         </StackLayout>
-                        <Label TextColor="#2E3058" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="51.516"/>
-                                        <Span Text=" HU"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
+                        <Label TextColor="#2E3058" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"
+                               Text="{Binding Balance,StringFormat='{0:D2} HU'}" />
                     </StackLayout>
                 </StackLayout>
             </Frame>

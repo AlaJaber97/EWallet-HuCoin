@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.Walkthorugh.DecentralizedApplication">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="10" Padding="0" Spacing="0">
+            <StackLayout Margin="20,0" Padding="0" Spacing="30" VerticalOptions="CenterAndExpand">
+                <Image Source="no_bank" Aspect="AspectFit" 
+                   VerticalOptions="Start" HorizontalOptions="Center"
+                   Margin="70,0"/>
+                <Label Text="Decentrilized Application"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2E3058"
+                   FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="This application is found to serve Categories which they don't prefer to deal with centralized organization" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2E3058"
+                   FontSize="Medium" LineHeight="1.5"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="0" 
+                         VerticalOptions="EndAndExpand">
+                <Label Text="Skip" FontSize="Medium"
+                       TextColor="#2E3058" FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SkipCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <IndicatorView IndicatorColor="#707070" SelectedIndicatorColor="#E76119" 
+                               HorizontalOptions="CenterAndExpand"
+                               Count="3" Position="0" IndicatorSize="15"/>
+                <Label Text="Next" FontSize="Medium"
+                       TextColor="#2E3058" FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NextCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

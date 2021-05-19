@@ -15,7 +15,7 @@ namespace HuCoin.ViewModels
         public ICommand OpenTransferServiceCommand { get; set; }
         public ICommand OpenBeneficiariesCommand { get; set; }
         public BLL.Models.User User { get; set; }
-        public string Balance { get; set; }
+        public decimal Balance { get; set; }
         public HomePageViewModel()
         {
             OpenCashOutServiceCommand = new Command(OpenCashOutService);
@@ -39,12 +39,8 @@ namespace HuCoin.ViewModels
                 AppStatic.Wallet = User.Wallet;
                 OnPropertyChanged(nameof(User));
 
-                var response_Wallet = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/get/balance");
-                var result = await response_Wallet.Content.ReadAsStringAsync();
-                if (decimal.TryParse(result, out decimal amount))
-                    Balance = $"{amount:D2}";
-                else
-                    Balance = "0.00";
+                Balance = await GetBalanceUser();
+                OnPropertyChanged(nameof(Balance));
             }
             else
             {

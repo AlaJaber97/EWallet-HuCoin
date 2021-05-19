@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -59,6 +60,16 @@ namespace HuCoin.ViewModels
             return isAproved;
         }
 
+        public async Task<decimal> GetBalanceUser()
+        {
+            using var httpClient = new HttpClient();
+            var response_Wallet = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/get/balance");
+            var result = await response_Wallet.Content.ReadAsStringAsync();
+            if (decimal.TryParse(result, out decimal amount))
+                return amount;
+            else
+                return 0;
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string propretyname)
