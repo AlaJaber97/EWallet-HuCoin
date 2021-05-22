@@ -17,7 +17,8 @@ namespace HuCoin.ViewModels
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
             OpenBeneficiaryDetailsCommand = new Command<Models.Beneficiary>(beneficiary=> OpenBeneficiaryDetails(beneficiary));
-            LoadBeneficiaries().ConfigureAwait(false);
+            LoadBeneficiaries().ConfigureAwait(false); 
+            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
         }
         private async Task LoadBeneficiaries()
         {
@@ -30,7 +31,6 @@ namespace HuCoin.ViewModels
         private void AddNewBeneficiary()
         {
             OpenPage(new Views.AddBeneficiaryPage()); 
-            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
         }
         private void OpenBeneficiaryDetails(Models.Beneficiary beneficiary)
         {

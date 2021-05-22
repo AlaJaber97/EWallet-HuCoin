@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -63,12 +64,19 @@ namespace HuCoin.ViewModels
         public async Task<decimal> GetBalanceUser()
         {
             using var httpClient = new HttpClient();
-            var response_Wallet = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/get/balance");
-            var result = await response_Wallet.Content.ReadAsStringAsync();
-            if (decimal.TryParse(result, out decimal amount))
-                return amount;
+            httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
+            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/get/balance",AppStatic.Wallet.Credential.PublicKey);
+            var result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                if (decimal.TryParse(result, out decimal amount))
+                    return amount;
+            }
             else
-                return 0;
+            {
+                await DisplayAlert(string.Empty, response.ToString(), "Okat");
+            }
+            return 0;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

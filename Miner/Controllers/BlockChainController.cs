@@ -12,9 +12,11 @@ namespace Miner.Controllers
     public class BlockChainController : ControllerBase
     {
         public readonly Services.CryptoCurrency BlockChain;
-        public BlockChainController(Services.CryptoCurrency blockChain)
+        public readonly Services.Recharger Recharger;
+        public BlockChainController(Services.CryptoCurrency blockChain, Services.Recharger recharger)
         {
             this.BlockChain = blockChain;
+            this.Recharger = recharger;
         }
         [HttpGet("get/transactions")]
         public IActionResult GetTransactions()
@@ -34,7 +36,8 @@ namespace Miner.Controllers
         [HttpPost("get/balance")]
         public IActionResult GetBalance(string ownerAddress)
         {
-            return Ok(BlockChain.GetBalance(ownerAddress));
+            var balance = BlockChain.GetBalance(ownerAddress);
+            return Ok(balance);
         }
         [HttpGet("chain")]
         public IActionResult GetBlocks()
@@ -67,8 +70,35 @@ namespace Miner.Controllers
         [HttpGet("miner/key")]
         public IActionResult GetMinerKey()
         {
-            return Ok(BlockChain.GetCredential());
+            return Ok(BlockChain.GetCredential()?.PublicKey);
         }
 
+        [HttpPost("recharge/balance")]
+        public IActionResult RechargeBalance(int cardnumber, string ownerAddress)
+        {
+            var CardCharge = Recharger.ChargeCards.SingleOrDefault(item => item.Number == cardnumber);
+            if (CardCharge != null)
+            {
+                var credential = BlockChain.GetCredential();
+                var transaction = new Miner.Models.Transaction
+                {
+                    Sender = "0",
+                    Recipient = ownerAddress,
+                    Amount = (decimal)CardCharge.Value,
+                    Fees =0,
+                };
+                transaction.Signature = Utils.RSA.SignatureGenerate(credential.PrivateKey, transaction.ToString());
+                var message = BlockChain.CreateTransaction(transaction);
+                if(message.Contains("Transcation Successed")) Recharger.UseCard(cardnumber);
+                return Ok(message);
+            }
+            return BadRequest("Can not found this number card");
+        }
+
+        [HttpPost("new/recharge")]
+        public IActionResult CreateRechargeCard(int count, double value)
+        {
+            return Ok(Recharger.CreateChargeCards(count, value));
+        }
     }
 }

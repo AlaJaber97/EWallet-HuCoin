@@ -120,14 +120,14 @@ namespace Miner.Services
         }
         private bool HasBalance(Transaction transaction) =>
             GetBalance(transaction.Sender) >= transaction.Amount;
-        public bool CreateTransaction(Transaction transaction)
+        public string CreateTransaction(Transaction transaction)
         {
             var isVerified = VerifyTransactionSignature(transaction, transaction.Signature, transaction.Sender);
-            if (!isVerified || transaction.Sender == transaction.Recipient) return false;
-            if (!HasBalance(transaction)) return false;
+            if (!isVerified || transaction.Sender == transaction.Recipient) return "Bad Transaction";
+            if (!HasBalance(transaction)) return "you are not have enough balance to this transaction";
 
             AddTransaction(transaction);
-            return true;
+            return "Transcation Successed";
         }
         private void AddTransaction(Transaction transaction)
         {
@@ -194,6 +194,6 @@ namespace Miner.Services
         public List<Transaction> GetTransactions() => CurrentTransactions;
         public List<Block> GetBlocks() => Chain;
         public List<Node> GetNodes() => Nodes;
-        public string GetCredential() => MinerCredential.PublicKey;
+        public Credential GetCredential() => MinerCredential;
     }
 }

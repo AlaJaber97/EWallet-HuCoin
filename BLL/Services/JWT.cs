@@ -15,7 +15,8 @@ namespace BLL.Services
                 new System.Security.Claims.Claim(ClaimTypes.NameIdentifier, user.Id),
                 new System.Security.Claims.Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub, user.UserName),
                 new System.Security.Claims.Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new System.Security.Claims.Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.GivenName, user.FirstName)
+                new System.Security.Claims.Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.GivenName, user.FirstName),
+                new System.Security.Claims.Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber, user.PhoneNumber)
             };
 
             var key = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes("SOME_RANDOM_KEY_DO_NOT_SHARE"));
@@ -41,6 +42,7 @@ namespace BLL.Services
                 {
                     Id = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == ClaimTypes.NameIdentifier).Value,
                     UserName = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub).Value,
+                    PhoneNumber = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber).Value,
                     FirstName = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.GivenName).Value,
                 };
             }
