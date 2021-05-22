@@ -11,17 +11,22 @@ namespace HuCoin.ViewModels
     public class CashInServicePageViewModel : ViewModels.BaseViewModel
     {
         public ICommand RechargeBalanceCommand { get; set; }
+        public decimal CardNumber { get; set; }
         public decimal Balance { get; set; }
-        public int CardNumber { get; set; }
+
         public CashInServicePageViewModel()
         {
             RechargeBalanceCommand = new Command(RechargeBalanceService);
-            Balance= Services.BalanceManagment.Instance.Balance;
             MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) =>
             {
                 if (isSuccessed) RechargeBalance().ConfigureAwait(false);
             });
-
+            LoadBalance().ConfigureAwait(false);
+        }
+        private async Task LoadBalance() 
+        {
+            Balance = await GetBalanceUser();
+            OnPropertyChanged(nameof(Balance));
         }
         private void RechargeBalanceService()
         {
@@ -29,21 +34,17 @@ namespace HuCoin.ViewModels
         }
         private async Task RechargeBalance()
         {
-            try 
+            try
             {
                 using var loadingview = new Components.LoadingView();
-
                 using var httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
-                var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/recharge/balance?number_card={CardNumber}&ownerAddress={AppStatic.Wallet.Credential.PublicKey}", null);
+                var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/blockchain/recharge/balance?cardnumber={CardNumber}&ownerAddress={AppStatic.Wallet.Credential.PublicKey}", null);
                 if (response.IsSuccessStatusCode)
                 {
                     var message = await response.Content.ReadAsStringAsync();
                     await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
-                    await Services.BalanceManagment.Instance.ReLoadBalance();
-                    Balance = Services.BalanceManagment.Instance.Balance;
-                    OnPropertyChanged(nameof(Balance));
-                    MessagingCenter.Send(this, "UpdateBalance");
+                    await LoadBalance().ConfigureAwait(false);
                 }
                 else
                 {
@@ -51,10 +52,11 @@ namespace HuCoin.ViewModels
                     await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
             }
         }
+
     }
 }

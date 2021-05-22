@@ -25,19 +25,25 @@ namespace HuCoin.ViewModels
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
             TransferServiceCommand = new Command(TransferService);
             LoadBeneficiaries().ConfigureAwait(false);
-            Balance = Services.BalanceManagment.Instance.Balance;
+
             MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
             MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) =>
             {
                 if (isSuccessed) SendTransaction().ConfigureAwait(false);
             });
-        }
+         }
         private async Task LoadBeneficiaries()
         {
             using var loadingview = new Components.LoadingView();
             using var db = new Data.DbCon();
             Beneficiaries = await db.Beneficiaries.ToListAsync();
             OnPropertyChanged(nameof(Beneficiaries));
+            await LoadBalance().ConfigureAwait(false);
+        }
+        private async Task LoadBalance()
+        {
+
+            Balance = await GetBalanceUser();
             OnPropertyChanged(nameof(Balance));
         }
         private void AddNewBeneficiary()
@@ -46,8 +52,8 @@ namespace HuCoin.ViewModels
             {
                 BackgroundColor = Color.FromHex("#AAC4C4C4"),
                 Padding = 10
-            });
-        }
+            }); 
+            }
         private void TransferService()
         {
             OpenPage(new Views.VerficationPinPage());
@@ -71,10 +77,7 @@ namespace HuCoin.ViewModels
                 {
                     var message = await response.Content.ReadAsStringAsync();
                     await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
-                    await Services.BalanceManagment.Instance.ReLoadBalance();
-                    Balance = Services.BalanceManagment.Instance.Balance;
-                    OnPropertyChanged(nameof(Balance));
-                    MessagingCenter.Send(this, "UpdateBalance");
+                    await LoadBalance().ConfigureAwait(false);
                 }
                 else
                 {

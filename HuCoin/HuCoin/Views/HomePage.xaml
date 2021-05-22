@@ -55,7 +55,7 @@
                                FontAttributes="Bold" VerticalOptions="Center"/>
                         </StackLayout>
                         <Label TextColor="#2E3058" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"
-                               Text="{Binding Balance,StringFormat='{0:F2} HU'}" />
+                               Text="{Binding Balance,StringFormat='{0:F} HU'}" />
                     </StackLayout>
                 </StackLayout>
             </Frame>

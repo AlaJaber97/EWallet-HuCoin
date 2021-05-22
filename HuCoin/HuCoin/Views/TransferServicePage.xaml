@@ -25,7 +25,7 @@
                             <Image Source="wallet" Aspect="AspectFit" 
                                    HorizontalOptions="Start" VerticalOptions="Center"
                                    HeightRequest="32" WidthRequest="32"/>
-                            <Label Text="{Binding Balance,StringFormat='{0:D2} HU'}" TextColor="white" FontAttributes="Bold"
+                            <Label Text="{Binding Balance,StringFormat='{0:F} HU'}" TextColor="white" FontAttributes="Bold"
                                     VerticalTextAlignment="Center" FontSize="Large"/>
                         </StackLayout>
                     </StackLayout>

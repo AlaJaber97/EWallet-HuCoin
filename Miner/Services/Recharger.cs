@@ -7,34 +7,34 @@ namespace Miner.Services
 {
     public class Recharger
     {
-        private List<Models.CardCharge> ChargeCards { get; set; }
+        public List<Models.CardCharge> ChargeCards { get; set; }
         public Recharger()
         {
             ChargeCards = new List<Models.CardCharge>();
         }
-        public List<Models.CardCharge> GetChargeCards() => ChargeCards;
-        public List<Models.CardCharge> CreateChargeCards(int count, decimal value)
+
+        public List<Models.CardCharge> CreateChargeCards(int count, double value)
         {
             var Random = new Random();
             var ListNewCard = new List<Models.CardCharge>();
             for (int index = 0; index < count; index++)
             {
-                int number_card;
-                //do
-                //{
-                    number_card = Random.Next(100_000_000, 999_999_999);
-                //} while (ChargeCards.Find(item => item.NumberCard == number_card) != null);
-
+                var numberCard = Random.Next(100_000_000, 999_999_999);
                 ListNewCard.Add(new Models.CardCharge
                 {
-                    NumberCard = number_card,
+                    Number = numberCard,
                     Value = value
                 });
             }
             ChargeCards.AddRange(ListNewCard);
             return ListNewCard;
         }
-
-        public bool UseCard(Models.CardCharge card) => ChargeCards.Remove(card);
+        public bool UseCard(int numberCard)
+        {
+            var card = ChargeCards.SingleOrDefault(card => card.Number == numberCard);
+            if (card == null) return false;
+            return ChargeCards.Remove(card);
+        }
     }
+
 }

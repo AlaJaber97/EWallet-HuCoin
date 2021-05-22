@@ -26,5 +26,11 @@ namespace API.Utils
                 PublicKey = publicKey.ToString()
             };
         }
+        public static string SignatureGenerate(string PrivateKey, string Message)
+        {
+            var secret = Network.Main.CreateBitcoinSecret(PrivateKey);
+            var signature = secret.PrivateKey.SignMessage(Message);
+            return signature;
+        }
     }
 }

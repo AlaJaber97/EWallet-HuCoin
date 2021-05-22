@@ -31,13 +31,13 @@ namespace Miner.Controllers
         [HttpPost("new/transaction")]
         public IActionResult CreateTransaction(Models.Transaction transaction)
         {
-            var message = BlockChain.CreateTransaction(transaction);
-            return Ok(message);
+            return Ok(BlockChain.CreateTransaction(transaction));
         }
         [HttpPost("get/balance")]
         public IActionResult GetBalance(string ownerAddress)
         {
-            return Ok(BlockChain.GetBalance(ownerAddress));
+            var balance = BlockChain.GetBalance(ownerAddress);
+            return Ok(balance);
         }
         [HttpGet("chain")]
         public IActionResult GetBlocks()
@@ -70,57 +70,35 @@ namespace Miner.Controllers
         [HttpGet("miner/key")]
         public IActionResult GetMinerKey()
         {
-            return Ok(BlockChain.GetCredential());
+            return Ok(BlockChain.GetCredential()?.PublicKey);
         }
 
         [HttpPost("recharge/balance")]
-        public IActionResult RechargeBalance(int number_card, string ownerAddress)
+        public IActionResult RechargeBalance(int cardnumber, string ownerAddress)
         {
-            var CardCharge = Recharger.GetChargeCards().FirstOrDefault(item => item.NumberCard == number_card);
-            if(CardCharge != null)
+            var CardCharge = Recharger.ChargeCards.SingleOrDefault(item => item.Number == cardnumber);
+            if (CardCharge != null)
             {
-                var transaction = new Models.Transaction
+                var credential = BlockChain.GetCredential();
+                var transaction = new Miner.Models.Transaction
                 {
                     Sender = "0",
                     Recipient = ownerAddress,
-                    Amount = CardCharge.Value,
-                    Fees = 0
+                    Amount = (decimal)CardCharge.Value,
+                    Fees =0,
                 };
-                if (Recharger.UseCard(CardCharge))
-                {
-                    BlockChain.RechargeBalance(transaction);
-                    return Ok($"recharge your balance with {CardCharge.Value} HU coin");
-                }
-                else
-                {
-                    return Problem("can not use this card");
-                }
+                transaction.Signature = Utils.RSA.SignatureGenerate(credential.PrivateKey, transaction.ToString());
+                var message = BlockChain.CreateTransaction(transaction);
+                if(message.Contains("Transcation Successed")) Recharger.UseCard(cardnumber);
+                return Ok(message);
             }
-            return BadRequest("can not found this number card");
+            return BadRequest("Can not found this number card");
         }
+
         [HttpPost("new/recharge")]
-        public IActionResult CreateChargeCards(int count, int value)
+        public IActionResult CreateRechargeCard(int count, double value)
         {
             return Ok(Recharger.CreateChargeCards(count, value));
         }
-        [HttpPost("list/recharge")]
-        public IActionResult GetChargeCards()
-        {
-            return Ok(Recharger.GetChargeCards());
-        }
-        [HttpPost("cashout")]
-        public IActionResult Cashout(decimal amount, string ownerAddress)
-        {
-            var transaction = new Models.Transaction
-            {
-                Sender = ownerAddress,
-                Recipient = "0",
-                Amount = amount,
-                Fees = 0
-            };
-            BlockChain.RechargeBalance(transaction);
-            return Ok($"The cash withdrawal of {amount} HU was successful");
-        }
-
     }
 }
