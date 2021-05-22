@@ -120,14 +120,14 @@ namespace Miner.Services
         }
         private bool HasBalance(Transaction transaction) =>
             GetBalance(transaction.Sender) >= transaction.Amount;
-        public bool CreateTransaction(Transaction transaction)
+        public string CreateTransaction(Transaction transaction)
         {
             var isVerified = VerifyTransactionSignature(transaction, transaction.Signature, transaction.Sender);
-            if (!isVerified || transaction.Sender == transaction.Recipient) return false;
-            if (!HasBalance(transaction)) return false;
+            if (!isVerified || transaction.Sender == transaction.Recipient) return "Bad transaction";
+            if (!HasBalance(transaction)) return "you are not have enough balance to this transaction";
 
             AddTransaction(transaction);
-            return true;
+            return "Transaction Successed";
         }
         private void AddTransaction(Transaction transaction)
         {
@@ -147,8 +147,7 @@ namespace Miner.Services
             int proof = ProofGenerate(LastBlock.PreviousHash);
             return CreateNewBlock(proof);
         }
-        public string GetFullChain() => System.Text.Json.JsonSerializer.Serialize(new Blockchain(Chain));
-        
+        public string GetFullChain() => System.Text.Json.JsonSerializer.Serialize(new Blockchain(Chain));       
 
         public async Task<object> Consensus()
         {
@@ -190,7 +189,11 @@ namespace Miner.Services
             }
             return true;
         }
-
+        public Block RechargeBalance(Transaction transaction)
+        {
+            CurrentTransactions.Add(transaction);
+            return CreateNewBlock(prevProof: 100, prevHash: "1");
+        }
         public List<Transaction> GetTransactions() => CurrentTransactions;
         public List<Block> GetBlocks() => Chain;
         public List<Node> GetNodes() => Nodes;

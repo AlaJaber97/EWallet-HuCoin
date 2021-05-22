@@ -17,7 +17,7 @@ namespace HuCoin
         {
             if (this.Properties.ContainsKey(AppStatic.IsFirstTimeRunApplicationKey))
             {
-                MainPage = new NavigationPage(new Views.MainPage());
+                MainPage = new NavigationPage(new Views.LoginPage());
             }
             else
             {

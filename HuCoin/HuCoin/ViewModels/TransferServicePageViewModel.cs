@@ -18,13 +18,17 @@ namespace HuCoin.ViewModels
         public decimal Amount { get; set; }
         public ICommand AddNewBeneficiaryCommand { get; set; }
         public ICommand TransferServiceCommand { get; set; }
-        public decimal Balance { get; set; }
+        public decimal Balance => Services.BalanceManagment.Instance.Balance;
 
         public TransferServicePageViewModel()
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
             TransferServiceCommand = new Command(TransferService);
-            LoadBeneficiaries().ConfigureAwait(false);
+            LoadBeneficiaries().ConfigureAwait(false); 
+            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
+            MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) => {
+                if (isSuccessed) SendTransaction().ConfigureAwait(false);
+            });
         }
         private async Task LoadBeneficiaries()
         {
@@ -32,9 +36,6 @@ namespace HuCoin.ViewModels
             using var db = new Data.DbCon();
             Beneficiaries = await db.Beneficiaries.ToListAsync();
             OnPropertyChanged(nameof(Beneficiaries));
-
-
-            Balance = await GetBalanceUser();
             OnPropertyChanged(nameof(Balance));
         }
         private void AddNewBeneficiary()
@@ -44,36 +45,29 @@ namespace HuCoin.ViewModels
                 BackgroundColor = Color.FromHex("#AAC4C4C4"),
                 Padding = 10
             }); 
-            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
-
         }
         private void TransferService()
         {
             OpenPage(new Views.VerficationPinPage());
-
-            MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender,isSuccessed) => {
-                if (isSuccessed) 
-                    SendTransaction().ConfigureAwait(false);
-            });
         }
         private async Task SendTransaction()
         {
             using var loadingview = new Components.LoadingView();
-            var transaction = new BLL.Models.Transaction
+            var transaction = new BLL.Models.TransactionClient
             {
-                Sender = AppStatic.Wallet.Credential.PublicKey,
+                SenderPhoneNumber = AppStatic.User.PhoneNumber,
                 RecipientPhoneNumber = Beneficiary.PhoneNumber,
-            Amount = Amount,
-        };
-            transaction.Signature = BLL.Utils.RSA.SignatureGenerate(AppStatic.Wallet.Credential.PrivateKey, transaction.ToString());
-
+                Amount = Amount,
+            };
 
             using var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
             var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/send/transaction", transaction);
             if (response.IsSuccessStatusCode)
             {
-
+                var message = await response.Content.ReadAsStringAsync();
+                await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
+                await Services.BalanceManagment.Instance.ReLoadBalance();
             }
             else
             {

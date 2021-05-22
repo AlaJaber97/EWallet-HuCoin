@@ -16,5 +16,10 @@ namespace HuCoin.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            OnPropertyChanged(nameof(ViewModels.HomePageViewModel.Balance));
+        }
     }
 }

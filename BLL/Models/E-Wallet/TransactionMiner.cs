@@ -4,9 +4,8 @@ using System.Text;
 
 namespace BLL.Models
 {
-    public class Transaction
+    public class TransactionMiner
     {
-        public string RecipientPhoneNumber { get; set; }
         public string Recipient { get; set; }
         public string Sender { get; set; }
         public string Signature { get; set; }

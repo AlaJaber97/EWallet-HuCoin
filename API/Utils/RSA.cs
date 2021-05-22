@@ -8,6 +8,12 @@ namespace API.Utils
 {
     public static class RSA
     {
+        public static string SignatureGenerate(string PrivateKey, string Message)
+        {
+            var secret = Network.Main.CreateBitcoinSecret(PrivateKey);
+            var signature = secret.PrivateKey.SignMessage(Message);
+            return signature;
+        }
         public static BLL.Models.Credential KeyGenerate()
         {
             var privateKey = new Key();

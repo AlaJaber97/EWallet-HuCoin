@@ -29,7 +29,8 @@ namespace Miner.Controllers
         [HttpPost("new/transaction")]
         public IActionResult CreateTransaction(Models.Transaction transaction)
         {
-            return Ok(BlockChain.CreateTransaction(transaction));
+            var message = BlockChain.CreateTransaction(transaction);
+            return Ok(message);
         }
         [HttpPost("get/balance")]
         public IActionResult GetBalance(string ownerAddress)
@@ -70,5 +71,21 @@ namespace Miner.Controllers
             return Ok(BlockChain.GetCredential());
         }
 
+        [HttpPost("recharge/balance")]
+        public IActionResult RechargeBalance(int cardnumber, string ownerAddress)
+        {
+            if(cardnumber == 123)
+            {
+                var transaction = new Models.Transaction
+                {
+                    Sender = "0",
+                    Recipient = ownerAddress,
+                    Amount = 20,
+                    Fees = 0
+                };                 
+                return Ok(BlockChain.RechargeBalance(transaction));
+            }
+            return BadRequest("can not found this number card");
+        }
     }
 }

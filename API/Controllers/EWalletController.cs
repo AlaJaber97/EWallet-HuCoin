@@ -23,21 +23,28 @@ namespace API.Controllers
             this._context = context;
         }
         [HttpPost("send/transaction")]
-        public async Task<IActionResult> SendTransaction(BLL.Models.Transaction transaction)
+        public async Task<IActionResult> SendTransaction(BLL.Models.TransactionClient transactionClient)
         {
+            var userSender = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
+                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.SenderPhoneNumber);
+            if (userSender?.Wallet?.Credential == null) return NotFound($"can not found sender with phone number {transactionClient.RecipientPhoneNumber}");
+            
             var userRecipient = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
-                                .SingleOrDefault(user => user.PhoneNumber == transaction.RecipientPhoneNumber);
-            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {transaction.RecipientPhoneNumber}");
-
-            transaction.Recipient = userRecipient.Wallet.Credential.PublicKey;
+                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.RecipientPhoneNumber);
+            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {transactionClient.RecipientPhoneNumber}");
+            var transactionMiner = new BLL.Models.TransactionMiner
+            {
+                Sender = userSender.Wallet.Credential.PublicKey,
+                Recipient = userRecipient.Wallet.Credential.PublicKey,
+                Amount = transactionClient.Amount,
+                Fees = transactionClient.Fees,
+            };
+            transactionMiner.Signature = Utils.RSA.SignatureGenerate(userSender.Wallet.Credential.PrivateKey, transactionMiner.ToString());
 
             using var httpClient = new HttpClient();
-            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/new/transaction", transaction);
+            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/new/transaction", transactionMiner);
             var result = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-                return Ok("Transaction Successfully!");
-            else
-                return Problem(result);
+            return StatusCode((int)response.StatusCode, result);
         }
 
         [HttpPost("get/address_user")]
@@ -55,30 +62,24 @@ namespace API.Controllers
         public async Task<IActionResult> GetTransactions(string PhoneNumber)
         {
             var userRecipient = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
-                       .SingleOrDefault(user => user.PhoneNumber == PhoneNumber);
+                                    .SingleOrDefault(user => user.PhoneNumber == PhoneNumber);
             if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {PhoneNumber}");
 
             var ownerAddress = userRecipient.Wallet.Credential.PublicKey;
 
             using var httpClient = new HttpClient();
-            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/get/transactions", ownerAddress);
+            var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/get/transactions?ownerAddress={ownerAddress}", null);
             var result = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-                return Ok(result);
-            else
-                return Problem(result);
+            return StatusCode((int)response.StatusCode, result);
         }
 
         [HttpPost("get/balance")]
         public async Task<IActionResult> GetBalance(string ownerAddress)
         {
             using var httpClient = new HttpClient();
-            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/get/balance", ownerAddress);
+            var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/get/balance?ownerAddress={ownerAddress}", null);
             var result = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-                return Ok(result);
-            else
-                return Problem(result);
+            return StatusCode((int)response.StatusCode, result);
         }
     }
 }

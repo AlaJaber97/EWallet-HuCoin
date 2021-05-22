@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class BaseViewModel: INotifyPropertyChanged
+    public class BaseViewModel: Services.NotifyPropertyChanged
     {
         public ICommand BackPageCommand { get; set; }
         public ICommand BackModalCommand { get; set; }
@@ -58,24 +58,6 @@ namespace HuCoin.ViewModels
             else
                 isAproved = await Xamarin.Essentials.MainThread.InvokeOnMainThreadAsync(() => App.Current.MainPage.DisplayAlert(title, message, okButton, cancelButton));
             return isAproved;
-        }
-
-        public async Task<decimal> GetBalanceUser()
-        {
-            using var httpClient = new HttpClient();
-            var response_Wallet = await httpClient.GetAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/get/balance");
-            var result = await response_Wallet.Content.ReadAsStringAsync();
-            if (decimal.TryParse(result, out decimal amount))
-                return amount;
-            else
-                return 0;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propretyname)
-        {
-            if(PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs(propretyname));
         }
     }
 }
