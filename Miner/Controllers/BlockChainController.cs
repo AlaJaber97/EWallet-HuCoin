@@ -12,9 +12,11 @@ namespace Miner.Controllers
     public class BlockChainController : ControllerBase
     {
         public readonly Services.CryptoCurrency BlockChain;
-        public BlockChainController(Services.CryptoCurrency blockChain)
+        public readonly Services.Recharger Recharger;
+        public BlockChainController(Services.CryptoCurrency blockChain, Services.Recharger recharger)
         {
             this.BlockChain = blockChain;
+            this.Recharger = recharger;
         }
         [HttpGet("get/transactions")]
         public IActionResult GetTransactions()
@@ -72,20 +74,53 @@ namespace Miner.Controllers
         }
 
         [HttpPost("recharge/balance")]
-        public IActionResult RechargeBalance(int cardnumber, string ownerAddress)
+        public IActionResult RechargeBalance(int number_card, string ownerAddress)
         {
-            if(cardnumber == 123)
+            var CardCharge = Recharger.GetChargeCards().FirstOrDefault(item => item.NumberCard == number_card);
+            if(CardCharge != null)
             {
                 var transaction = new Models.Transaction
                 {
                     Sender = "0",
                     Recipient = ownerAddress,
-                    Amount = 20,
+                    Amount = CardCharge.Value,
                     Fees = 0
-                };                 
-                return Ok(BlockChain.RechargeBalance(transaction));
+                };
+                if (Recharger.UseCard(CardCharge))
+                {
+                    BlockChain.RechargeBalance(transaction);
+                    return Ok($"recharge your balance with {CardCharge.Value} HU coin");
+                }
+                else
+                {
+                    return Problem("can not use this card");
+                }
             }
             return BadRequest("can not found this number card");
         }
+        [HttpPost("new/recharge")]
+        public IActionResult CreateChargeCards(int count, int value)
+        {
+            return Ok(Recharger.CreateChargeCards(count, value));
+        }
+        [HttpPost("list/recharge")]
+        public IActionResult GetChargeCards()
+        {
+            return Ok(Recharger.GetChargeCards());
+        }
+        [HttpPost("cashout")]
+        public IActionResult Cashout(decimal amount, string ownerAddress)
+        {
+            var transaction = new Models.Transaction
+            {
+                Sender = ownerAddress,
+                Recipient = "0",
+                Amount = amount,
+                Fees = 0
+            };
+            BlockChain.RechargeBalance(transaction);
+            return Ok($"The cash withdrawal of {amount} HU was successful");
+        }
+
     }
 }

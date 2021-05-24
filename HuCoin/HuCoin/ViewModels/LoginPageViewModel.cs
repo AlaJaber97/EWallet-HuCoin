@@ -35,32 +35,39 @@ namespace HuCoin.ViewModels
         }
         private async Task SingIn()
         {
-            if (!string.IsNullOrWhiteSpace(RequestLogin.Username) &&
-                !string.IsNullOrWhiteSpace(RequestLogin.Password))
+            try
             {
-                using var loadingview = new Components.LoadingView();
-                using var httpClient = new HttpClient();
-                var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/login", RequestLogin);
-                if (response.IsSuccessStatusCode)
+                if (!string.IsNullOrWhiteSpace(RequestLogin.Username) &&
+               !string.IsNullOrWhiteSpace(RequestLogin.Password))
                 {
-                    AppStatic.Token = await response.Content.ReadAsStringAsync();
-                    if (RequestLogin.IsRememberMe)
-                        await Xamarin.Essentials.SecureStorage.SetAsync(AppStatic.LastUserLoginKey, RequestLogin.Username);
+                    using var loadingview = new Components.LoadingView();
+                    using var httpClient = new HttpClient();
+                    var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/login", RequestLogin);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        AppStatic.Token = await response.Content.ReadAsStringAsync();
+                        if (RequestLogin.IsRememberMe)
+                            await Xamarin.Essentials.SecureStorage.SetAsync(AppStatic.LastUserLoginKey, RequestLogin.Username);
 
-                    if (await Xamarin.Essentials.SecureStorage.GetAsync(AppStatic.HuCoinPinCodeKey) == null)
-                        OpenPageAsMainPage(new Views.CreatePinCodePage());
+                        if (await Xamarin.Essentials.SecureStorage.GetAsync(AppStatic.HuCoinPinCodeKey) == null)
+                            OpenPageAsMainPage(new Views.CreatePinCodePage());
+                        else
+                            OpenPageAsMainPage(new Views.MainPage());
+                    }
                     else
-                        OpenPageAsMainPage(new Views.MainPage());
+                    {
+                        var error = await response.Content.ReadAsStringAsync();
+                        await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                    }
                 }
                 else
                 {
-                    var error = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                    await DisplayAlert("Required Field", "Please, don't leave empty fields", "Ok").ConfigureAwait(false);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                await DisplayAlert("Required Field", "Please, don't leave empty fields", "Ok").ConfigureAwait(false);
+                await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
             }
         }
     }

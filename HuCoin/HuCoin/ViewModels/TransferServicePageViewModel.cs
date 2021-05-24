@@ -18,15 +18,17 @@ namespace HuCoin.ViewModels
         public decimal Amount { get; set; }
         public ICommand AddNewBeneficiaryCommand { get; set; }
         public ICommand TransferServiceCommand { get; set; }
-        public decimal Balance => Services.BalanceManagment.Instance.Balance;
+        public decimal Balance { get; set; }
 
         public TransferServicePageViewModel()
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
             TransferServiceCommand = new Command(TransferService);
-            LoadBeneficiaries().ConfigureAwait(false); 
+            LoadBeneficiaries().ConfigureAwait(false);
+            Balance = Services.BalanceManagment.Instance.Balance;
             MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
-            MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) => {
+            MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) =>
+            {
                 if (isSuccessed) SendTransaction().ConfigureAwait(false);
             });
         }
@@ -44,7 +46,7 @@ namespace HuCoin.ViewModels
             {
                 BackgroundColor = Color.FromHex("#AAC4C4C4"),
                 Padding = 10
-            }); 
+            });
         }
         private void TransferService()
         {
@@ -52,27 +54,37 @@ namespace HuCoin.ViewModels
         }
         private async Task SendTransaction()
         {
-            using var loadingview = new Components.LoadingView();
-            var transaction = new BLL.Models.TransactionClient
+            try
             {
-                SenderPhoneNumber = AppStatic.User.PhoneNumber,
-                RecipientPhoneNumber = Beneficiary.PhoneNumber,
-                Amount = Amount,
-            };
+                using var loadingview = new Components.LoadingView();
+                var transaction = new BLL.Models.TransactionClient
+                {
+                    SenderPhoneNumber = AppStatic.User.PhoneNumber,
+                    RecipientPhoneNumber = Beneficiary.PhoneNumber,
+                    Amount = Amount,
+                };
 
-            using var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
-            var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/send/transaction", transaction);
-            if (response.IsSuccessStatusCode)
-            {
-                var message = await response.Content.ReadAsStringAsync();
-                await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
-                await Services.BalanceManagment.Instance.ReLoadBalance();
+                using var httpClient = new HttpClient();
+                httpClient.DefaultRequestHeaders.Authorization = AppStatic.GetAuthenticationHeader();
+                var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/ewallet/send/transaction", transaction);
+                if (response.IsSuccessStatusCode)
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
+                    await Services.BalanceManagment.Instance.ReLoadBalance();
+                    Balance = Services.BalanceManagment.Instance.Balance;
+                    OnPropertyChanged(nameof(Balance));
+                    MessagingCenter.Send(this, "UpdateBalance");
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
             }
         }
     }

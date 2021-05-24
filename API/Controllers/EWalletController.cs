@@ -81,5 +81,24 @@ namespace API.Controllers
             var result = await response.Content.ReadAsStringAsync();
             return StatusCode((int)response.StatusCode, result);
         }
+
+
+        [HttpPost("recharge/balance")]
+        public async Task<IActionResult> RechargeBalance(int number_card, string ownerAddress)
+        {
+            using var httpClient = new HttpClient();
+            var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/recharge/balance?number_card={number_card}&ownerAddress={ownerAddress}", null);
+            var result = await response.Content.ReadAsStringAsync();
+            return StatusCode((int)response.StatusCode, result);
+        }
+
+        [HttpPost("cashout")]
+        public async Task<IActionResult> CashOut(decimal amount, string ownerAddress)
+        {
+            using var httpClient = new HttpClient();
+            var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/cashout?amount={amount}&ownerAddress={ownerAddress}", null);
+            var result = await response.Content.ReadAsStringAsync();
+            return StatusCode((int)response.StatusCode, result);
+        }
     }
 }

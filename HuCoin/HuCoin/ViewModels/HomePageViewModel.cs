@@ -15,7 +15,7 @@ namespace HuCoin.ViewModels
         public ICommand OpenTransferServiceCommand { get; set; }
         public ICommand OpenBeneficiariesCommand { get; set; }
         public BLL.Models.User User { get; set; }
-        public decimal Balance => Services.BalanceManagment.Instance.Balance;
+        public decimal Balance { get; set; }
         public HomePageViewModel()
         {
             OpenCashOutServiceCommand = new Command(OpenCashOutService);
@@ -23,7 +23,16 @@ namespace HuCoin.ViewModels
             OpenTransferServiceCommand = new Command(OpenTransferService);
             OpenBeneficiariesCommand = new Command(OpenBeneficiaries);
             LoadUserProfile().ConfigureAwait(false);
+            Balance = Services.BalanceManagment.Instance.Balance;
             MessagingCenter.Subscribe<ProfilePageViewModel>(this, "NotifyProfileInfromationUpdated", (sender) => LoadUserProfile().ConfigureAwait(false));
+            MessagingCenter.Subscribe<TransferServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
+            MessagingCenter.Subscribe<CashInServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
+            MessagingCenter.Subscribe<CashOutServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
+        }
+        private void UpdateBalance()
+        {
+            Balance = Services.BalanceManagment.Instance.Balance;
+            OnPropertyChanged(nameof(Balance));
         }
         private async Task LoadUserProfile()
         {

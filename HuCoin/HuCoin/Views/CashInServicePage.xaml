@@ -25,7 +25,7 @@
                             <Image Source="wallet" Aspect="AspectFit" 
                                    HorizontalOptions="Start" VerticalOptions="Center"
                                    HeightRequest="32" WidthRequest="32"/>
-                            <Label Text="51.516 HU" TextColor="white" FontAttributes="Bold"
+                            <Label Text="{Binding Balance,StringFormat='{0:F2} HU'}" TextColor="white" FontAttributes="Bold"
                                VerticalTextAlignment="Center" FontSize="Large"/>
                         </StackLayout>
                     </StackLayout>
@@ -34,7 +34,7 @@
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Label Text="Recharge Number" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Entry Keyboard="Numeric"/>
+                            <Entry Text="{Binding CardNumber}" Keyboard="Numeric"/>
                         </Frame>
                     </StackLayout>
                     <Button Text="Continue" CornerRadius="5" BackgroundColor="#E6611A"
