@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin
 {
@@ -15,13 +16,22 @@ namespace HuCoin
 
         private void OpenStartupPage()
         {
+            if (this.Properties.TryGetValue(AppStatic.LanguageKey, out object culture))
+                localizer.Instance.SetCulture(new System.Globalization.CultureInfo(culture as string));
+
             if (this.Properties.ContainsKey(AppStatic.IsFirstTimeRunApplicationKey))
             {
-                MainPage = new NavigationPage(new Views.LoginPage());
+                var page = new Views.LoginPage();
+                page.SetBinding(VisualElement.FlowDirectionProperty, new Binding(path: nameof(localizer.FlowDirection), source: localizer.Instance));
+
+                MainPage = new NavigationPage(page);
             }
             else
             {
-                MainPage = new Views.Walkthorugh.WalkthorughPage();
+                var page= new Views.Walkthorugh.WalkthorughPage(); 
+                page.SetBinding(VisualElement.FlowDirectionProperty, new Binding(path: nameof(localizer.FlowDirection), source: localizer.Instance));
+
+                MainPage = page;
                 this.Properties.Add(AppStatic.IsFirstTimeRunApplicationKey, true);
                 this.SavePropertiesAsync();
             }

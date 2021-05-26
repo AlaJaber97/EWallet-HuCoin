@@ -9,7 +9,7 @@ namespace HuCoin.Services
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propretyname)
+        public void OnPropertyChanged(string propretyname = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propretyname));
         }

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.SettingsPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -11,8 +12,10 @@
         <StackLayout Margin="20,10" Padding="0" Spacing="10">
             <Image Source="settings" Margin="30,10" HorizontalOptions="Center"/>
             <Grid Margin="0" Padding="0" ColumnDefinitions="*,*" ColumnSpacing="0">
-                <Button Grid.Column="0" Text="English" BackgroundColor="#E6611A" TextColor="White" CornerRadius="5"/>
-                <Button Grid.Column="1" Text="عربي" BackgroundColor="#F5F5F5" TextColor="#39374D" CornerRadius="5"/>
+                <Button Grid.Column="0" Text="English" BackgroundColor="#E6611A" TextColor="White" CornerRadius="5"
+                        Command="{Binding ChangeLanguageCommand}" CommandParameter="en-US"/>
+                <Button Grid.Column="1" Text="عربي" BackgroundColor="#F5F5F5" TextColor="#39374D" CornerRadius="5"
+                        Command="{Binding ChangeLanguageCommand}" CommandParameter="ar-JO"/>
             </Grid>
             <Frame Margin="0" Padding="10" BackgroundColor="#F5F5F5"
                    CornerRadius="10" HasShadow="True">
@@ -20,7 +23,7 @@
                     <Image Source="padlock" 
                            HeightRequest="32" WidthRequest="32"
                            VerticalOptions="Center" HorizontalOptions="Start"/>
-                    <Label Text="Reset Password" TextColor="#39374D" FontSize="Medium"
+                    <Label Text="{Utils:Translate ResetPassword}" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>

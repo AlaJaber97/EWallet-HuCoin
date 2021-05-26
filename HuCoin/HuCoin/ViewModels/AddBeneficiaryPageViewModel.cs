@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -31,7 +31,7 @@ namespace HuCoin.ViewModels
                 }
                 else
                 {
-                    await DisplayAlert("Add new beneficiary", "can not add new beneficiary", "Ok");
+                    await DisplayAlert(localizer.Instance["AddNewBeneficiary"], "can not add new beneficiary", "Ok");
                 }
             }
             catch (Exception ex)

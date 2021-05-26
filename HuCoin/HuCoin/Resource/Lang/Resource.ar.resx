@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAsBeneficiary" xml:space="preserve">
+    <value>إضافة ك منتفع </value>
+  </data>
+  <data name="AddBeneficiary" xml:space="preserve">
+    <value>إضافة منتفع </value>
+  </data>
+  <data name="AddNewBeneficiary" xml:space="preserve">
+    <value>إضافة منتفع جديد</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="AnErrorOccurred" xml:space="preserve">
+    <value>هناك خطأ</value>
+  </data>
+  <data name="Beneficiaries" xml:space="preserve">
+    <value>المنتفعين</value>
+  </data>
+  <data name="BeneficiaryDetails" xml:space="preserve">
+    <value>تفاصيل المنتفع </value>
+  </data>
+  <data name="BeneficiaryList" xml:space="preserve">
+    <value>قائمة المنتفعين</value>
+  </data>
+  <data name="BeneficiaryMobileNumber" xml:space="preserve">
+    <value>رقم هاتف المنتفع</value>
+  </data>
+  <data name="BeneficiaryName" xml:space="preserve">
+    <value>اسم المنتفع</value>
+  </data>
+  <data name="CashOut" xml:space="preserve">
+    <value>السحب نقدا</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="ChangePasswordAleart" xml:space="preserve">
+    <value>نجحت العملية تم تغيير كلمة المرور بنجاح</value>
+  </data>
+  <data name="ChangePasswordLink" xml:space="preserve">
+    <value>تم ارسال الرابط, يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>استمر</value>
+  </data>
+  <data name="CreatePINCode" xml:space="preserve">
+    <value>إنشاء رمز PINالخاص بك</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>الرصيد الحالي</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>كلمة المرور الحالية</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="DontHaveAccount" xml:space="preserve">
+    <value>لا تمتلك حساب ؟سجل الآن</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الاكتروني</value>
+  </data>
+  <data name="EmptyFields" xml:space="preserve">
+    <value>حقل مطلوب يرجى عدم ترك حقول فارغة</value>
+  </data>
+  <data name="EmptyFieldsError" xml:space="preserve">
+    <value>ارجو عدم ترك حقول فارغة يجب مطابقة الحقل الخاص بكلمة المرور الجديدة والحقل الخاص بتأكيد كلمة المرور</value>
+  </data>
+  <data name="EnterEmailAsk" xml:space="preserve">
+    <value>أدخل بريدك الإلكتروني, وسنتولى تعليمات حول إعادة تعيين كلمة المرور الخاصة بك</value>
+  </data>
+  <data name="FamilyName" xml:space="preserve">
+    <value>اسم العائلة</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>الاسم  الاول</value>
+  </data>
+  <data name="FirstPage" xml:space="preserve">
+    <value>تطبيق لا مركزي , يخدم التطبيق العديد من الفئات التي لا يفضلون التعامل مع المنظمات المركزية</value>
+  </data>
+  <data name="ForgetPassword?" xml:space="preserve">
+    <value>هل نسيت كلمة المرور؟</value>
+  </data>
+  <data name="ForgetPasswordAsk" xml:space="preserve">
+    <value>هل نسيت كلمة كلمة المرور؟</value>
+  </data>
+  <data name="ForgetPINCode" xml:space="preserve">
+    <value> نسيت رمز PIN</value>
+  </data>
+  <data name="ForgetYourPIN" xml:space="preserve">
+    <value>هل نسيت رمز PIN؟ اضغط هنا</value>
+  </data>
+  <data name="LetsStart" xml:space="preserve">
+    <value>ابدأ</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="MobileNumberPos" xml:space="preserve">
+    <value>رقم الهاتف الخاص بنقطة البيع</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>ملفي الشخصي</value>
+  </data>
+  <data name="NewBeneficiary" xml:space="preserve">
+    <value>منتفع جديد</value>
+  </data>
+  <data name="NewBenificaryError" xml:space="preserve">
+    <value>لا يمكن اضافة منتفع جديد</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="NoBeneficiariesFound" xml:space="preserve">
+    <value>لم يتم العثور على منتفع</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="PinCodeError" xml:space="preserve">
+    <value>رمز PIN خاطئ يبدو ان رمز PIN الخاص بك غير صحيح يرجى المحاولة مرة اخرى</value>
+  </data>
+  <data name="PleaseEnterPIN" xml:space="preserve">
+    <value>الرجاء إدخال رمز PIN الخاص بك</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>سياسة الخصوصية</value>
+  </data>
+  <data name="Receiver" xml:space="preserve">
+    <value>المستقبل</value>
+  </data>
+  <data name="Recharge" xml:space="preserve">
+    <value>إعادة تعبئة</value>
+  </data>
+  <data name="RechargeNumber" xml:space="preserve">
+    <value>رقم إعادة التعبئة</value>
+  </data>
+  <data name="Registeration" xml:space="preserve">
+    <value>التسجيل</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>إعادة كتابة كلمة المرور</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>الاسم الثاني</value>
+  </data>
+  <data name="SecondPage" xml:space="preserve">
+    <value>الدفع عبر الانترنت, سجل وامتلك حسابك الخاص في تطبيق  HuCoin للتخلى عن المعاملات المالية التقليدية وانجازها بأسرع طريقة ممكنة</value>
+  </data>
+  <data name="SelectPreferLanguage" xml:space="preserve">
+    <value>تحديد اللغة المفضلة </value>
+  </data>
+  <data name="SendInstruction" xml:space="preserve">
+    <value>أرسل التعليمات</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>اشتراك</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>تخطي</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>إدخال</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>ملخص العملية</value>
+  </data>
+  <data name="ThirdPage" xml:space="preserve">
+    <value>التحويلات الرقمية, دعك من النقود التقليدية, يمكنك الان اجراء المعاملات المالية دون الحاجة لحساب بنكي ودون رسوم اضافية</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>الوقت</value>
+  </data>
+  <data name="ToBeneficiary" xml:space="preserve">
+    <value>إلى المنتفع</value>
+  </data>
+  <data name="TransactionDetails" xml:space="preserve">
+    <value>تفاصيل المعاملة</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>سجل المعاملات</value>
+  </data>
+  <data name="TransactionId" xml:space="preserve">
+    <value>رقم المعاملة </value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>تحويل</value>
+  </data>
+  <data name="UniversityId" xml:space="preserve">
+    <value>الرقم الجامعي</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="UpdateProfileAleart" xml:space="preserve">
+    <value>تم تحديث معلومات ملفك الشخصي بنجاح</value>
+  </data>
+  <data name="VerificationCodeSent" xml:space="preserve">
+    <value>تم إرسال رمز التحقق الى الرقم </value>
+  </data>
+  <data name="VerificationError" xml:space="preserve">
+    <value>مؤسف لم يتم التحقق من رقم الهاتف الخاص بك من فضلك حاول مرة اخرى اذا استعادت المشكلة ارجو التواصل مع الداعم</value>
+  </data>
+  <data name="VerificationRequired" xml:space="preserve">
+    <value>التوثيق المطلوب</value>
+  </data>
+</root>

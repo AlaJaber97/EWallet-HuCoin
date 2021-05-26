@@ -13,6 +13,7 @@ namespace HuCoin
         public static readonly string IsFirstTimeRunApplicationKey = "IsFirstTimeRunApplication";
         public static readonly string HuCoinPinCodeKey = "HuCoinPinCode";
         internal static readonly string LastUserLoginKey = "LastUserLogin";
+        internal static readonly string LanguageKey = "Language";
 
         public static AuthenticationHeaderValue GetAuthenticationHeader()
         {
