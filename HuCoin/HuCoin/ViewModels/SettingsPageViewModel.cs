@@ -31,7 +31,7 @@ namespace HuCoin.ViewModels
         }
         private void OpenPrivacyPolicy()
         {
-            Xamarin.Essentials.Browser.OpenAsync($"{BLL.Settings.Connections.GetServerAddress()}/PrivacyPolicy");
+            Xamarin.Essentials.Browser.OpenAsync($"{BLL.Settings.Connections.GetServerAddress()}/page/PrivacyPolicy");
         }
         private void OpenContactUs()
         {

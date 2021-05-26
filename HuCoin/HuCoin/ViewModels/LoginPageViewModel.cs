@@ -12,6 +12,7 @@ namespace HuCoin.ViewModels
 {
     public class LoginPageViewModel : BaseViewModel
     {
+        public ICommand OpenForgotPasswordPageCommand { get; private set; }
         public ICommand OpenRegisterPageCommand { get; private set; }
         public ICommand SignInCommand { get; private set; }
         public BLL.Models.RequestLogin RequestLogin { get; set; }
@@ -19,6 +20,7 @@ namespace HuCoin.ViewModels
         {
             RequestLogin = new BLL.Models.RequestLogin();
             OpenRegisterPageCommand = new Command(OpenRegisterPage);
+            OpenForgotPasswordPageCommand = new Command(OpenForgotPasswordPage);
             SignInCommand = new Command(()=> SingIn().ConfigureAwait(false));
             Xamarin.Essentials.SecureStorage.GetAsync(AppStatic.LastUserLoginKey).ContinueWith(task =>
             {
@@ -32,6 +34,10 @@ namespace HuCoin.ViewModels
         private void OpenRegisterPage()
         {
             OpenPage(new Views.RegisterPage());
+        }
+        private void OpenForgotPasswordPage()
+        {
+            OpenPage(new Views.ForgotPasswordPage());
         }
         private async Task SingIn()
         {

@@ -64,6 +64,7 @@ namespace HuCoin.ViewModels
             if (string.IsNullOrWhiteSpace(user.FirstName) ||
                 string.IsNullOrWhiteSpace(user.SecondName) ||
                 string.IsNullOrWhiteSpace(user.FamilyName) ||
+                string.IsNullOrWhiteSpace(user.Email) ||
                 string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627") ||
                 user.UniversityID.ToString().Length != 7 ||
                 string.IsNullOrWhiteSpace(user.Password))
@@ -75,6 +76,8 @@ namespace HuCoin.ViewModels
                 ErrorMessage += "\n• Second Name";
             if (string.IsNullOrWhiteSpace(user.FamilyName))
                 ErrorMessage += "\n• Family Name";
+            if (string.IsNullOrWhiteSpace(user.Email))
+                ErrorMessage += "\n• Email";
             if (string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627"))
                 ErrorMessage += "\n• Phone Number must start with +9627 and not be empty field";
             if (user.UniversityID.ToString().Length != 7)

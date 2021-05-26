@@ -19,20 +19,23 @@ namespace API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(JwtBearerDefaults.AuthenticationScheme)]
-    public class AccountController : ControllerBase
+    public class AccountController : Controller
     {
         private readonly SignInManager<BLL.Models.User> _signInManager;
         private readonly UserManager<BLL.Models.User> _userManager;
+        private readonly API.Services.EmailSender _emailSender;
         private readonly API.Data.APIContext _context;
         private readonly string UserID;
         public AccountController(
             UserManager<BLL.Models.User> userManager, 
             SignInManager<BLL.Models.User> signInManager,
+            API.Services.EmailSender emailSender,
             IHttpContextAccessor httpContextAccessor,
             API.Data.APIContext context)
         {
             this._signInManager = signInManager;
             this._userManager = userManager;
+            this._emailSender = emailSender;
             this._context = context;
             var userclaim = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
             if (userclaim != null) UserID = userclaim.Value;
@@ -129,6 +132,75 @@ namespace API.Controllers
             }
             else
                 return NotFound();
+        }
+
+        [AllowAnonymous]
+        [HttpGet("ForgotPassword")]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpPost("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromForm] BLL.Models.ForgotPassword forgotPassword)
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPassword.Email);
+            if (user == null) return RedirectToAction(nameof(ForgotPasswordFailed));
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var callback = $"{BLL.Settings.Connections.GetServerAddress()}/api/Account/ResetPassword?token={token}&email={user.Email}";
+
+            var message = new Services.Message(user.Email, "Reset Password", callback);
+            await _emailSender.SendEmailAsync(message);
+
+            return RedirectToAction(nameof(ForgotPasswordConfirmation));
+        }
+        [AllowAnonymous]
+        [HttpGet("ForgotPasswordConfirmation")]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpGet("ForgotPasswordFailed")]
+        public IActionResult ForgotPasswordFailed()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpGet("ResetPassword")]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromForm] BLL.Models.ResetPassword resetPassword)
+        {
+            var user = await _userManager.FindByEmailAsync(resetPassword.Email);
+            if (user == null) return RedirectToAction(nameof(ResetPasswordFailed));
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPassword.Token, resetPassword.Password);
+            if (result.Succeeded) return RedirectToAction(nameof(ResetPasswordConfirmation));
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.TryAddModelError(error.Code, error.Description);
+
+            }
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpGet("ResetPasswordConfirmation")]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpGet("ResetPasswordFailed")]
+        public IActionResult ResetPasswordFailed()
+        {
+            return View();
         }
     }
 }

@@ -101,6 +101,22 @@
                                 <Entry Text="{Binding User.FamilyName}" />
                             </Frame>
                         </StackLayout>
+                        <!--Email-->
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Email" TextColor="#2E3058"/>
+                                            <Span Text="*" TextColor="#E6611A"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Frame Margin="0" Padding="0" CornerRadius="5" BorderColor="Gray">
+                                <Entry Keyboard="Email" Text="{Binding User.Email}" />
+                            </Frame>
+                        </StackLayout>
                         <!--Mobile Number-->
                         <StackLayout Margin="0" Padding="0" Spacing="10">
                             <Label FontAttributes="Bold">

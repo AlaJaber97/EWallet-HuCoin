@@ -29,11 +29,8 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
-            services.AddControllers()
-                .AddJsonOptions(option => option.JsonSerializerOptions.PropertyNamingPolicy = null);
-            
-            services.AddRazorPages();
+            services.AddControllersWithViews()
+                    .AddJsonOptions(option => option.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             services.AddDefaultIdentity<BLL.Models.User>(options =>
             {
@@ -56,7 +53,7 @@ namespace API
                 options.Password.RequiredUniqueChars = 0;
                 options.Password.RequiredLength = 1;
 
-                options.User.RequireUniqueEmail = false;
+                options.User.RequireUniqueEmail = true;
             });
 
             services.AddAuthorization(option => {
@@ -80,6 +77,10 @@ namespace API
                         ClockSkew = TimeSpan.Parse(Configuration["JwtExpireDays"])
                     };
                 });
+
+            var emailConfig = Configuration.GetSection("EmailConfiguration").Get<Services.EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+            services.AddScoped(typeof(Services.EmailSender));
 
             services.AddSwaggerGen(options=> {
                 options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
@@ -125,6 +126,7 @@ namespace API
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "HuCoin API");
             });
 
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
