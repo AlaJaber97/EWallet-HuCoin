@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <converter:SafetyByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
             <xct:IsNullOrEmptyConverter x:Key="IsNullOrEmptyConverter"/>
+            <xct:InvertedBoolConverter x:Key="InvertedBoolConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

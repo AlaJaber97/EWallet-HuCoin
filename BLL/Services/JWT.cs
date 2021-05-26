@@ -44,7 +44,6 @@ namespace BLL.Services
                     UserName = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub).Value,
                     PhoneNumber = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber).Value,
                     FirstName = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.GivenName).Value,
-                    PhoneNumber = jwtSecurityToken.Claims.SingleOrDefault(claim => claim.Type == Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.PhoneNumber).Value,
                 };
             }
             catch (Exception)

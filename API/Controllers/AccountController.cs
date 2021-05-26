@@ -1,17 +1,11 @@
-﻿using API.Utils;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -19,21 +13,24 @@ namespace API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(JwtBearerDefaults.AuthenticationScheme)]
-    public class AccountController : ControllerBase
+    public class AccountController : Controller
     {
         private readonly SignInManager<BLL.Models.User> _signInManager;
         private readonly UserManager<BLL.Models.User> _userManager;
+        private readonly EmailService.IEmailSender _emailSender;
         private readonly API.Data.APIContext _context;
         private readonly string UserID;
         public AccountController(
             UserManager<BLL.Models.User> userManager, 
             SignInManager<BLL.Models.User> signInManager,
+            EmailService.IEmailSender emailSender,
             IHttpContextAccessor httpContextAccessor,
             API.Data.APIContext context)
         {
             this._signInManager = signInManager;
             this._userManager = userManager;
             this._context = context;
+            this._emailSender = emailSender;
             var userclaim = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
             if (userclaim != null) UserID = userclaim.Value;
         }
@@ -129,6 +126,71 @@ namespace API.Controllers
             }
             else
                 return NotFound();
+        }
+
+        [HttpGet("ForgotPassword")]
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        [HttpPost("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromForm] BLL.Models.ForgotPassword forgotPasswordModel)
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPasswordModel.Email);
+            if (user == null)
+                return RedirectToAction(nameof(ForgotPasswordConfirmation));
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var callback = Url.Action(nameof(ResetPassword), "Account", new { token, email = user.Email }, Request.Scheme);
+
+            var message = new EmailService.Message(new string[] { user.Email }, "Reset password token", callback, null);
+            await _emailSender.SendEmailAsync(message);
+
+            return RedirectToAction(nameof(ForgotPasswordConfirmation));
+        }
+
+        [AllowAnonymous]
+        [HttpGet("ForgotPasswordConfirmation")]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        [HttpGet("ResetPassword")]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            var model = new BLL.Models.ResetPassword { Token = token, Email = email };
+            return View(model);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromForm] BLL.Models.ResetPassword resetPasswordModel)
+        {
+            var user = await _userManager.FindByEmailAsync(resetPasswordModel.Email);
+            if (user == null)
+                RedirectToAction(nameof(ResetPasswordConfirmation));
+            var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordModel.Token, resetPasswordModel.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                foreach (var error in resetPassResult.Errors)
+                {
+                    ModelState.TryAddModelError(error.Code, error.Description);
+                }
+                return View();
+            }
+            return RedirectToAction(nameof(ResetPasswordConfirmation));
+        }
+
+        [AllowAnonymous]
+        [HttpGet("ResetPasswordConfirmation")]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
         }
     }
 }

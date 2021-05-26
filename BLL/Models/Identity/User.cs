@@ -11,7 +11,6 @@ namespace BLL.Models
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string FamilyName { get; set; }
-        public string Email { get; set; }
         public int UniversityID { get; set; }
         public byte[] Image { get; set; }
 

@@ -31,9 +31,13 @@
                             <Label Text="Remember me" TextColor="White" FontAttributes="Bold"
                                    VerticalTextAlignment="Center"/>
                         </StackLayout>
-                        <!--<Label Grid.Column="1" Text="Forget Password?" 
+                        <Label Grid.Column="1" Text="Forgot Password?" 
                                HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                               TextColor="#E6611A" FontAttributes="Bold"/>-->
+                               TextColor="#E6611A" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenForgetPageCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </Grid>
                     <Button Text="Sign in" TextTransform="None" CornerRadius="5"
                             BackgroundColor="#E6611A" TextColor="White" 

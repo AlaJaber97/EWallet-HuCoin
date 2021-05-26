@@ -1,15 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -29,11 +24,9 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
-            services.AddControllers()
+            //services.AddRazorPages();
+            services.AddControllersWithViews()
                 .AddJsonOptions(option => option.JsonSerializerOptions.PropertyNamingPolicy = null);
-            
-            services.AddRazorPages();
 
             services.AddDefaultIdentity<BLL.Models.User>(options =>
             {
@@ -56,7 +49,7 @@ namespace API
                 options.Password.RequiredUniqueChars = 0;
                 options.Password.RequiredLength = 1;
 
-                options.User.RequireUniqueEmail = false;
+                options.User.RequireUniqueEmail = true;
             });
 
             services.AddAuthorization(option => {
@@ -80,7 +73,12 @@ namespace API
                         ClockSkew = TimeSpan.Parse(Configuration["JwtExpireDays"])
                     };
                 });
-
+            services.Configure<DataProtectionTokenProviderOptions>(opt => opt.TokenLifespan = TimeSpan.FromHours(2));
+            var emailConfig = Configuration
+                                .GetSection("EmailConfiguration")
+                                .Get<EmailService.EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+            services.AddScoped<EmailService.IEmailSender, EmailService.EmailSender>();
             services.AddSwaggerGen(options=> {
                 options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
                 {
@@ -124,6 +122,7 @@ namespace API
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "HuCoin API");
             });
+            app.UseStaticFiles();
 
             app.UseRouting();
 
