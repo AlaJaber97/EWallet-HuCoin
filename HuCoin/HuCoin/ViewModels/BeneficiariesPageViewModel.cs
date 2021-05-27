@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class BeneficiariesPageViewModel : ViewModels.BaseViewModel
+    public class BeneficiariesPageViewModel : ViewModels.BaseViewModel, IDisposable
     {
         public List<Models.Beneficiary> Beneficiaries { get; set; }
         public ICommand AddNewBeneficiaryCommand { get; set; }
@@ -35,6 +35,11 @@ namespace HuCoin.ViewModels
         private void OpenBeneficiaryDetails(Models.Beneficiary beneficiary)
         {
             OpenPage(new Views.BeneficiaryDetailsPage());
+        }
+
+        public void Dispose()
+        {
+            MessagingCenter.Unsubscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary");
         }
     }
 }

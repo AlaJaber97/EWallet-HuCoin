@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class CashInServicePageViewModel : ViewModels.BaseViewModel
+    public class CashInServicePageViewModel : ViewModels.BaseViewModel, IDisposable
     {
         public ICommand RechargeBalanceCommand { get; set; }
         public decimal Balance { get; set; }
@@ -55,6 +55,11 @@ namespace HuCoin.ViewModels
             {
                 await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
             }
+        }
+
+        public void Dispose()
+        {
+            MessagingCenter.Unsubscribe<VerficationPinPageViewModel,bool>(this, "VerficationPinCode");
         }
     }
 }

@@ -26,12 +26,12 @@ namespace API.Controllers
         public async Task<IActionResult> SendTransaction(BLL.Models.TransactionClient transactionClient)
         {
             var userSender = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
-                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.SenderPhoneNumber);
-            if (userSender?.Wallet?.Credential == null) return NotFound($"can not found sender with phone number {transactionClient.RecipientPhoneNumber}");
+                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.Sender.PhoneNumber);
+            if (userSender?.Wallet?.Credential == null) return NotFound($"can not found sender with phone number {transactionClient.Recipient.PhoneNumber}");
             
             var userRecipient = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
-                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.RecipientPhoneNumber);
-            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {transactionClient.RecipientPhoneNumber}");
+                                .SingleOrDefault(user => user.PhoneNumber == transactionClient.Recipient.PhoneNumber);
+            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {transactionClient.Recipient.PhoneNumber}");
             var transactionMiner = new BLL.Models.TransactionMiner
             {
                 Sender = userSender.Wallet.Credential.PublicKey,
@@ -61,16 +61,39 @@ namespace API.Controllers
         [HttpPost("get/transactions")]
         public async Task<IActionResult> GetTransactions(string PhoneNumber)
         {
-            var userRecipient = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
+            var user = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
                                     .SingleOrDefault(user => user.PhoneNumber == PhoneNumber);
-            if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {PhoneNumber}");
+            if (user?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {PhoneNumber}");
 
-            var ownerAddress = userRecipient.Wallet.Credential.PublicKey;
+            var ownerAddress = user.Wallet.Credential.PublicKey;
 
             using var httpClient = new HttpClient();
             var response = await httpClient.PostAsync($"{BLL.Settings.Connections.GetMinerAddress()}/api/blockchain/get/transactions?ownerAddress={ownerAddress}", null);
             var result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                var ListOfTransactionMiner = System.Text.Json.JsonSerializer.Deserialize<List<BLL.Models.TransactionMiner>>(result);
+                var ListOfTransactionClient = ListOfTransactionMiner.Select(item => new BLL.Models.TransactionClient
+                {
+                    ID = item.ID,
+                    Sender = GetUserByAddress(item.Sender),
+                    Recipient = GetUserByAddress(item.Recipient),
+                    Amount = item.Amount,
+                    Fees = item.Fees,
+                    Date = item.Date
+                });
+                result = System.Text.Json.JsonSerializer.Serialize(ListOfTransactionClient);
+            }
             return StatusCode((int)response.StatusCode, result);
+        }
+        private BLL.Models.User GetUserByAddress(string ownerAddress)
+        {
+            if (ownerAddress == "0") return new BLL.Models.User { FirstName = "System" };
+            var user = _context.Users.Include(user => user.Wallet).ThenInclude(wallet => wallet.Credential)
+                       .SingleOrDefault(item=> item.Wallet.Credential.PublicKey == ownerAddress);
+            if (user == null) return new BLL.Models.User();
+            user.Wallet = null;
+            return user;
         }
 
         [HttpPost("get/balance")]

@@ -11166,6 +11166,1803 @@ namespace HuCoin.Droid
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_bottom_start = global::HuCoin.Droid.Resource.Xml.standalone_badge_gravity_bottom_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_gravity_top_start = global::HuCoin.Droid.Resource.Xml.standalone_badge_gravity_top_start;
 			global::Xamarin.Forms.Platform.Resource.Xml.standalone_badge_offset = global::HuCoin.Droid.Resource.Xml.standalone_badge_offset;
+			global::XamEffects.Droid.Resource.Animation.abc_fade_in = global::HuCoin.Droid.Resource.Animation.abc_fade_in;
+			global::XamEffects.Droid.Resource.Animation.abc_fade_out = global::HuCoin.Droid.Resource.Animation.abc_fade_out;
+			global::XamEffects.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::HuCoin.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_popup_enter = global::HuCoin.Droid.Resource.Animation.abc_popup_enter;
+			global::XamEffects.Droid.Resource.Animation.abc_popup_exit = global::HuCoin.Droid.Resource.Animation.abc_popup_exit;
+			global::XamEffects.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::HuCoin.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_in_bottom = global::HuCoin.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_in_top = global::HuCoin.Droid.Resource.Animation.abc_slide_in_top;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_out_bottom = global::HuCoin.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::XamEffects.Droid.Resource.Animation.abc_slide_out_top = global::HuCoin.Droid.Resource.Animation.abc_slide_out_top;
+			global::XamEffects.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::HuCoin.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::XamEffects.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::HuCoin.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::XamEffects.Droid.Resource.Animation.design_snackbar_in = global::HuCoin.Droid.Resource.Animation.design_snackbar_in;
+			global::XamEffects.Droid.Resource.Animation.design_snackbar_out = global::HuCoin.Droid.Resource.Animation.design_snackbar_out;
+			global::XamEffects.Droid.Resource.Animator.design_appbar_state_list_animator = global::HuCoin.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::XamEffects.Droid.Resource.Attribute.actionBarDivider = global::HuCoin.Droid.Resource.Attribute.actionBarDivider;
+			global::XamEffects.Droid.Resource.Attribute.actionBarItemBackground = global::HuCoin.Droid.Resource.Attribute.actionBarItemBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionBarPopupTheme = global::HuCoin.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionBarSize = global::HuCoin.Droid.Resource.Attribute.actionBarSize;
+			global::XamEffects.Droid.Resource.Attribute.actionBarSplitStyle = global::HuCoin.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarStyle = global::HuCoin.Droid.Resource.Attribute.actionBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabBarStyle = global::HuCoin.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabStyle = global::HuCoin.Droid.Resource.Attribute.actionBarTabStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTabTextStyle = global::HuCoin.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionBarTheme = global::HuCoin.Droid.Resource.Attribute.actionBarTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionBarWidgetTheme = global::HuCoin.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::XamEffects.Droid.Resource.Attribute.actionButtonStyle = global::HuCoin.Droid.Resource.Attribute.actionButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionDropDownStyle = global::HuCoin.Droid.Resource.Attribute.actionDropDownStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionLayout = global::HuCoin.Droid.Resource.Attribute.actionLayout;
+			global::XamEffects.Droid.Resource.Attribute.actionMenuTextAppearance = global::HuCoin.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.actionMenuTextColor = global::HuCoin.Droid.Resource.Attribute.actionMenuTextColor;
+			global::XamEffects.Droid.Resource.Attribute.actionModeBackground = global::HuCoin.Droid.Resource.Attribute.actionModeBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::HuCoin.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCloseDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCopyDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeCutDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeFindDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModePasteDrawable = global::HuCoin.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModePopupWindowStyle = global::HuCoin.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeShareDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionModeSplitBackground = global::HuCoin.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::XamEffects.Droid.Resource.Attribute.actionModeStyle = global::HuCoin.Droid.Resource.Attribute.actionModeStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::HuCoin.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::XamEffects.Droid.Resource.Attribute.actionOverflowButtonStyle = global::HuCoin.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionOverflowMenuStyle = global::HuCoin.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::XamEffects.Droid.Resource.Attribute.actionProviderClass = global::HuCoin.Droid.Resource.Attribute.actionProviderClass;
+			global::XamEffects.Droid.Resource.Attribute.actionViewClass = global::HuCoin.Droid.Resource.Attribute.actionViewClass;
+			global::XamEffects.Droid.Resource.Attribute.activityChooserViewStyle = global::HuCoin.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::HuCoin.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogCenterButtons = global::HuCoin.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogStyle = global::HuCoin.Droid.Resource.Attribute.alertDialogStyle;
+			global::XamEffects.Droid.Resource.Attribute.alertDialogTheme = global::HuCoin.Droid.Resource.Attribute.alertDialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.allowStacking = global::HuCoin.Droid.Resource.Attribute.allowStacking;
+			global::XamEffects.Droid.Resource.Attribute.alpha = global::HuCoin.Droid.Resource.Attribute.alpha;
+			global::XamEffects.Droid.Resource.Attribute.arrowHeadLength = global::HuCoin.Droid.Resource.Attribute.arrowHeadLength;
+			global::XamEffects.Droid.Resource.Attribute.arrowShaftLength = global::HuCoin.Droid.Resource.Attribute.arrowShaftLength;
+			global::XamEffects.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::HuCoin.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.background = global::HuCoin.Droid.Resource.Attribute.background;
+			global::XamEffects.Droid.Resource.Attribute.backgroundSplit = global::HuCoin.Droid.Resource.Attribute.backgroundSplit;
+			global::XamEffects.Droid.Resource.Attribute.backgroundStacked = global::HuCoin.Droid.Resource.Attribute.backgroundStacked;
+			global::XamEffects.Droid.Resource.Attribute.backgroundTint = global::HuCoin.Droid.Resource.Attribute.backgroundTint;
+			global::XamEffects.Droid.Resource.Attribute.backgroundTintMode = global::HuCoin.Droid.Resource.Attribute.backgroundTintMode;
+			global::XamEffects.Droid.Resource.Attribute.barLength = global::HuCoin.Droid.Resource.Attribute.barLength;
+			global::XamEffects.Droid.Resource.Attribute.behavior_autoHide = global::HuCoin.Droid.Resource.Attribute.behavior_autoHide;
+			global::XamEffects.Droid.Resource.Attribute.behavior_hideable = global::HuCoin.Droid.Resource.Attribute.behavior_hideable;
+			global::XamEffects.Droid.Resource.Attribute.behavior_overlapTop = global::HuCoin.Droid.Resource.Attribute.behavior_overlapTop;
+			global::XamEffects.Droid.Resource.Attribute.behavior_peekHeight = global::HuCoin.Droid.Resource.Attribute.behavior_peekHeight;
+			global::XamEffects.Droid.Resource.Attribute.behavior_skipCollapsed = global::HuCoin.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::XamEffects.Droid.Resource.Attribute.borderWidth = global::HuCoin.Droid.Resource.Attribute.borderWidth;
+			global::XamEffects.Droid.Resource.Attribute.borderlessButtonStyle = global::HuCoin.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.bottomSheetDialogTheme = global::HuCoin.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.bottomSheetStyle = global::HuCoin.Droid.Resource.Attribute.bottomSheetStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarButtonStyle = global::HuCoin.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::HuCoin.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::HuCoin.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::HuCoin.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonBarStyle = global::HuCoin.Droid.Resource.Attribute.buttonBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonGravity = global::HuCoin.Droid.Resource.Attribute.buttonGravity;
+			global::XamEffects.Droid.Resource.Attribute.buttonPanelSideLayout = global::HuCoin.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::XamEffects.Droid.Resource.Attribute.buttonStyle = global::HuCoin.Droid.Resource.Attribute.buttonStyle;
+			global::XamEffects.Droid.Resource.Attribute.buttonStyleSmall = global::HuCoin.Droid.Resource.Attribute.buttonStyleSmall;
+			global::XamEffects.Droid.Resource.Attribute.buttonTint = global::HuCoin.Droid.Resource.Attribute.buttonTint;
+			global::XamEffects.Droid.Resource.Attribute.buttonTintMode = global::HuCoin.Droid.Resource.Attribute.buttonTintMode;
+			global::XamEffects.Droid.Resource.Attribute.cardBackgroundColor = global::HuCoin.Droid.Resource.Attribute.cardBackgroundColor;
+			global::XamEffects.Droid.Resource.Attribute.cardCornerRadius = global::HuCoin.Droid.Resource.Attribute.cardCornerRadius;
+			global::XamEffects.Droid.Resource.Attribute.cardElevation = global::HuCoin.Droid.Resource.Attribute.cardElevation;
+			global::XamEffects.Droid.Resource.Attribute.cardMaxElevation = global::HuCoin.Droid.Resource.Attribute.cardMaxElevation;
+			global::XamEffects.Droid.Resource.Attribute.cardPreventCornerOverlap = global::HuCoin.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::XamEffects.Droid.Resource.Attribute.cardUseCompatPadding = global::HuCoin.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::XamEffects.Droid.Resource.Attribute.checkboxStyle = global::HuCoin.Droid.Resource.Attribute.checkboxStyle;
+			global::XamEffects.Droid.Resource.Attribute.checkedTextViewStyle = global::HuCoin.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.closeIcon = global::HuCoin.Droid.Resource.Attribute.closeIcon;
+			global::XamEffects.Droid.Resource.Attribute.closeItemLayout = global::HuCoin.Droid.Resource.Attribute.closeItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.collapseContentDescription = global::HuCoin.Droid.Resource.Attribute.collapseContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.collapseIcon = global::HuCoin.Droid.Resource.Attribute.collapseIcon;
+			global::XamEffects.Droid.Resource.Attribute.collapsedTitleGravity = global::HuCoin.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::XamEffects.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::HuCoin.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.color = global::HuCoin.Droid.Resource.Attribute.color;
+			global::XamEffects.Droid.Resource.Attribute.colorAccent = global::HuCoin.Droid.Resource.Attribute.colorAccent;
+			global::XamEffects.Droid.Resource.Attribute.colorBackgroundFloating = global::HuCoin.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::XamEffects.Droid.Resource.Attribute.colorButtonNormal = global::HuCoin.Droid.Resource.Attribute.colorButtonNormal;
+			global::XamEffects.Droid.Resource.Attribute.colorControlActivated = global::HuCoin.Droid.Resource.Attribute.colorControlActivated;
+			global::XamEffects.Droid.Resource.Attribute.colorControlHighlight = global::HuCoin.Droid.Resource.Attribute.colorControlHighlight;
+			global::XamEffects.Droid.Resource.Attribute.colorControlNormal = global::HuCoin.Droid.Resource.Attribute.colorControlNormal;
+			global::XamEffects.Droid.Resource.Attribute.colorPrimary = global::HuCoin.Droid.Resource.Attribute.colorPrimary;
+			global::XamEffects.Droid.Resource.Attribute.colorPrimaryDark = global::HuCoin.Droid.Resource.Attribute.colorPrimaryDark;
+			global::XamEffects.Droid.Resource.Attribute.colorSwitchThumbNormal = global::HuCoin.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::XamEffects.Droid.Resource.Attribute.commitIcon = global::HuCoin.Droid.Resource.Attribute.commitIcon;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetEnd = global::HuCoin.Droid.Resource.Attribute.contentInsetEnd;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetEndWithActions = global::HuCoin.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetLeft = global::HuCoin.Droid.Resource.Attribute.contentInsetLeft;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetRight = global::HuCoin.Droid.Resource.Attribute.contentInsetRight;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetStart = global::HuCoin.Droid.Resource.Attribute.contentInsetStart;
+			global::XamEffects.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::HuCoin.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Attribute.contentPadding = global::HuCoin.Droid.Resource.Attribute.contentPadding;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingBottom = global::HuCoin.Droid.Resource.Attribute.contentPaddingBottom;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingLeft = global::HuCoin.Droid.Resource.Attribute.contentPaddingLeft;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingRight = global::HuCoin.Droid.Resource.Attribute.contentPaddingRight;
+			global::XamEffects.Droid.Resource.Attribute.contentPaddingTop = global::HuCoin.Droid.Resource.Attribute.contentPaddingTop;
+			global::XamEffects.Droid.Resource.Attribute.contentScrim = global::HuCoin.Droid.Resource.Attribute.contentScrim;
+			global::XamEffects.Droid.Resource.Attribute.controlBackground = global::HuCoin.Droid.Resource.Attribute.controlBackground;
+			global::XamEffects.Droid.Resource.Attribute.counterEnabled = global::HuCoin.Droid.Resource.Attribute.counterEnabled;
+			global::XamEffects.Droid.Resource.Attribute.counterMaxLength = global::HuCoin.Droid.Resource.Attribute.counterMaxLength;
+			global::XamEffects.Droid.Resource.Attribute.counterOverflowTextAppearance = global::HuCoin.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.counterTextAppearance = global::HuCoin.Droid.Resource.Attribute.counterTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.customNavigationLayout = global::HuCoin.Droid.Resource.Attribute.customNavigationLayout;
+			global::XamEffects.Droid.Resource.Attribute.defaultQueryHint = global::HuCoin.Droid.Resource.Attribute.defaultQueryHint;
+			global::XamEffects.Droid.Resource.Attribute.dialogPreferredPadding = global::HuCoin.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::XamEffects.Droid.Resource.Attribute.dialogTheme = global::HuCoin.Droid.Resource.Attribute.dialogTheme;
+			global::XamEffects.Droid.Resource.Attribute.displayOptions = global::HuCoin.Droid.Resource.Attribute.displayOptions;
+			global::XamEffects.Droid.Resource.Attribute.divider = global::HuCoin.Droid.Resource.Attribute.divider;
+			global::XamEffects.Droid.Resource.Attribute.dividerHorizontal = global::HuCoin.Droid.Resource.Attribute.dividerHorizontal;
+			global::XamEffects.Droid.Resource.Attribute.dividerPadding = global::HuCoin.Droid.Resource.Attribute.dividerPadding;
+			global::XamEffects.Droid.Resource.Attribute.dividerVertical = global::HuCoin.Droid.Resource.Attribute.dividerVertical;
+			global::XamEffects.Droid.Resource.Attribute.drawableSize = global::HuCoin.Droid.Resource.Attribute.drawableSize;
+			global::XamEffects.Droid.Resource.Attribute.drawerArrowStyle = global::HuCoin.Droid.Resource.Attribute.drawerArrowStyle;
+			global::XamEffects.Droid.Resource.Attribute.dropDownListViewStyle = global::HuCoin.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::HuCoin.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Attribute.editTextBackground = global::HuCoin.Droid.Resource.Attribute.editTextBackground;
+			global::XamEffects.Droid.Resource.Attribute.editTextColor = global::HuCoin.Droid.Resource.Attribute.editTextColor;
+			global::XamEffects.Droid.Resource.Attribute.editTextStyle = global::HuCoin.Droid.Resource.Attribute.editTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.elevation = global::HuCoin.Droid.Resource.Attribute.elevation;
+			global::XamEffects.Droid.Resource.Attribute.errorEnabled = global::HuCoin.Droid.Resource.Attribute.errorEnabled;
+			global::XamEffects.Droid.Resource.Attribute.errorTextAppearance = global::HuCoin.Droid.Resource.Attribute.errorTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::HuCoin.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::XamEffects.Droid.Resource.Attribute.expanded = global::HuCoin.Droid.Resource.Attribute.expanded;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleGravity = global::HuCoin.Droid.Resource.Attribute.expandedTitleGravity;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMargin = global::HuCoin.Droid.Resource.Attribute.expandedTitleMargin;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginBottom = global::HuCoin.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginEnd = global::HuCoin.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginStart = global::HuCoin.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleMarginTop = global::HuCoin.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::XamEffects.Droid.Resource.Attribute.expandedTitleTextAppearance = global::HuCoin.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.fabSize = global::HuCoin.Droid.Resource.Attribute.fabSize;
+			global::XamEffects.Droid.Resource.Attribute.foregroundInsidePadding = global::HuCoin.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::XamEffects.Droid.Resource.Attribute.gapBetweenBars = global::HuCoin.Droid.Resource.Attribute.gapBetweenBars;
+			global::XamEffects.Droid.Resource.Attribute.goIcon = global::HuCoin.Droid.Resource.Attribute.goIcon;
+			global::XamEffects.Droid.Resource.Attribute.headerLayout = global::HuCoin.Droid.Resource.Attribute.headerLayout;
+			global::XamEffects.Droid.Resource.Attribute.height = global::HuCoin.Droid.Resource.Attribute.height;
+			global::XamEffects.Droid.Resource.Attribute.hideOnContentScroll = global::HuCoin.Droid.Resource.Attribute.hideOnContentScroll;
+			global::XamEffects.Droid.Resource.Attribute.hintAnimationEnabled = global::HuCoin.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::XamEffects.Droid.Resource.Attribute.hintEnabled = global::HuCoin.Droid.Resource.Attribute.hintEnabled;
+			global::XamEffects.Droid.Resource.Attribute.hintTextAppearance = global::HuCoin.Droid.Resource.Attribute.hintTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.homeAsUpIndicator = global::HuCoin.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Attribute.homeLayout = global::HuCoin.Droid.Resource.Attribute.homeLayout;
+			global::XamEffects.Droid.Resource.Attribute.icon = global::HuCoin.Droid.Resource.Attribute.icon;
+			global::XamEffects.Droid.Resource.Attribute.iconifiedByDefault = global::HuCoin.Droid.Resource.Attribute.iconifiedByDefault;
+			global::XamEffects.Droid.Resource.Attribute.imageButtonStyle = global::HuCoin.Droid.Resource.Attribute.imageButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.indeterminateProgressStyle = global::HuCoin.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::XamEffects.Droid.Resource.Attribute.initialActivityCount = global::HuCoin.Droid.Resource.Attribute.initialActivityCount;
+			global::XamEffects.Droid.Resource.Attribute.insetForeground = global::HuCoin.Droid.Resource.Attribute.insetForeground;
+			global::XamEffects.Droid.Resource.Attribute.isLightTheme = global::HuCoin.Droid.Resource.Attribute.isLightTheme;
+			global::XamEffects.Droid.Resource.Attribute.itemBackground = global::HuCoin.Droid.Resource.Attribute.itemBackground;
+			global::XamEffects.Droid.Resource.Attribute.itemIconTint = global::HuCoin.Droid.Resource.Attribute.itemIconTint;
+			global::XamEffects.Droid.Resource.Attribute.itemPadding = global::HuCoin.Droid.Resource.Attribute.itemPadding;
+			global::XamEffects.Droid.Resource.Attribute.itemTextAppearance = global::HuCoin.Droid.Resource.Attribute.itemTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.itemTextColor = global::HuCoin.Droid.Resource.Attribute.itemTextColor;
+			global::XamEffects.Droid.Resource.Attribute.keylines = global::HuCoin.Droid.Resource.Attribute.keylines;
+			global::XamEffects.Droid.Resource.Attribute.layout = global::HuCoin.Droid.Resource.Attribute.layout;
+			global::XamEffects.Droid.Resource.Attribute.layoutManager = global::HuCoin.Droid.Resource.Attribute.layoutManager;
+			global::XamEffects.Droid.Resource.Attribute.layout_anchor = global::HuCoin.Droid.Resource.Attribute.layout_anchor;
+			global::XamEffects.Droid.Resource.Attribute.layout_anchorGravity = global::HuCoin.Droid.Resource.Attribute.layout_anchorGravity;
+			global::XamEffects.Droid.Resource.Attribute.layout_behavior = global::HuCoin.Droid.Resource.Attribute.layout_behavior;
+			global::XamEffects.Droid.Resource.Attribute.layout_collapseMode = global::HuCoin.Droid.Resource.Attribute.layout_collapseMode;
+			global::XamEffects.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::HuCoin.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::XamEffects.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::HuCoin.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::XamEffects.Droid.Resource.Attribute.layout_insetEdge = global::HuCoin.Droid.Resource.Attribute.layout_insetEdge;
+			global::XamEffects.Droid.Resource.Attribute.layout_keyline = global::HuCoin.Droid.Resource.Attribute.layout_keyline;
+			global::XamEffects.Droid.Resource.Attribute.layout_scrollFlags = global::HuCoin.Droid.Resource.Attribute.layout_scrollFlags;
+			global::XamEffects.Droid.Resource.Attribute.layout_scrollInterpolator = global::HuCoin.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::XamEffects.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::HuCoin.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::XamEffects.Droid.Resource.Attribute.listDividerAlertDialog = global::HuCoin.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::XamEffects.Droid.Resource.Attribute.listItemLayout = global::HuCoin.Droid.Resource.Attribute.listItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.listLayout = global::HuCoin.Droid.Resource.Attribute.listLayout;
+			global::XamEffects.Droid.Resource.Attribute.listMenuViewStyle = global::HuCoin.Droid.Resource.Attribute.listMenuViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.listPopupWindowStyle = global::HuCoin.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeight = global::HuCoin.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::HuCoin.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::HuCoin.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::HuCoin.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::XamEffects.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::HuCoin.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::XamEffects.Droid.Resource.Attribute.logo = global::HuCoin.Droid.Resource.Attribute.logo;
+			global::XamEffects.Droid.Resource.Attribute.logoDescription = global::HuCoin.Droid.Resource.Attribute.logoDescription;
+			global::XamEffects.Droid.Resource.Attribute.maxActionInlineWidth = global::HuCoin.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::XamEffects.Droid.Resource.Attribute.maxButtonHeight = global::HuCoin.Droid.Resource.Attribute.maxButtonHeight;
+			global::XamEffects.Droid.Resource.Attribute.measureWithLargestChild = global::HuCoin.Droid.Resource.Attribute.measureWithLargestChild;
+			global::XamEffects.Droid.Resource.Attribute.menu = global::HuCoin.Droid.Resource.Attribute.menu;
+			global::XamEffects.Droid.Resource.Attribute.multiChoiceItemLayout = global::HuCoin.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.navigationContentDescription = global::HuCoin.Droid.Resource.Attribute.navigationContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.navigationIcon = global::HuCoin.Droid.Resource.Attribute.navigationIcon;
+			global::XamEffects.Droid.Resource.Attribute.navigationMode = global::HuCoin.Droid.Resource.Attribute.navigationMode;
+			global::XamEffects.Droid.Resource.Attribute.overlapAnchor = global::HuCoin.Droid.Resource.Attribute.overlapAnchor;
+			global::XamEffects.Droid.Resource.Attribute.paddingBottomNoButtons = global::HuCoin.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::XamEffects.Droid.Resource.Attribute.paddingEnd = global::HuCoin.Droid.Resource.Attribute.paddingEnd;
+			global::XamEffects.Droid.Resource.Attribute.paddingStart = global::HuCoin.Droid.Resource.Attribute.paddingStart;
+			global::XamEffects.Droid.Resource.Attribute.paddingTopNoTitle = global::HuCoin.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::XamEffects.Droid.Resource.Attribute.panelBackground = global::HuCoin.Droid.Resource.Attribute.panelBackground;
+			global::XamEffects.Droid.Resource.Attribute.panelMenuListTheme = global::HuCoin.Droid.Resource.Attribute.panelMenuListTheme;
+			global::XamEffects.Droid.Resource.Attribute.panelMenuListWidth = global::HuCoin.Droid.Resource.Attribute.panelMenuListWidth;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleContentDescription = global::HuCoin.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleDrawable = global::HuCoin.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleEnabled = global::HuCoin.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleTint = global::HuCoin.Droid.Resource.Attribute.passwordToggleTint;
+			global::XamEffects.Droid.Resource.Attribute.passwordToggleTintMode = global::HuCoin.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::XamEffects.Droid.Resource.Attribute.popupMenuStyle = global::HuCoin.Droid.Resource.Attribute.popupMenuStyle;
+			global::XamEffects.Droid.Resource.Attribute.popupTheme = global::HuCoin.Droid.Resource.Attribute.popupTheme;
+			global::XamEffects.Droid.Resource.Attribute.popupWindowStyle = global::HuCoin.Droid.Resource.Attribute.popupWindowStyle;
+			global::XamEffects.Droid.Resource.Attribute.preserveIconSpacing = global::HuCoin.Droid.Resource.Attribute.preserveIconSpacing;
+			global::XamEffects.Droid.Resource.Attribute.pressedTranslationZ = global::HuCoin.Droid.Resource.Attribute.pressedTranslationZ;
+			global::XamEffects.Droid.Resource.Attribute.progressBarPadding = global::HuCoin.Droid.Resource.Attribute.progressBarPadding;
+			global::XamEffects.Droid.Resource.Attribute.progressBarStyle = global::HuCoin.Droid.Resource.Attribute.progressBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.queryBackground = global::HuCoin.Droid.Resource.Attribute.queryBackground;
+			global::XamEffects.Droid.Resource.Attribute.queryHint = global::HuCoin.Droid.Resource.Attribute.queryHint;
+			global::XamEffects.Droid.Resource.Attribute.radioButtonStyle = global::HuCoin.Droid.Resource.Attribute.radioButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyle = global::HuCoin.Droid.Resource.Attribute.ratingBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyleIndicator = global::HuCoin.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::XamEffects.Droid.Resource.Attribute.ratingBarStyleSmall = global::HuCoin.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::XamEffects.Droid.Resource.Attribute.reverseLayout = global::HuCoin.Droid.Resource.Attribute.reverseLayout;
+			global::XamEffects.Droid.Resource.Attribute.rippleColor = global::HuCoin.Droid.Resource.Attribute.rippleColor;
+			global::XamEffects.Droid.Resource.Attribute.scrimAnimationDuration = global::HuCoin.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::XamEffects.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::HuCoin.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::XamEffects.Droid.Resource.Attribute.searchHintIcon = global::HuCoin.Droid.Resource.Attribute.searchHintIcon;
+			global::XamEffects.Droid.Resource.Attribute.searchIcon = global::HuCoin.Droid.Resource.Attribute.searchIcon;
+			global::XamEffects.Droid.Resource.Attribute.searchViewStyle = global::HuCoin.Droid.Resource.Attribute.searchViewStyle;
+			global::XamEffects.Droid.Resource.Attribute.seekBarStyle = global::HuCoin.Droid.Resource.Attribute.seekBarStyle;
+			global::XamEffects.Droid.Resource.Attribute.selectableItemBackground = global::HuCoin.Droid.Resource.Attribute.selectableItemBackground;
+			global::XamEffects.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::HuCoin.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::XamEffects.Droid.Resource.Attribute.showAsAction = global::HuCoin.Droid.Resource.Attribute.showAsAction;
+			global::XamEffects.Droid.Resource.Attribute.showDividers = global::HuCoin.Droid.Resource.Attribute.showDividers;
+			global::XamEffects.Droid.Resource.Attribute.showText = global::HuCoin.Droid.Resource.Attribute.showText;
+			global::XamEffects.Droid.Resource.Attribute.showTitle = global::HuCoin.Droid.Resource.Attribute.showTitle;
+			global::XamEffects.Droid.Resource.Attribute.singleChoiceItemLayout = global::HuCoin.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Attribute.spanCount = global::HuCoin.Droid.Resource.Attribute.spanCount;
+			global::XamEffects.Droid.Resource.Attribute.spinBars = global::HuCoin.Droid.Resource.Attribute.spinBars;
+			global::XamEffects.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::HuCoin.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::XamEffects.Droid.Resource.Attribute.spinnerStyle = global::HuCoin.Droid.Resource.Attribute.spinnerStyle;
+			global::XamEffects.Droid.Resource.Attribute.splitTrack = global::HuCoin.Droid.Resource.Attribute.splitTrack;
+			global::XamEffects.Droid.Resource.Attribute.srcCompat = global::HuCoin.Droid.Resource.Attribute.srcCompat;
+			global::XamEffects.Droid.Resource.Attribute.stackFromEnd = global::HuCoin.Droid.Resource.Attribute.stackFromEnd;
+			global::XamEffects.Droid.Resource.Attribute.state_above_anchor = global::HuCoin.Droid.Resource.Attribute.state_above_anchor;
+			global::XamEffects.Droid.Resource.Attribute.state_collapsed = global::HuCoin.Droid.Resource.Attribute.state_collapsed;
+			global::XamEffects.Droid.Resource.Attribute.state_collapsible = global::HuCoin.Droid.Resource.Attribute.state_collapsible;
+			global::XamEffects.Droid.Resource.Attribute.statusBarBackground = global::HuCoin.Droid.Resource.Attribute.statusBarBackground;
+			global::XamEffects.Droid.Resource.Attribute.statusBarScrim = global::HuCoin.Droid.Resource.Attribute.statusBarScrim;
+			global::XamEffects.Droid.Resource.Attribute.subMenuArrow = global::HuCoin.Droid.Resource.Attribute.subMenuArrow;
+			global::XamEffects.Droid.Resource.Attribute.submitBackground = global::HuCoin.Droid.Resource.Attribute.submitBackground;
+			global::XamEffects.Droid.Resource.Attribute.subtitle = global::HuCoin.Droid.Resource.Attribute.subtitle;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextAppearance = global::HuCoin.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextColor = global::HuCoin.Droid.Resource.Attribute.subtitleTextColor;
+			global::XamEffects.Droid.Resource.Attribute.subtitleTextStyle = global::HuCoin.Droid.Resource.Attribute.subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.suggestionRowLayout = global::HuCoin.Droid.Resource.Attribute.suggestionRowLayout;
+			global::XamEffects.Droid.Resource.Attribute.switchMinWidth = global::HuCoin.Droid.Resource.Attribute.switchMinWidth;
+			global::XamEffects.Droid.Resource.Attribute.switchPadding = global::HuCoin.Droid.Resource.Attribute.switchPadding;
+			global::XamEffects.Droid.Resource.Attribute.switchStyle = global::HuCoin.Droid.Resource.Attribute.switchStyle;
+			global::XamEffects.Droid.Resource.Attribute.switchTextAppearance = global::HuCoin.Droid.Resource.Attribute.switchTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.tabBackground = global::HuCoin.Droid.Resource.Attribute.tabBackground;
+			global::XamEffects.Droid.Resource.Attribute.tabContentStart = global::HuCoin.Droid.Resource.Attribute.tabContentStart;
+			global::XamEffects.Droid.Resource.Attribute.tabGravity = global::HuCoin.Droid.Resource.Attribute.tabGravity;
+			global::XamEffects.Droid.Resource.Attribute.tabIndicatorColor = global::HuCoin.Droid.Resource.Attribute.tabIndicatorColor;
+			global::XamEffects.Droid.Resource.Attribute.tabIndicatorHeight = global::HuCoin.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::XamEffects.Droid.Resource.Attribute.tabMaxWidth = global::HuCoin.Droid.Resource.Attribute.tabMaxWidth;
+			global::XamEffects.Droid.Resource.Attribute.tabMinWidth = global::HuCoin.Droid.Resource.Attribute.tabMinWidth;
+			global::XamEffects.Droid.Resource.Attribute.tabMode = global::HuCoin.Droid.Resource.Attribute.tabMode;
+			global::XamEffects.Droid.Resource.Attribute.tabPadding = global::HuCoin.Droid.Resource.Attribute.tabPadding;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingBottom = global::HuCoin.Droid.Resource.Attribute.tabPaddingBottom;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingEnd = global::HuCoin.Droid.Resource.Attribute.tabPaddingEnd;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingStart = global::HuCoin.Droid.Resource.Attribute.tabPaddingStart;
+			global::XamEffects.Droid.Resource.Attribute.tabPaddingTop = global::HuCoin.Droid.Resource.Attribute.tabPaddingTop;
+			global::XamEffects.Droid.Resource.Attribute.tabSelectedTextColor = global::HuCoin.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::XamEffects.Droid.Resource.Attribute.tabTextAppearance = global::HuCoin.Droid.Resource.Attribute.tabTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.tabTextColor = global::HuCoin.Droid.Resource.Attribute.tabTextColor;
+			global::XamEffects.Droid.Resource.Attribute.textAllCaps = global::HuCoin.Droid.Resource.Attribute.textAllCaps;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::HuCoin.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItem = global::HuCoin.Droid.Resource.Attribute.textAppearanceListItem;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::HuCoin.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceListItemSmall = global::HuCoin.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::XamEffects.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::HuCoin.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::HuCoin.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::HuCoin.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::XamEffects.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::HuCoin.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::XamEffects.Droid.Resource.Attribute.textColorAlertDialogListItem = global::HuCoin.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::XamEffects.Droid.Resource.Attribute.textColorSearchUrl = global::HuCoin.Droid.Resource.Attribute.textColorSearchUrl;
+			global::XamEffects.Droid.Resource.Attribute.theme = global::HuCoin.Droid.Resource.Attribute.theme;
+			global::XamEffects.Droid.Resource.Attribute.thickness = global::HuCoin.Droid.Resource.Attribute.thickness;
+			global::XamEffects.Droid.Resource.Attribute.thumbTextPadding = global::HuCoin.Droid.Resource.Attribute.thumbTextPadding;
+			global::XamEffects.Droid.Resource.Attribute.thumbTint = global::HuCoin.Droid.Resource.Attribute.thumbTint;
+			global::XamEffects.Droid.Resource.Attribute.thumbTintMode = global::HuCoin.Droid.Resource.Attribute.thumbTintMode;
+			global::XamEffects.Droid.Resource.Attribute.tickMark = global::HuCoin.Droid.Resource.Attribute.tickMark;
+			global::XamEffects.Droid.Resource.Attribute.tickMarkTint = global::HuCoin.Droid.Resource.Attribute.tickMarkTint;
+			global::XamEffects.Droid.Resource.Attribute.tickMarkTintMode = global::HuCoin.Droid.Resource.Attribute.tickMarkTintMode;
+			global::XamEffects.Droid.Resource.Attribute.tint = global::HuCoin.Droid.Resource.Attribute.tint;
+			global::XamEffects.Droid.Resource.Attribute.tintMode = global::HuCoin.Droid.Resource.Attribute.tintMode;
+			global::XamEffects.Droid.Resource.Attribute.title = global::HuCoin.Droid.Resource.Attribute.title;
+			global::XamEffects.Droid.Resource.Attribute.titleEnabled = global::HuCoin.Droid.Resource.Attribute.titleEnabled;
+			global::XamEffects.Droid.Resource.Attribute.titleMargin = global::HuCoin.Droid.Resource.Attribute.titleMargin;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginBottom = global::HuCoin.Droid.Resource.Attribute.titleMarginBottom;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginEnd = global::HuCoin.Droid.Resource.Attribute.titleMarginEnd;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginStart = global::HuCoin.Droid.Resource.Attribute.titleMarginStart;
+			global::XamEffects.Droid.Resource.Attribute.titleMarginTop = global::HuCoin.Droid.Resource.Attribute.titleMarginTop;
+			global::XamEffects.Droid.Resource.Attribute.titleMargins = global::HuCoin.Droid.Resource.Attribute.titleMargins;
+			global::XamEffects.Droid.Resource.Attribute.titleTextAppearance = global::HuCoin.Droid.Resource.Attribute.titleTextAppearance;
+			global::XamEffects.Droid.Resource.Attribute.titleTextColor = global::HuCoin.Droid.Resource.Attribute.titleTextColor;
+			global::XamEffects.Droid.Resource.Attribute.titleTextStyle = global::HuCoin.Droid.Resource.Attribute.titleTextStyle;
+			global::XamEffects.Droid.Resource.Attribute.toolbarId = global::HuCoin.Droid.Resource.Attribute.toolbarId;
+			global::XamEffects.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::HuCoin.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::XamEffects.Droid.Resource.Attribute.toolbarStyle = global::HuCoin.Droid.Resource.Attribute.toolbarStyle;
+			global::XamEffects.Droid.Resource.Attribute.track = global::HuCoin.Droid.Resource.Attribute.track;
+			global::XamEffects.Droid.Resource.Attribute.trackTint = global::HuCoin.Droid.Resource.Attribute.trackTint;
+			global::XamEffects.Droid.Resource.Attribute.trackTintMode = global::HuCoin.Droid.Resource.Attribute.trackTintMode;
+			global::XamEffects.Droid.Resource.Attribute.useCompatPadding = global::HuCoin.Droid.Resource.Attribute.useCompatPadding;
+			global::XamEffects.Droid.Resource.Attribute.voiceIcon = global::HuCoin.Droid.Resource.Attribute.voiceIcon;
+			global::XamEffects.Droid.Resource.Attribute.windowActionBar = global::HuCoin.Droid.Resource.Attribute.windowActionBar;
+			global::XamEffects.Droid.Resource.Attribute.windowActionBarOverlay = global::HuCoin.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::XamEffects.Droid.Resource.Attribute.windowActionModeOverlay = global::HuCoin.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedHeightMajor = global::HuCoin.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedHeightMinor = global::HuCoin.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedWidthMajor = global::HuCoin.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowFixedWidthMinor = global::HuCoin.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowMinWidthMajor = global::HuCoin.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::XamEffects.Droid.Resource.Attribute.windowMinWidthMinor = global::HuCoin.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::XamEffects.Droid.Resource.Attribute.windowNoTitle = global::HuCoin.Droid.Resource.Attribute.windowNoTitle;
+			global::XamEffects.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::HuCoin.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::XamEffects.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::HuCoin.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::XamEffects.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::HuCoin.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::XamEffects.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::HuCoin.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::HuCoin.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::HuCoin.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::XamEffects.Droid.Resource.Color.abc_btn_colored_text_material = global::HuCoin.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::XamEffects.Droid.Resource.Color.abc_color_highlight_material = global::HuCoin.Droid.Resource.Color.abc_color_highlight_material;
+			global::XamEffects.Droid.Resource.Color.abc_hint_foreground_material_dark = global::HuCoin.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_hint_foreground_material_light = global::HuCoin.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::HuCoin.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::HuCoin.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_material_dark = global::HuCoin.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_primary_text_material_light = global::HuCoin.Droid.Resource.Color.abc_primary_text_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text = global::HuCoin.Droid.Resource.Color.abc_search_url_text;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_normal = global::HuCoin.Droid.Resource.Color.abc_search_url_text_normal;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_pressed = global::HuCoin.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::XamEffects.Droid.Resource.Color.abc_search_url_text_selected = global::HuCoin.Droid.Resource.Color.abc_search_url_text_selected;
+			global::XamEffects.Droid.Resource.Color.abc_secondary_text_material_dark = global::HuCoin.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.abc_secondary_text_material_light = global::HuCoin.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::XamEffects.Droid.Resource.Color.abc_tint_btn_checkable = global::HuCoin.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::XamEffects.Droid.Resource.Color.abc_tint_default = global::HuCoin.Droid.Resource.Color.abc_tint_default;
+			global::XamEffects.Droid.Resource.Color.abc_tint_edittext = global::HuCoin.Droid.Resource.Color.abc_tint_edittext;
+			global::XamEffects.Droid.Resource.Color.abc_tint_seek_thumb = global::HuCoin.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::XamEffects.Droid.Resource.Color.abc_tint_spinner = global::HuCoin.Droid.Resource.Color.abc_tint_spinner;
+			global::XamEffects.Droid.Resource.Color.abc_tint_switch_track = global::HuCoin.Droid.Resource.Color.abc_tint_switch_track;
+			global::XamEffects.Droid.Resource.Color.accent_material_dark = global::HuCoin.Droid.Resource.Color.accent_material_dark;
+			global::XamEffects.Droid.Resource.Color.accent_material_light = global::HuCoin.Droid.Resource.Color.accent_material_light;
+			global::XamEffects.Droid.Resource.Color.background_floating_material_dark = global::HuCoin.Droid.Resource.Color.background_floating_material_dark;
+			global::XamEffects.Droid.Resource.Color.background_floating_material_light = global::HuCoin.Droid.Resource.Color.background_floating_material_light;
+			global::XamEffects.Droid.Resource.Color.background_material_dark = global::HuCoin.Droid.Resource.Color.background_material_dark;
+			global::XamEffects.Droid.Resource.Color.background_material_light = global::HuCoin.Droid.Resource.Color.background_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::HuCoin.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_disabled_material_light = global::HuCoin.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::HuCoin.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_inverse_material_light = global::HuCoin.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_material_dark = global::HuCoin.Droid.Resource.Color.bright_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.bright_foreground_material_light = global::HuCoin.Droid.Resource.Color.bright_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.button_material_dark = global::HuCoin.Droid.Resource.Color.button_material_dark;
+			global::XamEffects.Droid.Resource.Color.button_material_light = global::HuCoin.Droid.Resource.Color.button_material_light;
+			global::XamEffects.Droid.Resource.Color.cardview_dark_background = global::HuCoin.Droid.Resource.Color.cardview_dark_background;
+			global::XamEffects.Droid.Resource.Color.cardview_light_background = global::HuCoin.Droid.Resource.Color.cardview_light_background;
+			global::XamEffects.Droid.Resource.Color.cardview_shadow_end_color = global::HuCoin.Droid.Resource.Color.cardview_shadow_end_color;
+			global::XamEffects.Droid.Resource.Color.cardview_shadow_start_color = global::HuCoin.Droid.Resource.Color.cardview_shadow_start_color;
+			global::XamEffects.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::HuCoin.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::XamEffects.Droid.Resource.Color.design_error = global::HuCoin.Droid.Resource.Color.design_error;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_end_color = global::HuCoin.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_mid_color = global::HuCoin.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_shadow_start_color = global::HuCoin.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::HuCoin.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::HuCoin.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::HuCoin.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::XamEffects.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::HuCoin.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::XamEffects.Droid.Resource.Color.design_snackbar_background_color = global::HuCoin.Droid.Resource.Color.design_snackbar_background_color;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::HuCoin.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_disabled_material_light = global::HuCoin.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_material_dark = global::HuCoin.Droid.Resource.Color.dim_foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.dim_foreground_material_light = global::HuCoin.Droid.Resource.Color.dim_foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.foreground_material_dark = global::HuCoin.Droid.Resource.Color.foreground_material_dark;
+			global::XamEffects.Droid.Resource.Color.foreground_material_light = global::HuCoin.Droid.Resource.Color.foreground_material_light;
+			global::XamEffects.Droid.Resource.Color.highlighted_text_material_dark = global::HuCoin.Droid.Resource.Color.highlighted_text_material_dark;
+			global::XamEffects.Droid.Resource.Color.highlighted_text_material_light = global::HuCoin.Droid.Resource.Color.highlighted_text_material_light;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_800 = global::HuCoin.Droid.Resource.Color.material_blue_grey_800;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_900 = global::HuCoin.Droid.Resource.Color.material_blue_grey_900;
+			global::XamEffects.Droid.Resource.Color.material_blue_grey_950 = global::HuCoin.Droid.Resource.Color.material_blue_grey_950;
+			global::XamEffects.Droid.Resource.Color.material_deep_teal_200 = global::HuCoin.Droid.Resource.Color.material_deep_teal_200;
+			global::XamEffects.Droid.Resource.Color.material_deep_teal_500 = global::HuCoin.Droid.Resource.Color.material_deep_teal_500;
+			global::XamEffects.Droid.Resource.Color.material_grey_100 = global::HuCoin.Droid.Resource.Color.material_grey_100;
+			global::XamEffects.Droid.Resource.Color.material_grey_300 = global::HuCoin.Droid.Resource.Color.material_grey_300;
+			global::XamEffects.Droid.Resource.Color.material_grey_50 = global::HuCoin.Droid.Resource.Color.material_grey_50;
+			global::XamEffects.Droid.Resource.Color.material_grey_600 = global::HuCoin.Droid.Resource.Color.material_grey_600;
+			global::XamEffects.Droid.Resource.Color.material_grey_800 = global::HuCoin.Droid.Resource.Color.material_grey_800;
+			global::XamEffects.Droid.Resource.Color.material_grey_850 = global::HuCoin.Droid.Resource.Color.material_grey_850;
+			global::XamEffects.Droid.Resource.Color.material_grey_900 = global::HuCoin.Droid.Resource.Color.material_grey_900;
+			global::XamEffects.Droid.Resource.Color.notification_action_color_filter = global::HuCoin.Droid.Resource.Color.notification_action_color_filter;
+			global::XamEffects.Droid.Resource.Color.notification_icon_bg_color = global::HuCoin.Droid.Resource.Color.notification_icon_bg_color;
+			global::XamEffects.Droid.Resource.Color.notification_material_background_media_default_color = global::HuCoin.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::XamEffects.Droid.Resource.Color.primary_dark_material_dark = global::HuCoin.Droid.Resource.Color.primary_dark_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_dark_material_light = global::HuCoin.Droid.Resource.Color.primary_dark_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_material_dark = global::HuCoin.Droid.Resource.Color.primary_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_material_light = global::HuCoin.Droid.Resource.Color.primary_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_text_default_material_dark = global::HuCoin.Droid.Resource.Color.primary_text_default_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_text_default_material_light = global::HuCoin.Droid.Resource.Color.primary_text_default_material_light;
+			global::XamEffects.Droid.Resource.Color.primary_text_disabled_material_dark = global::HuCoin.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.primary_text_disabled_material_light = global::HuCoin.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.ripple_material_dark = global::HuCoin.Droid.Resource.Color.ripple_material_dark;
+			global::XamEffects.Droid.Resource.Color.ripple_material_light = global::HuCoin.Droid.Resource.Color.ripple_material_light;
+			global::XamEffects.Droid.Resource.Color.secondary_text_default_material_dark = global::HuCoin.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::XamEffects.Droid.Resource.Color.secondary_text_default_material_light = global::HuCoin.Droid.Resource.Color.secondary_text_default_material_light;
+			global::XamEffects.Droid.Resource.Color.secondary_text_disabled_material_dark = global::HuCoin.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.secondary_text_disabled_material_light = global::HuCoin.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::HuCoin.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_disabled_material_light = global::HuCoin.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_material_dark = global::HuCoin.Droid.Resource.Color.switch_thumb_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_material_light = global::HuCoin.Droid.Resource.Color.switch_thumb_material_light;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_normal_material_dark = global::HuCoin.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::XamEffects.Droid.Resource.Color.switch_thumb_normal_material_light = global::HuCoin.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::HuCoin.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_height_material = global::HuCoin.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_width_material = global::HuCoin.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::HuCoin.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::HuCoin.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::HuCoin.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::HuCoin.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::HuCoin.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::HuCoin.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::HuCoin.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::HuCoin.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_corner_material = global::HuCoin.Droid.Resource.Dimension.abc_control_corner_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_inset_material = global::HuCoin.Droid.Resource.Dimension.abc_control_inset_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_control_padding_material = global::HuCoin.Droid.Resource.Dimension.abc_control_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::HuCoin.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::HuCoin.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::HuCoin.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::HuCoin.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::HuCoin.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::HuCoin.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_min_width_major = global::HuCoin.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::HuCoin.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_padding_material = global::HuCoin.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::HuCoin.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::HuCoin.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::HuCoin.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::HuCoin.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::HuCoin.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::HuCoin.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::XamEffects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::HuCoin.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::HuCoin.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::HuCoin.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::HuCoin.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_floating_window_z = global::HuCoin.Droid.Resource.Dimension.abc_floating_window_z;
+			global::XamEffects.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::HuCoin.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_panel_menu_list_width = global::HuCoin.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_progress_bar_height_material = global::HuCoin.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_search_view_preferred_height = global::HuCoin.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::XamEffects.Droid.Resource.Dimension.abc_search_view_preferred_width = global::HuCoin.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::XamEffects.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::HuCoin.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::HuCoin.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::HuCoin.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_switch_padding = global::HuCoin.Droid.Resource.Dimension.abc_switch_padding;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_body_1_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_body_2_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_button_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_caption_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_1_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_2_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_3_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_display_4_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_headline_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_large_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_medium_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_menu_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_small_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_subhead_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::HuCoin.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_title_material = global::HuCoin.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::XamEffects.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::HuCoin.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::XamEffects.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::HuCoin.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::XamEffects.Droid.Resource.Dimension.cardview_default_elevation = global::HuCoin.Droid.Resource.Dimension.cardview_default_elevation;
+			global::XamEffects.Droid.Resource.Dimension.cardview_default_radius = global::HuCoin.Droid.Resource.Dimension.cardview_default_radius;
+			global::XamEffects.Droid.Resource.Dimension.design_appbar_elevation = global::HuCoin.Droid.Resource.Dimension.design_appbar_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_height = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_margin = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::HuCoin.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::HuCoin.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::HuCoin.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_border_width = global::HuCoin.Droid.Resource.Dimension.design_fab_border_width;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_elevation = global::HuCoin.Droid.Resource.Dimension.design_fab_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_image_size = global::HuCoin.Droid.Resource.Dimension.design_fab_image_size;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_size_mini = global::HuCoin.Droid.Resource.Dimension.design_fab_size_mini;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_size_normal = global::HuCoin.Droid.Resource.Dimension.design_fab_size_normal;
+			global::XamEffects.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::HuCoin.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_elevation = global::HuCoin.Droid.Resource.Dimension.design_navigation_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_icon_padding = global::HuCoin.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_icon_size = global::HuCoin.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_max_width = global::HuCoin.Droid.Resource.Dimension.design_navigation_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_padding_bottom = global::HuCoin.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::XamEffects.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::HuCoin.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::HuCoin.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::HuCoin.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_elevation = global::HuCoin.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::HuCoin.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_max_width = global::HuCoin.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_min_width = global::HuCoin.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::HuCoin.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::HuCoin.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::HuCoin.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::XamEffects.Droid.Resource.Dimension.design_snackbar_text_size = global::HuCoin.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_max_width = global::HuCoin.Droid.Resource.Dimension.design_tab_max_width;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::HuCoin.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_text_size = global::HuCoin.Droid.Resource.Dimension.design_tab_text_size;
+			global::XamEffects.Droid.Resource.Dimension.design_tab_text_size_2line = global::HuCoin.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::XamEffects.Droid.Resource.Dimension.disabled_alpha_material_dark = global::HuCoin.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.disabled_alpha_material_light = global::HuCoin.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_colored = global::HuCoin.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_dark = global::HuCoin.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.highlight_alpha_material_light = global::HuCoin.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.hint_alpha_material_dark = global::HuCoin.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.hint_alpha_material_light = global::HuCoin.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::HuCoin.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::XamEffects.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::HuCoin.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::HuCoin.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::HuCoin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::XamEffects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::HuCoin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::XamEffects.Droid.Resource.Dimension.notification_action_icon_size = global::HuCoin.Droid.Resource.Dimension.notification_action_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_action_text_size = global::HuCoin.Droid.Resource.Dimension.notification_action_text_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_big_circle_margin = global::HuCoin.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::XamEffects.Droid.Resource.Dimension.notification_content_margin_start = global::HuCoin.Droid.Resource.Dimension.notification_content_margin_start;
+			global::XamEffects.Droid.Resource.Dimension.notification_large_icon_height = global::HuCoin.Droid.Resource.Dimension.notification_large_icon_height;
+			global::XamEffects.Droid.Resource.Dimension.notification_large_icon_width = global::HuCoin.Droid.Resource.Dimension.notification_large_icon_width;
+			global::XamEffects.Droid.Resource.Dimension.notification_main_column_padding_top = global::HuCoin.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::XamEffects.Droid.Resource.Dimension.notification_media_narrow_margin = global::HuCoin.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::XamEffects.Droid.Resource.Dimension.notification_right_icon_size = global::HuCoin.Droid.Resource.Dimension.notification_right_icon_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_right_side_padding_top = global::HuCoin.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::XamEffects.Droid.Resource.Dimension.notification_small_icon_background_padding = global::HuCoin.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::XamEffects.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::HuCoin.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::XamEffects.Droid.Resource.Dimension.notification_subtext_size = global::HuCoin.Droid.Resource.Dimension.notification_subtext_size;
+			global::XamEffects.Droid.Resource.Dimension.notification_top_pad = global::HuCoin.Droid.Resource.Dimension.notification_top_pad;
+			global::XamEffects.Droid.Resource.Dimension.notification_top_pad_large_text = global::HuCoin.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::XamEffects.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::HuCoin.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_borderless_material = global::HuCoin.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_material = global::HuCoin.Droid.Resource.Drawable.abc_btn_check_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::HuCoin.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::HuCoin.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_colored_material = global::HuCoin.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::HuCoin.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_material = global::HuCoin.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::HuCoin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::HuCoin.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::HuCoin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::XamEffects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::HuCoin.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::HuCoin.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_top_material = global::HuCoin.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_control_background_material = global::HuCoin.Droid.Resource.Drawable.abc_control_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_dialog_material_background = global::HuCoin.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::XamEffects.Droid.Resource.Drawable.abc_edit_text_material = global::HuCoin.Droid.Resource.Drawable.abc_edit_text_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_ab_back_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_clear_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_search_api_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::HuCoin.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::XamEffects.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::HuCoin.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_item_background_holo_dark = global::HuCoin.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_item_background_holo_light = global::HuCoin.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_focused_holo = global::HuCoin.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_longpressed_holo = global::HuCoin.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::HuCoin.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::HuCoin.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_list_selector_holo_light = global::HuCoin.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::HuCoin.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::XamEffects.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::HuCoin.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::HuCoin.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_material = global::HuCoin.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_ratingbar_small_material = global::HuCoin.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::HuCoin.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::HuCoin.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::HuCoin.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::HuCoin.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_seekbar_track_material = global::HuCoin.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::HuCoin.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::HuCoin.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_switch_thumb_material = global::HuCoin.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_tab_indicator_material = global::HuCoin.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_cursor_material = global::HuCoin.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::XamEffects.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::HuCoin.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::HuCoin.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::XamEffects.Droid.Resource.Drawable.abc_textfield_search_material = global::HuCoin.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::XamEffects.Droid.Resource.Drawable.abc_vector_test = global::HuCoin.Droid.Resource.Drawable.abc_vector_test;
+			global::XamEffects.Droid.Resource.Drawable.avd_hide_password = global::HuCoin.Droid.Resource.Drawable.avd_hide_password;
+			global::XamEffects.Droid.Resource.Drawable.avd_show_password = global::HuCoin.Droid.Resource.Drawable.avd_show_password;
+			global::XamEffects.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::HuCoin.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::XamEffects.Droid.Resource.Drawable.design_fab_background = global::HuCoin.Droid.Resource.Drawable.design_fab_background;
+			global::XamEffects.Droid.Resource.Drawable.design_ic_visibility = global::HuCoin.Droid.Resource.Drawable.design_ic_visibility;
+			global::XamEffects.Droid.Resource.Drawable.design_ic_visibility_off = global::HuCoin.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::XamEffects.Droid.Resource.Drawable.design_password_eye = global::HuCoin.Droid.Resource.Drawable.design_password_eye;
+			global::XamEffects.Droid.Resource.Drawable.design_snackbar_background = global::HuCoin.Droid.Resource.Drawable.design_snackbar_background;
+			global::XamEffects.Droid.Resource.Drawable.navigation_empty_icon = global::HuCoin.Droid.Resource.Drawable.navigation_empty_icon;
+			global::XamEffects.Droid.Resource.Drawable.notification_action_background = global::HuCoin.Droid.Resource.Drawable.notification_action_background;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg = global::HuCoin.Droid.Resource.Drawable.notification_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low = global::HuCoin.Droid.Resource.Drawable.notification_bg_low;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low_normal = global::HuCoin.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_low_pressed = global::HuCoin.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_normal = global::HuCoin.Droid.Resource.Drawable.notification_bg_normal;
+			global::XamEffects.Droid.Resource.Drawable.notification_bg_normal_pressed = global::HuCoin.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::XamEffects.Droid.Resource.Drawable.notification_icon_background = global::HuCoin.Droid.Resource.Drawable.notification_icon_background;
+			global::XamEffects.Droid.Resource.Drawable.notification_template_icon_bg = global::HuCoin.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_template_icon_low_bg = global::HuCoin.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::XamEffects.Droid.Resource.Drawable.notification_tile_bg = global::HuCoin.Droid.Resource.Drawable.notification_tile_bg;
+			global::XamEffects.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::HuCoin.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XamEffects.Droid.Resource.Id.action0 = global::HuCoin.Droid.Resource.Id.action0;
+			global::XamEffects.Droid.Resource.Id.action_bar = global::HuCoin.Droid.Resource.Id.action_bar;
+			global::XamEffects.Droid.Resource.Id.action_bar_activity_content = global::HuCoin.Droid.Resource.Id.action_bar_activity_content;
+			global::XamEffects.Droid.Resource.Id.action_bar_container = global::HuCoin.Droid.Resource.Id.action_bar_container;
+			global::XamEffects.Droid.Resource.Id.action_bar_root = global::HuCoin.Droid.Resource.Id.action_bar_root;
+			global::XamEffects.Droid.Resource.Id.action_bar_spinner = global::HuCoin.Droid.Resource.Id.action_bar_spinner;
+			global::XamEffects.Droid.Resource.Id.action_bar_subtitle = global::HuCoin.Droid.Resource.Id.action_bar_subtitle;
+			global::XamEffects.Droid.Resource.Id.action_bar_title = global::HuCoin.Droid.Resource.Id.action_bar_title;
+			global::XamEffects.Droid.Resource.Id.action_container = global::HuCoin.Droid.Resource.Id.action_container;
+			global::XamEffects.Droid.Resource.Id.action_context_bar = global::HuCoin.Droid.Resource.Id.action_context_bar;
+			global::XamEffects.Droid.Resource.Id.action_divider = global::HuCoin.Droid.Resource.Id.action_divider;
+			global::XamEffects.Droid.Resource.Id.action_image = global::HuCoin.Droid.Resource.Id.action_image;
+			global::XamEffects.Droid.Resource.Id.action_menu_divider = global::HuCoin.Droid.Resource.Id.action_menu_divider;
+			global::XamEffects.Droid.Resource.Id.action_menu_presenter = global::HuCoin.Droid.Resource.Id.action_menu_presenter;
+			global::XamEffects.Droid.Resource.Id.action_mode_bar = global::HuCoin.Droid.Resource.Id.action_mode_bar;
+			global::XamEffects.Droid.Resource.Id.action_mode_bar_stub = global::HuCoin.Droid.Resource.Id.action_mode_bar_stub;
+			global::XamEffects.Droid.Resource.Id.action_mode_close_button = global::HuCoin.Droid.Resource.Id.action_mode_close_button;
+			global::XamEffects.Droid.Resource.Id.action_text = global::HuCoin.Droid.Resource.Id.action_text;
+			global::XamEffects.Droid.Resource.Id.actions = global::HuCoin.Droid.Resource.Id.actions;
+			global::XamEffects.Droid.Resource.Id.activity_chooser_view_content = global::HuCoin.Droid.Resource.Id.activity_chooser_view_content;
+			global::XamEffects.Droid.Resource.Id.add = global::HuCoin.Droid.Resource.Id.add;
+			global::XamEffects.Droid.Resource.Id.alertTitle = global::HuCoin.Droid.Resource.Id.alertTitle;
+			global::XamEffects.Droid.Resource.Id.all = global::HuCoin.Droid.Resource.Id.all;
+			global::XamEffects.Droid.Resource.Id.always = global::HuCoin.Droid.Resource.Id.always;
+			global::XamEffects.Droid.Resource.Id.auto = global::HuCoin.Droid.Resource.Id.auto;
+			global::XamEffects.Droid.Resource.Id.beginning = global::HuCoin.Droid.Resource.Id.beginning;
+			global::XamEffects.Droid.Resource.Id.bottom = global::HuCoin.Droid.Resource.Id.bottom;
+			global::XamEffects.Droid.Resource.Id.buttonPanel = global::HuCoin.Droid.Resource.Id.buttonPanel;
+			global::XamEffects.Droid.Resource.Id.cancel_action = global::HuCoin.Droid.Resource.Id.cancel_action;
+			global::XamEffects.Droid.Resource.Id.center = global::HuCoin.Droid.Resource.Id.center;
+			global::XamEffects.Droid.Resource.Id.center_horizontal = global::HuCoin.Droid.Resource.Id.center_horizontal;
+			global::XamEffects.Droid.Resource.Id.center_vertical = global::HuCoin.Droid.Resource.Id.center_vertical;
+			global::XamEffects.Droid.Resource.Id.checkbox = global::HuCoin.Droid.Resource.Id.checkbox;
+			global::XamEffects.Droid.Resource.Id.chronometer = global::HuCoin.Droid.Resource.Id.chronometer;
+			global::XamEffects.Droid.Resource.Id.clip_horizontal = global::HuCoin.Droid.Resource.Id.clip_horizontal;
+			global::XamEffects.Droid.Resource.Id.clip_vertical = global::HuCoin.Droid.Resource.Id.clip_vertical;
+			global::XamEffects.Droid.Resource.Id.collapseActionView = global::HuCoin.Droid.Resource.Id.collapseActionView;
+			global::XamEffects.Droid.Resource.Id.container = global::HuCoin.Droid.Resource.Id.container;
+			global::XamEffects.Droid.Resource.Id.contentPanel = global::HuCoin.Droid.Resource.Id.contentPanel;
+			global::XamEffects.Droid.Resource.Id.coordinator = global::HuCoin.Droid.Resource.Id.coordinator;
+			global::XamEffects.Droid.Resource.Id.custom = global::HuCoin.Droid.Resource.Id.custom;
+			global::XamEffects.Droid.Resource.Id.customPanel = global::HuCoin.Droid.Resource.Id.customPanel;
+			global::XamEffects.Droid.Resource.Id.decor_content_parent = global::HuCoin.Droid.Resource.Id.decor_content_parent;
+			global::XamEffects.Droid.Resource.Id.default_activity_button = global::HuCoin.Droid.Resource.Id.default_activity_button;
+			global::XamEffects.Droid.Resource.Id.design_bottom_sheet = global::HuCoin.Droid.Resource.Id.design_bottom_sheet;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_action_area = global::HuCoin.Droid.Resource.Id.design_menu_item_action_area;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_action_area_stub = global::HuCoin.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::XamEffects.Droid.Resource.Id.design_menu_item_text = global::HuCoin.Droid.Resource.Id.design_menu_item_text;
+			global::XamEffects.Droid.Resource.Id.design_navigation_view = global::HuCoin.Droid.Resource.Id.design_navigation_view;
+			global::XamEffects.Droid.Resource.Id.disableHome = global::HuCoin.Droid.Resource.Id.disableHome;
+			global::XamEffects.Droid.Resource.Id.edit_query = global::HuCoin.Droid.Resource.Id.edit_query;
+			global::XamEffects.Droid.Resource.Id.end = global::HuCoin.Droid.Resource.Id.end;
+			global::XamEffects.Droid.Resource.Id.end_padder = global::HuCoin.Droid.Resource.Id.end_padder;
+			global::XamEffects.Droid.Resource.Id.enterAlways = global::HuCoin.Droid.Resource.Id.enterAlways;
+			global::XamEffects.Droid.Resource.Id.enterAlwaysCollapsed = global::HuCoin.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::XamEffects.Droid.Resource.Id.exitUntilCollapsed = global::HuCoin.Droid.Resource.Id.exitUntilCollapsed;
+			global::XamEffects.Droid.Resource.Id.expand_activities_button = global::HuCoin.Droid.Resource.Id.expand_activities_button;
+			global::XamEffects.Droid.Resource.Id.expanded_menu = global::HuCoin.Droid.Resource.Id.expanded_menu;
+			global::XamEffects.Droid.Resource.Id.fill = global::HuCoin.Droid.Resource.Id.fill;
+			global::XamEffects.Droid.Resource.Id.fill_horizontal = global::HuCoin.Droid.Resource.Id.fill_horizontal;
+			global::XamEffects.Droid.Resource.Id.fill_vertical = global::HuCoin.Droid.Resource.Id.fill_vertical;
+			global::XamEffects.Droid.Resource.Id.@fixed = global::HuCoin.Droid.Resource.Id.@fixed;
+			global::XamEffects.Droid.Resource.Id.home = global::HuCoin.Droid.Resource.Id.home;
+			global::XamEffects.Droid.Resource.Id.homeAsUp = global::HuCoin.Droid.Resource.Id.homeAsUp;
+			global::XamEffects.Droid.Resource.Id.icon = global::HuCoin.Droid.Resource.Id.icon;
+			global::XamEffects.Droid.Resource.Id.icon_group = global::HuCoin.Droid.Resource.Id.icon_group;
+			global::XamEffects.Droid.Resource.Id.ifRoom = global::HuCoin.Droid.Resource.Id.ifRoom;
+			global::XamEffects.Droid.Resource.Id.image = global::HuCoin.Droid.Resource.Id.image;
+			global::XamEffects.Droid.Resource.Id.info = global::HuCoin.Droid.Resource.Id.info;
+			global::XamEffects.Droid.Resource.Id.item_touch_helper_previous_elevation = global::HuCoin.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::XamEffects.Droid.Resource.Id.largeLabel = global::HuCoin.Droid.Resource.Id.largeLabel;
+			global::XamEffects.Droid.Resource.Id.left = global::HuCoin.Droid.Resource.Id.left;
+			global::XamEffects.Droid.Resource.Id.line1 = global::HuCoin.Droid.Resource.Id.line1;
+			global::XamEffects.Droid.Resource.Id.line3 = global::HuCoin.Droid.Resource.Id.line3;
+			global::XamEffects.Droid.Resource.Id.listMode = global::HuCoin.Droid.Resource.Id.listMode;
+			global::XamEffects.Droid.Resource.Id.list_item = global::HuCoin.Droid.Resource.Id.list_item;
+			global::XamEffects.Droid.Resource.Id.masked = global::HuCoin.Droid.Resource.Id.masked;
+			global::XamEffects.Droid.Resource.Id.media_actions = global::HuCoin.Droid.Resource.Id.media_actions;
+			global::XamEffects.Droid.Resource.Id.middle = global::HuCoin.Droid.Resource.Id.middle;
+			global::XamEffects.Droid.Resource.Id.mini = global::HuCoin.Droid.Resource.Id.mini;
+			global::XamEffects.Droid.Resource.Id.multiply = global::HuCoin.Droid.Resource.Id.multiply;
+			global::XamEffects.Droid.Resource.Id.navigation_header_container = global::HuCoin.Droid.Resource.Id.navigation_header_container;
+			global::XamEffects.Droid.Resource.Id.never = global::HuCoin.Droid.Resource.Id.never;
+			global::XamEffects.Droid.Resource.Id.none = global::HuCoin.Droid.Resource.Id.none;
+			global::XamEffects.Droid.Resource.Id.normal = global::HuCoin.Droid.Resource.Id.normal;
+			global::XamEffects.Droid.Resource.Id.notification_background = global::HuCoin.Droid.Resource.Id.notification_background;
+			global::XamEffects.Droid.Resource.Id.notification_main_column = global::HuCoin.Droid.Resource.Id.notification_main_column;
+			global::XamEffects.Droid.Resource.Id.notification_main_column_container = global::HuCoin.Droid.Resource.Id.notification_main_column_container;
+			global::XamEffects.Droid.Resource.Id.parallax = global::HuCoin.Droid.Resource.Id.parallax;
+			global::XamEffects.Droid.Resource.Id.parentPanel = global::HuCoin.Droid.Resource.Id.parentPanel;
+			global::XamEffects.Droid.Resource.Id.pin = global::HuCoin.Droid.Resource.Id.pin;
+			global::XamEffects.Droid.Resource.Id.progress_circular = global::HuCoin.Droid.Resource.Id.progress_circular;
+			global::XamEffects.Droid.Resource.Id.progress_horizontal = global::HuCoin.Droid.Resource.Id.progress_horizontal;
+			global::XamEffects.Droid.Resource.Id.radio = global::HuCoin.Droid.Resource.Id.radio;
+			global::XamEffects.Droid.Resource.Id.right = global::HuCoin.Droid.Resource.Id.right;
+			global::XamEffects.Droid.Resource.Id.right_icon = global::HuCoin.Droid.Resource.Id.right_icon;
+			global::XamEffects.Droid.Resource.Id.right_side = global::HuCoin.Droid.Resource.Id.right_side;
+			global::XamEffects.Droid.Resource.Id.screen = global::HuCoin.Droid.Resource.Id.screen;
+			global::XamEffects.Droid.Resource.Id.scroll = global::HuCoin.Droid.Resource.Id.scroll;
+			global::XamEffects.Droid.Resource.Id.scrollIndicatorDown = global::HuCoin.Droid.Resource.Id.scrollIndicatorDown;
+			global::XamEffects.Droid.Resource.Id.scrollIndicatorUp = global::HuCoin.Droid.Resource.Id.scrollIndicatorUp;
+			global::XamEffects.Droid.Resource.Id.scrollView = global::HuCoin.Droid.Resource.Id.scrollView;
+			global::XamEffects.Droid.Resource.Id.scrollable = global::HuCoin.Droid.Resource.Id.scrollable;
+			global::XamEffects.Droid.Resource.Id.search_badge = global::HuCoin.Droid.Resource.Id.search_badge;
+			global::XamEffects.Droid.Resource.Id.search_bar = global::HuCoin.Droid.Resource.Id.search_bar;
+			global::XamEffects.Droid.Resource.Id.search_button = global::HuCoin.Droid.Resource.Id.search_button;
+			global::XamEffects.Droid.Resource.Id.search_close_btn = global::HuCoin.Droid.Resource.Id.search_close_btn;
+			global::XamEffects.Droid.Resource.Id.search_edit_frame = global::HuCoin.Droid.Resource.Id.search_edit_frame;
+			global::XamEffects.Droid.Resource.Id.search_go_btn = global::HuCoin.Droid.Resource.Id.search_go_btn;
+			global::XamEffects.Droid.Resource.Id.search_mag_icon = global::HuCoin.Droid.Resource.Id.search_mag_icon;
+			global::XamEffects.Droid.Resource.Id.search_plate = global::HuCoin.Droid.Resource.Id.search_plate;
+			global::XamEffects.Droid.Resource.Id.search_src_text = global::HuCoin.Droid.Resource.Id.search_src_text;
+			global::XamEffects.Droid.Resource.Id.search_voice_btn = global::HuCoin.Droid.Resource.Id.search_voice_btn;
+			global::XamEffects.Droid.Resource.Id.select_dialog_listview = global::HuCoin.Droid.Resource.Id.select_dialog_listview;
+			global::XamEffects.Droid.Resource.Id.shortcut = global::HuCoin.Droid.Resource.Id.shortcut;
+			global::XamEffects.Droid.Resource.Id.showCustom = global::HuCoin.Droid.Resource.Id.showCustom;
+			global::XamEffects.Droid.Resource.Id.showHome = global::HuCoin.Droid.Resource.Id.showHome;
+			global::XamEffects.Droid.Resource.Id.showTitle = global::HuCoin.Droid.Resource.Id.showTitle;
+			global::XamEffects.Droid.Resource.Id.smallLabel = global::HuCoin.Droid.Resource.Id.smallLabel;
+			global::XamEffects.Droid.Resource.Id.snackbar_action = global::HuCoin.Droid.Resource.Id.snackbar_action;
+			global::XamEffects.Droid.Resource.Id.snackbar_text = global::HuCoin.Droid.Resource.Id.snackbar_text;
+			global::XamEffects.Droid.Resource.Id.snap = global::HuCoin.Droid.Resource.Id.snap;
+			global::XamEffects.Droid.Resource.Id.spacer = global::HuCoin.Droid.Resource.Id.spacer;
+			global::XamEffects.Droid.Resource.Id.split_action_bar = global::HuCoin.Droid.Resource.Id.split_action_bar;
+			global::XamEffects.Droid.Resource.Id.src_atop = global::HuCoin.Droid.Resource.Id.src_atop;
+			global::XamEffects.Droid.Resource.Id.src_in = global::HuCoin.Droid.Resource.Id.src_in;
+			global::XamEffects.Droid.Resource.Id.src_over = global::HuCoin.Droid.Resource.Id.src_over;
+			global::XamEffects.Droid.Resource.Id.start = global::HuCoin.Droid.Resource.Id.start;
+			global::XamEffects.Droid.Resource.Id.status_bar_latest_event_content = global::HuCoin.Droid.Resource.Id.status_bar_latest_event_content;
+			global::XamEffects.Droid.Resource.Id.submenuarrow = global::HuCoin.Droid.Resource.Id.submenuarrow;
+			global::XamEffects.Droid.Resource.Id.submit_area = global::HuCoin.Droid.Resource.Id.submit_area;
+			global::XamEffects.Droid.Resource.Id.tabMode = global::HuCoin.Droid.Resource.Id.tabMode;
+			global::XamEffects.Droid.Resource.Id.text = global::HuCoin.Droid.Resource.Id.text;
+			global::XamEffects.Droid.Resource.Id.text2 = global::HuCoin.Droid.Resource.Id.text2;
+			global::XamEffects.Droid.Resource.Id.textSpacerNoButtons = global::HuCoin.Droid.Resource.Id.textSpacerNoButtons;
+			global::XamEffects.Droid.Resource.Id.textSpacerNoTitle = global::HuCoin.Droid.Resource.Id.textSpacerNoTitle;
+			global::XamEffects.Droid.Resource.Id.textinput_counter = global::HuCoin.Droid.Resource.Id.textinput_counter;
+			global::XamEffects.Droid.Resource.Id.textinput_error = global::HuCoin.Droid.Resource.Id.textinput_error;
+			global::XamEffects.Droid.Resource.Id.time = global::HuCoin.Droid.Resource.Id.time;
+			global::XamEffects.Droid.Resource.Id.title = global::HuCoin.Droid.Resource.Id.title;
+			global::XamEffects.Droid.Resource.Id.titleDividerNoCustom = global::HuCoin.Droid.Resource.Id.titleDividerNoCustom;
+			global::XamEffects.Droid.Resource.Id.title_template = global::HuCoin.Droid.Resource.Id.title_template;
+			global::XamEffects.Droid.Resource.Id.top = global::HuCoin.Droid.Resource.Id.top;
+			global::XamEffects.Droid.Resource.Id.topPanel = global::HuCoin.Droid.Resource.Id.topPanel;
+			global::XamEffects.Droid.Resource.Id.touch_outside = global::HuCoin.Droid.Resource.Id.touch_outside;
+			global::XamEffects.Droid.Resource.Id.transition_current_scene = global::HuCoin.Droid.Resource.Id.transition_current_scene;
+			global::XamEffects.Droid.Resource.Id.transition_scene_layoutid_cache = global::HuCoin.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::XamEffects.Droid.Resource.Id.up = global::HuCoin.Droid.Resource.Id.up;
+			global::XamEffects.Droid.Resource.Id.useLogo = global::HuCoin.Droid.Resource.Id.useLogo;
+			global::XamEffects.Droid.Resource.Id.view_offset_helper = global::HuCoin.Droid.Resource.Id.view_offset_helper;
+			global::XamEffects.Droid.Resource.Id.visible = global::HuCoin.Droid.Resource.Id.visible;
+			global::XamEffects.Droid.Resource.Id.withText = global::HuCoin.Droid.Resource.Id.withText;
+			global::XamEffects.Droid.Resource.Id.wrap_content = global::HuCoin.Droid.Resource.Id.wrap_content;
+			global::XamEffects.Droid.Resource.Integer.abc_config_activityDefaultDur = global::HuCoin.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::XamEffects.Droid.Resource.Integer.abc_config_activityShortDur = global::HuCoin.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::XamEffects.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::HuCoin.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::XamEffects.Droid.Resource.Integer.bottom_sheet_slide_duration = global::HuCoin.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::XamEffects.Droid.Resource.Integer.cancel_button_image_alpha = global::HuCoin.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::XamEffects.Droid.Resource.Integer.design_snackbar_text_max_lines = global::HuCoin.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::XamEffects.Droid.Resource.Integer.hide_password_duration = global::HuCoin.Droid.Resource.Integer.hide_password_duration;
+			global::XamEffects.Droid.Resource.Integer.show_password_duration = global::HuCoin.Droid.Resource.Integer.show_password_duration;
+			global::XamEffects.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::HuCoin.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::XamEffects.Droid.Resource.Layout.abc_action_bar_title_item = global::HuCoin.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::XamEffects.Droid.Resource.Layout.abc_action_bar_up_container = global::HuCoin.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::XamEffects.Droid.Resource.Layout.abc_action_menu_item_layout = global::HuCoin.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_action_menu_layout = global::HuCoin.Droid.Resource.Layout.abc_action_menu_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_action_mode_bar = global::HuCoin.Droid.Resource.Layout.abc_action_mode_bar;
+			global::XamEffects.Droid.Resource.Layout.abc_action_mode_close_item_material = global::HuCoin.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::XamEffects.Droid.Resource.Layout.abc_activity_chooser_view = global::HuCoin.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::XamEffects.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::HuCoin.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::HuCoin.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_material = global::HuCoin.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::XamEffects.Droid.Resource.Layout.abc_alert_dialog_title_material = global::HuCoin.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::XamEffects.Droid.Resource.Layout.abc_dialog_title_material = global::HuCoin.Droid.Resource.Layout.abc_dialog_title_material;
+			global::XamEffects.Droid.Resource.Layout.abc_expanded_menu_layout = global::HuCoin.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::HuCoin.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_icon = global::HuCoin.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_layout = global::HuCoin.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_list_menu_item_radio = global::HuCoin.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::XamEffects.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::HuCoin.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_popup_menu_item_layout = global::HuCoin.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_content_include = global::HuCoin.Droid.Resource.Layout.abc_screen_content_include;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_simple = global::HuCoin.Droid.Resource.Layout.abc_screen_simple;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::HuCoin.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::XamEffects.Droid.Resource.Layout.abc_screen_toolbar = global::HuCoin.Droid.Resource.Layout.abc_screen_toolbar;
+			global::XamEffects.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::HuCoin.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::XamEffects.Droid.Resource.Layout.abc_search_view = global::HuCoin.Droid.Resource.Layout.abc_search_view;
+			global::XamEffects.Droid.Resource.Layout.abc_select_dialog_material = global::HuCoin.Droid.Resource.Layout.abc_select_dialog_material;
+			global::XamEffects.Droid.Resource.Layout.design_bottom_navigation_item = global::HuCoin.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::XamEffects.Droid.Resource.Layout.design_bottom_sheet_dialog = global::HuCoin.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::XamEffects.Droid.Resource.Layout.design_layout_snackbar = global::HuCoin.Droid.Resource.Layout.design_layout_snackbar;
+			global::XamEffects.Droid.Resource.Layout.design_layout_snackbar_include = global::HuCoin.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::XamEffects.Droid.Resource.Layout.design_layout_tab_icon = global::HuCoin.Droid.Resource.Layout.design_layout_tab_icon;
+			global::XamEffects.Droid.Resource.Layout.design_layout_tab_text = global::HuCoin.Droid.Resource.Layout.design_layout_tab_text;
+			global::XamEffects.Droid.Resource.Layout.design_menu_item_action_area = global::HuCoin.Droid.Resource.Layout.design_menu_item_action_area;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item = global::HuCoin.Droid.Resource.Layout.design_navigation_item;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_header = global::HuCoin.Droid.Resource.Layout.design_navigation_item_header;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_separator = global::HuCoin.Droid.Resource.Layout.design_navigation_item_separator;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_item_subheader = global::HuCoin.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_menu = global::HuCoin.Droid.Resource.Layout.design_navigation_menu;
+			global::XamEffects.Droid.Resource.Layout.design_navigation_menu_item = global::HuCoin.Droid.Resource.Layout.design_navigation_menu_item;
+			global::XamEffects.Droid.Resource.Layout.notification_action = global::HuCoin.Droid.Resource.Layout.notification_action;
+			global::XamEffects.Droid.Resource.Layout.notification_action_tombstone = global::HuCoin.Droid.Resource.Layout.notification_action_tombstone;
+			global::XamEffects.Droid.Resource.Layout.notification_media_action = global::HuCoin.Droid.Resource.Layout.notification_media_action;
+			global::XamEffects.Droid.Resource.Layout.notification_media_cancel_action = global::HuCoin.Droid.Resource.Layout.notification_media_cancel_action;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media = global::HuCoin.Droid.Resource.Layout.notification_template_big_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_custom = global::HuCoin.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_narrow = global::HuCoin.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::XamEffects.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::HuCoin.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_custom_big = global::HuCoin.Droid.Resource.Layout.notification_template_custom_big;
+			global::XamEffects.Droid.Resource.Layout.notification_template_icon_group = global::HuCoin.Droid.Resource.Layout.notification_template_icon_group;
+			global::XamEffects.Droid.Resource.Layout.notification_template_lines_media = global::HuCoin.Droid.Resource.Layout.notification_template_lines_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_media = global::HuCoin.Droid.Resource.Layout.notification_template_media;
+			global::XamEffects.Droid.Resource.Layout.notification_template_media_custom = global::HuCoin.Droid.Resource.Layout.notification_template_media_custom;
+			global::XamEffects.Droid.Resource.Layout.notification_template_part_chronometer = global::HuCoin.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::XamEffects.Droid.Resource.Layout.notification_template_part_time = global::HuCoin.Droid.Resource.Layout.notification_template_part_time;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_item_material = global::HuCoin.Droid.Resource.Layout.select_dialog_item_material;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_multichoice_material = global::HuCoin.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::XamEffects.Droid.Resource.Layout.select_dialog_singlechoice_material = global::HuCoin.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::XamEffects.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::HuCoin.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::XamEffects.Droid.Resource.String.ApplicationName = global::HuCoin.Droid.Resource.String.ApplicationName;
+			global::XamEffects.Droid.Resource.String.Hello = global::HuCoin.Droid.Resource.String.Hello;
+			global::XamEffects.Droid.Resource.String.abc_action_bar_home_description = global::HuCoin.Droid.Resource.String.abc_action_bar_home_description;
+			global::XamEffects.Droid.Resource.String.abc_action_bar_up_description = global::HuCoin.Droid.Resource.String.abc_action_bar_up_description;
+			global::XamEffects.Droid.Resource.String.abc_action_menu_overflow_description = global::HuCoin.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::XamEffects.Droid.Resource.String.abc_action_mode_done = global::HuCoin.Droid.Resource.String.abc_action_mode_done;
+			global::XamEffects.Droid.Resource.String.abc_activity_chooser_view_see_all = global::HuCoin.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::XamEffects.Droid.Resource.String.abc_activitychooserview_choose_application = global::HuCoin.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::XamEffects.Droid.Resource.String.abc_capital_off = global::HuCoin.Droid.Resource.String.abc_capital_off;
+			global::XamEffects.Droid.Resource.String.abc_capital_on = global::HuCoin.Droid.Resource.String.abc_capital_on;
+			global::XamEffects.Droid.Resource.String.abc_search_hint = global::HuCoin.Droid.Resource.String.abc_search_hint;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_clear = global::HuCoin.Droid.Resource.String.abc_searchview_description_clear;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_query = global::HuCoin.Droid.Resource.String.abc_searchview_description_query;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_search = global::HuCoin.Droid.Resource.String.abc_searchview_description_search;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_submit = global::HuCoin.Droid.Resource.String.abc_searchview_description_submit;
+			global::XamEffects.Droid.Resource.String.abc_searchview_description_voice = global::HuCoin.Droid.Resource.String.abc_searchview_description_voice;
+			global::XamEffects.Droid.Resource.String.abc_shareactionprovider_share_with = global::HuCoin.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::XamEffects.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::HuCoin.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::XamEffects.Droid.Resource.String.abc_toolbar_collapse_description = global::HuCoin.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::XamEffects.Droid.Resource.String.appbar_scrolling_view_behavior = global::HuCoin.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::XamEffects.Droid.Resource.String.bottom_sheet_behavior = global::HuCoin.Droid.Resource.String.bottom_sheet_behavior;
+			global::XamEffects.Droid.Resource.String.character_counter_pattern = global::HuCoin.Droid.Resource.String.character_counter_pattern;
+			global::XamEffects.Droid.Resource.String.password_toggle_content_description = global::HuCoin.Droid.Resource.String.password_toggle_content_description;
+			global::XamEffects.Droid.Resource.String.path_password_eye = global::HuCoin.Droid.Resource.String.path_password_eye;
+			global::XamEffects.Droid.Resource.String.path_password_eye_mask_strike_through = global::HuCoin.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::XamEffects.Droid.Resource.String.path_password_eye_mask_visible = global::HuCoin.Droid.Resource.String.path_password_eye_mask_visible;
+			global::XamEffects.Droid.Resource.String.path_password_strike_through = global::HuCoin.Droid.Resource.String.path_password_strike_through;
+			global::XamEffects.Droid.Resource.String.search_menu_title = global::HuCoin.Droid.Resource.String.search_menu_title;
+			global::XamEffects.Droid.Resource.String.status_bar_notification_info_overflow = global::HuCoin.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::XamEffects.Droid.Resource.Style.AlertDialog_AppCompat = global::HuCoin.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::XamEffects.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::HuCoin.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Animation_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::HuCoin.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::XamEffects.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::HuCoin.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::HuCoin.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::HuCoin.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::XamEffects.Droid.Resource.Style.Base_CardView = global::HuCoin.Droid.Resource.Style.Base_CardView;
+			global::XamEffects.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::HuCoin.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::HuCoin.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::HuCoin.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::HuCoin.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::HuCoin.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::HuCoin.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::HuCoin.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::HuCoin.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::HuCoin.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamEffects.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::HuCoin.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::XamEffects.Droid.Resource.Style.CardView = global::HuCoin.Droid.Resource.Style.CardView;
+			global::XamEffects.Droid.Resource.Style.CardView_Dark = global::HuCoin.Droid.Resource.Style.CardView_Dark;
+			global::XamEffects.Droid.Resource.Style.CardView_Light = global::HuCoin.Droid.Resource.Style.CardView_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_AppCompat = global::HuCoin.Droid.Resource.Style.Platform_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::HuCoin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::HuCoin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_V21_AppCompat = global::HuCoin.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_V25_AppCompat = global::HuCoin.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::HuCoin.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::HuCoin.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::XamEffects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::HuCoin.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::XamEffects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::HuCoin.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::HuCoin.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HuCoin.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Counter = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Error = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Hint = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Design_Tab = global::HuCoin.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HuCoin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HuCoin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XamEffects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::HuCoin.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat = global::HuCoin.Droid.Resource.Style.Theme_AppCompat;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::HuCoin.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_Design = global::HuCoin.Droid.Resource.Style.Theme_Design;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::HuCoin.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light = global::HuCoin.Droid.Resource.Style.Theme_Design_Light;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::HuCoin.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::HuCoin.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.Theme_Design_NoActionBar = global::HuCoin.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XamEffects.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::HuCoin.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_EditText = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SearchView = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::XamEffects.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::HuCoin.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_AppBarLayout = global::HuCoin.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::HuCoin.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::HuCoin.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::HuCoin.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::HuCoin.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_NavigationView = global::HuCoin.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::HuCoin.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_Snackbar = global::HuCoin.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_TabLayout = global::HuCoin.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::XamEffects.Droid.Resource.Style.Widget_Design_TextInputLayout = global::HuCoin.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar = global::HuCoin.Droid.Resource.Styleable.ActionBar;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_background = global::HuCoin.Droid.Resource.Styleable.ActionBar_background;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::HuCoin.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::HuCoin.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::HuCoin.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::HuCoin.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_displayOptions = global::HuCoin.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_divider = global::HuCoin.Droid.Resource.Styleable.ActionBar_divider;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_elevation = global::HuCoin.Droid.Resource.Styleable.ActionBar_elevation;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_height = global::HuCoin.Droid.Resource.Styleable.ActionBar_height;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::HuCoin.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::HuCoin.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_homeLayout = global::HuCoin.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_icon = global::HuCoin.Droid.Resource.Styleable.ActionBar_icon;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::HuCoin.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_itemPadding = global::HuCoin.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_logo = global::HuCoin.Droid.Resource.Styleable.ActionBar_logo;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_navigationMode = global::HuCoin.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_popupTheme = global::HuCoin.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::HuCoin.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::HuCoin.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_subtitle = global::HuCoin.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::HuCoin.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_title = global::HuCoin.Droid.Resource.Styleable.ActionBar_title;
+			global::XamEffects.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::HuCoin.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionBarLayout = global::HuCoin.Droid.Resource.Styleable.ActionBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::HuCoin.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuItemView = global::HuCoin.Droid.Resource.Styleable.ActionMenuItemView;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::HuCoin.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::XamEffects.Droid.Resource.Styleable.ActionMenuView = global::HuCoin.Droid.Resource.Styleable.ActionMenuView;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode = global::HuCoin.Droid.Resource.Styleable.ActionMode;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_background = global::HuCoin.Droid.Resource.Styleable.ActionMode_background;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::HuCoin.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::HuCoin.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_height = global::HuCoin.Droid.Resource.Styleable.ActionMode_height;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::HuCoin.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::HuCoin.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView = global::HuCoin.Droid.Resource.Styleable.ActivityChooserView;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::HuCoin.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::XamEffects.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::HuCoin.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog = global::HuCoin.Droid.Resource.Styleable.AlertDialog;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_android_layout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_listLayout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_showTitle = global::HuCoin.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::XamEffects.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::HuCoin.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout = global::HuCoin.Droid.Resource.Styleable.AppBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_android_background = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_elevation = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_expanded = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates = global::HuCoin.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::HuCoin.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::HuCoin.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::XamEffects.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::HuCoin.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView = global::HuCoin.Droid.Resource.Styleable.AppCompatImageView;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_android_src = global::HuCoin.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::HuCoin.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_tint = global::HuCoin.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::HuCoin.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar = global::HuCoin.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::HuCoin.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::HuCoin.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::HuCoin.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::HuCoin.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::HuCoin.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView = global::HuCoin.Droid.Resource.Styleable.AppCompatTextView;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::HuCoin.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::HuCoin.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::XamEffects.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::HuCoin.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_elevation = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::XamEffects.Droid.Resource.Styleable.BottomNavigationView_menu = global::HuCoin.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::HuCoin.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::HuCoin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::HuCoin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::XamEffects.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::HuCoin.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::XamEffects.Droid.Resource.Styleable.ButtonBarLayout = global::HuCoin.Droid.Resource.Styleable.ButtonBarLayout;
+			global::XamEffects.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::HuCoin.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::XamEffects.Droid.Resource.Styleable.CardView = global::HuCoin.Droid.Resource.Styleable.CardView;
+			global::XamEffects.Droid.Resource.Styleable.CardView_android_minHeight = global::HuCoin.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::XamEffects.Droid.Resource.Styleable.CardView_android_minWidth = global::HuCoin.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::HuCoin.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardCornerRadius = global::HuCoin.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardElevation = global::HuCoin.Droid.Resource.Styleable.CardView_cardElevation;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardMaxElevation = global::HuCoin.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::HuCoin.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::XamEffects.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::HuCoin.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPadding = global::HuCoin.Droid.Resource.Styleable.CardView_contentPadding;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::HuCoin.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::HuCoin.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingRight = global::HuCoin.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::XamEffects.Droid.Resource.Styleable.CardView_contentPaddingTop = global::HuCoin.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::XamEffects.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::HuCoin.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem = global::HuCoin.Droid.Resource.Styleable.ColorStateListItem;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_alpha = global::HuCoin.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::HuCoin.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::XamEffects.Droid.Resource.Styleable.ColorStateListItem_android_color = global::HuCoin.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton = global::HuCoin.Droid.Resource.Styleable.CompoundButton;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_android_button = global::HuCoin.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_buttonTint = global::HuCoin.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::XamEffects.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::HuCoin.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::XamEffects.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::HuCoin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_color = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::XamEffects.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::HuCoin.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_elevation = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::HuCoin.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout = global::HuCoin.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::HuCoin.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::HuCoin.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::XamEffects.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::HuCoin.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::XamEffects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::HuCoin.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow = global::HuCoin.Droid.Resource.Styleable.ListPopupWindow;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::HuCoin.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::XamEffects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::HuCoin.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup = global::HuCoin.Droid.Resource.Styleable.MenuGroup;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_enabled = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_id = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuGroup_android_visible = global::HuCoin.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem = global::HuCoin.Droid.Resource.Styleable.MenuItem;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionLayout = global::HuCoin.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::HuCoin.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_actionViewClass = global::HuCoin.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_checkable = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_checked = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_enabled = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_icon = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_id = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_id;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_onClick = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_title = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_title;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_android_visible = global::HuCoin.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::XamEffects.Droid.Resource.Styleable.MenuItem_showAsAction = global::HuCoin.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::XamEffects.Droid.Resource.Styleable.MenuView = global::HuCoin.Droid.Resource.Styleable.MenuView;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_headerBackground = global::HuCoin.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::HuCoin.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemBackground = global::HuCoin.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::HuCoin.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::HuCoin.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::HuCoin.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::HuCoin.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::HuCoin.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::XamEffects.Droid.Resource.Styleable.MenuView_subMenuArrow = global::HuCoin.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView = global::HuCoin.Droid.Resource.Styleable.NavigationView;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_background = global::HuCoin.Droid.Resource.Styleable.NavigationView_android_background;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::HuCoin.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::HuCoin.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_elevation = global::HuCoin.Droid.Resource.Styleable.NavigationView_elevation;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_headerLayout = global::HuCoin.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemBackground = global::HuCoin.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemIconTint = global::HuCoin.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::HuCoin.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_itemTextColor = global::HuCoin.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::XamEffects.Droid.Resource.Styleable.NavigationView_menu = global::HuCoin.Droid.Resource.Styleable.NavigationView_menu;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow = global::HuCoin.Droid.Resource.Styleable.PopupWindow;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::HuCoin.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::HuCoin.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::HuCoin.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindowBackgroundState = global::HuCoin.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::XamEffects.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::HuCoin.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView = global::HuCoin.Droid.Resource.Styleable.RecycleListView;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::HuCoin.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::XamEffects.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::HuCoin.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView = global::HuCoin.Droid.Resource.Styleable.RecyclerView;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::HuCoin.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_android_orientation = global::HuCoin.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_layoutManager = global::HuCoin.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::HuCoin.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_spanCount = global::HuCoin.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::XamEffects.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::HuCoin.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::XamEffects.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::HuCoin.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::XamEffects.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::HuCoin.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::XamEffects.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::HuCoin.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::XamEffects.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::HuCoin.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::XamEffects.Droid.Resource.Styleable.SearchView = global::HuCoin.Droid.Resource.Styleable.SearchView;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_focusable = global::HuCoin.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_imeOptions = global::HuCoin.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_inputType = global::HuCoin.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_android_maxWidth = global::HuCoin.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_closeIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_commitIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::HuCoin.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_goIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_goIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::HuCoin.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_layout = global::HuCoin.Droid.Resource.Styleable.SearchView_layout;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_queryBackground = global::HuCoin.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_queryHint = global::HuCoin.Droid.Resource.Styleable.SearchView_queryHint;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_searchHintIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_searchIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_submitBackground = global::HuCoin.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::HuCoin.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::XamEffects.Droid.Resource.Styleable.SearchView_voiceIcon = global::HuCoin.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout = global::HuCoin.Droid.Resource.Styleable.SnackbarLayout;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::HuCoin.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_elevation = global::HuCoin.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::XamEffects.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::HuCoin.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::XamEffects.Droid.Resource.Styleable.Spinner = global::HuCoin.Droid.Resource.Styleable.Spinner;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::HuCoin.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_entries = global::HuCoin.Droid.Resource.Styleable.Spinner_android_entries;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_popupBackground = global::HuCoin.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_android_prompt = global::HuCoin.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::XamEffects.Droid.Resource.Styleable.Spinner_popupTheme = global::HuCoin.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat = global::HuCoin.Droid.Resource.Styleable.SwitchCompat;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_showText = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_track = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_track;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_trackTint = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::XamEffects.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::HuCoin.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::XamEffects.Droid.Resource.Styleable.TabItem = global::HuCoin.Droid.Resource.Styleable.TabItem;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_icon = global::HuCoin.Droid.Resource.Styleable.TabItem_android_icon;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_layout = global::HuCoin.Droid.Resource.Styleable.TabItem_android_layout;
+			global::XamEffects.Droid.Resource.Styleable.TabItem_android_text = global::HuCoin.Droid.Resource.Styleable.TabItem_android_text;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout = global::HuCoin.Droid.Resource.Styleable.TabLayout;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabBackground = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabContentStart = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabGravity = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabMode = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPadding = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TabLayout_tabTextColor = global::HuCoin.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance = global::HuCoin.Droid.Resource.Styleable.TextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textColor = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textSize = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_android_typeface = global::HuCoin.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::XamEffects.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::HuCoin.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout = global::HuCoin.Droid.Resource.Styleable.TextInputLayout;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_android_hint = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::XamEffects.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::HuCoin.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar = global::HuCoin.Droid.Resource.Styleable.Toolbar;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_android_gravity = global::HuCoin.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_android_minHeight = global::HuCoin.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_buttonGravity = global::HuCoin.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::HuCoin.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_collapseIcon = global::HuCoin.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::HuCoin.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_logo = global::HuCoin.Droid.Resource.Styleable.Toolbar_logo;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_logoDescription = global::HuCoin.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::HuCoin.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::HuCoin.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_navigationIcon = global::HuCoin.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_popupTheme = global::HuCoin.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitle = global::HuCoin.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::HuCoin.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::HuCoin.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_title = global::HuCoin.Droid.Resource.Styleable.Toolbar_title;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMargin = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleMargins = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::XamEffects.Droid.Resource.Styleable.Toolbar_titleTextColor = global::HuCoin.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::XamEffects.Droid.Resource.Styleable.View = global::HuCoin.Droid.Resource.Styleable.View;
+			global::XamEffects.Droid.Resource.Styleable.View_android_focusable = global::HuCoin.Droid.Resource.Styleable.View_android_focusable;
+			global::XamEffects.Droid.Resource.Styleable.View_android_theme = global::HuCoin.Droid.Resource.Styleable.View_android_theme;
+			global::XamEffects.Droid.Resource.Styleable.View_paddingEnd = global::HuCoin.Droid.Resource.Styleable.View_paddingEnd;
+			global::XamEffects.Droid.Resource.Styleable.View_paddingStart = global::HuCoin.Droid.Resource.Styleable.View_paddingStart;
+			global::XamEffects.Droid.Resource.Styleable.View_theme = global::HuCoin.Droid.Resource.Styleable.View_theme;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper = global::HuCoin.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::HuCoin.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::HuCoin.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::XamEffects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::HuCoin.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat = global::HuCoin.Droid.Resource.Styleable.ViewStubCompat;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_id = global::HuCoin.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::HuCoin.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::XamEffects.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::HuCoin.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -15393,331 +17190,334 @@ namespace HuCoin.Droid
 			public const int arrow_to_right = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int arrow_up = 2131165279;
+			public const int arrow_transfer = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int avd_hide_password = 2131165280;
+			public const int arrow_up = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int avd_show_password = 2131165281;
+			public const int avd_hide_password = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int btn_checkbox_checked_mtrl = 2131165282;
+			public const int avd_show_password = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165283;
+			public const int btn_checkbox_checked_mtrl = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int btn_checkbox_unchecked_mtrl = 2131165284;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165285;
+			public const int btn_checkbox_unchecked_mtrl = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int btn_radio_off_mtrl = 2131165286;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165287;
+			public const int btn_radio_off_mtrl = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int btn_radio_on_mtrl = 2131165288;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165289;
+			public const int btn_radio_on_mtrl = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int call = 2131165290;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int camera = 2131165291;
+			public const int call = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int close = 2131165292;
+			public const int camera = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int common_full_open_on_phone = 2131165293;
+			public const int close = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int common_google_signin_btn_icon_dark = 2131165294;
+			public const int common_full_open_on_phone = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int common_google_signin_btn_icon_dark_focused = 2131165295;
+			public const int common_google_signin_btn_icon_dark = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int common_google_signin_btn_icon_dark_normal = 2131165296;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131165297;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int common_google_signin_btn_icon_disabled = 2131165298;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int common_google_signin_btn_icon_light = 2131165299;
+			public const int common_google_signin_btn_icon_disabled = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int common_google_signin_btn_icon_light_focused = 2131165300;
+			public const int common_google_signin_btn_icon_light = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int common_google_signin_btn_icon_light_normal = 2131165301;
+			public const int common_google_signin_btn_icon_light_focused = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int common_google_signin_btn_icon_light_normal_background = 2131165302;
+			public const int common_google_signin_btn_icon_light_normal = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int common_google_signin_btn_text_dark = 2131165303;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int common_google_signin_btn_text_dark_focused = 2131165304;
+			public const int common_google_signin_btn_text_dark = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int common_google_signin_btn_text_dark_normal = 2131165305;
+			public const int common_google_signin_btn_text_dark_focused = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int common_google_signin_btn_text_dark_normal_background = 2131165306;
+			public const int common_google_signin_btn_text_dark_normal = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int common_google_signin_btn_text_disabled = 2131165307;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int common_google_signin_btn_text_light = 2131165308;
+			public const int common_google_signin_btn_text_disabled = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int common_google_signin_btn_text_light_focused = 2131165309;
+			public const int common_google_signin_btn_text_light = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int common_google_signin_btn_text_light_normal = 2131165310;
+			public const int common_google_signin_btn_text_light_focused = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int common_google_signin_btn_text_light_normal_background = 2131165311;
+			public const int common_google_signin_btn_text_light_normal = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int compliant = 2131165312;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int contact_us = 2131165313;
+			public const int compliant = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int design_bottom_navigation_item_background = 2131165314;
+			public const int contact_us = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int design_fab_background = 2131165315;
+			public const int design_bottom_navigation_item_background = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int design_ic_visibility = 2131165316;
+			public const int design_fab_background = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int design_ic_visibility_off = 2131165317;
+			public const int design_ic_visibility = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int design_password_eye = 2131165318;
+			public const int design_ic_visibility_off = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int design_snackbar_background = 2131165319;
+			public const int design_password_eye = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int email = 2131165320;
+			public const int design_snackbar_background = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int empty_list = 2131165321;
+			public const int email = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int favorites = 2131165322;
+			public const int empty_list = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int googleg_disabled_color_18 = 2131165323;
+			public const int favorites = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int googleg_standard_color_18 = 2131165324;
+			public const int googleg_disabled_color_18 = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int history_dis = 2131165325;
+			public const int googleg_standard_color_18 = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int history_en = 2131165326;
+			public const int history_dis = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int home_dis = 2131165327;
+			public const int history_en = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int home_en = 2131165328;
-			
-			// aapt resource value: 0x7F070095
-			public const int icon = 2131165333;
+			public const int home_dis = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int ic_mtrl_checked_circle = 2131165329;
-			
-			// aapt resource value: 0x7F070092
-			public const int ic_mtrl_chip_checked_black = 2131165330;
-			
-			// aapt resource value: 0x7F070093
-			public const int ic_mtrl_chip_checked_circle = 2131165331;
-			
-			// aapt resource value: 0x7F070094
-			public const int ic_mtrl_chip_close_circle = 2131165332;
+			public const int home_en = 2131165329;
 			
 			// aapt resource value: 0x7F070096
-			public const int identity = 2131165334;
+			public const int icon = 2131165334;
+			
+			// aapt resource value: 0x7F070092
+			public const int ic_mtrl_checked_circle = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int ic_mtrl_chip_checked_black = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int ic_mtrl_chip_checked_circle = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int ic_mtrl_chip_close_circle = 2131165333;
 			
 			// aapt resource value: 0x7F070097
-			public const int loading = 2131165335;
-			
-			// aapt resource value: 0x7F070099
-			public const int logout = 2131165337;
+			public const int identity = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int logo_hu = 2131165336;
+			public const int loading = 2131165336;
 			
 			// aapt resource value: 0x7F07009A
-			public const int material_ic_calendar_black_24dp = 2131165338;
+			public const int logout = 2131165338;
+			
+			// aapt resource value: 0x7F070099
+			public const int logo_hu = 2131165337;
 			
 			// aapt resource value: 0x7F07009B
-			public const int material_ic_clear_black_24dp = 2131165339;
+			public const int material_ic_calendar_black_24dp = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int material_ic_edit_black_24dp = 2131165340;
+			public const int material_ic_clear_black_24dp = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165341;
+			public const int material_ic_edit_black_24dp = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165342;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165343;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165344;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int mtrl_dialog_background = 2131165345;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int mtrl_dropdown_arrow = 2131165346;
+			public const int mtrl_dialog_background = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int mtrl_ic_arrow_drop_down = 2131165347;
+			public const int mtrl_dropdown_arrow = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int mtrl_ic_arrow_drop_up = 2131165348;
+			public const int mtrl_ic_arrow_drop_down = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int mtrl_ic_cancel = 2131165349;
+			public const int mtrl_ic_arrow_drop_up = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int mtrl_ic_error = 2131165350;
+			public const int mtrl_ic_cancel = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int mtrl_popupmenu_background = 2131165351;
+			public const int mtrl_ic_error = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int mtrl_popupmenu_background_dark = 2131165352;
+			public const int mtrl_popupmenu_background = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int mtrl_tabs_default_indicator = 2131165353;
+			public const int mtrl_popupmenu_background_dark = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int navigation_empty_icon = 2131165354;
-			
-			// aapt resource value: 0x7F0700AC
-			public const int notification_action_background = 2131165356;
-			
-			// aapt resource value: 0x7F0700AD
-			public const int notification_bg = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int notification_bg_low = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int notification_bg_low_normal = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int notification_bg_low_pressed = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int notification_bg_normal = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int notification_bg_normal_pressed = 2131165362;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int notification_icon_background = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int notification_template_icon_bg = 2131165364;
-			
-			// aapt resource value: 0x7F0700B5
-			public const int notification_template_icon_low_bg = 2131165365;
-			
-			// aapt resource value: 0x7F0700B6
-			public const int notification_tile_bg = 2131165366;
-			
-			// aapt resource value: 0x7F0700B7
-			public const int notify_panel_notification_icon_bg = 2131165367;
+			public const int mtrl_tabs_default_indicator = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int no_bank = 2131165355;
+			public const int navigation_empty_icon = 2131165355;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int notification_action_background = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int notification_bg = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int notification_bg_low = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int notification_bg_low_normal = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int notification_bg_low_pressed = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int notification_bg_normal = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int notification_bg_normal_pressed = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int notification_icon_background = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int notification_template_icon_bg = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int notification_template_icon_low_bg = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int notification_tile_bg = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int padlock = 2131165368;
+			public const int notify_panel_notification_icon_bg = 2131165368;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int no_bank = 2131165356;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int pay_online = 2131165369;
+			public const int padlock = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int recharge = 2131165370;
+			public const int pay_online = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int security = 2131165371;
+			public const int recharge = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int settings = 2131165372;
+			public const int security = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int settings_dis = 2131165373;
+			public const int settings = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int settings_en = 2131165374;
+			public const int settings_dis = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int splash_screen = 2131165375;
+			public const int settings_en = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int suggestion = 2131165376;
+			public const int splash_screen = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int test_custom_background = 2131165377;
+			public const int suggestion = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int time_work = 2131165378;
+			public const int test_custom_background = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int tooltip_frame_dark = 2131165379;
+			public const int time_work = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int tooltip_frame_light = 2131165380;
+			public const int tooltip_frame_dark = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int transfer = 2131165381;
+			public const int tooltip_frame_light = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int transfer_money = 2131165382;
+			public const int transfer = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int unkown_user = 2131165383;
+			public const int transfer_money = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int user_dis = 2131165384;
+			public const int unkown_user = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int user_en = 2131165385;
+			public const int user_dis = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int wallet = 2131165386;
+			public const int user_en = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int withdraw = 2131165387;
+			public const int wallet = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int withdraw = 2131165388;
 			
 			static Drawable()
 			{
@@ -17222,350 +19022,356 @@ namespace HuCoin.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0D0000
-			public const int abc_action_bar_home_description = 2131558400;
-			
-			// aapt resource value: 0x7F0D0001
-			public const int abc_action_bar_up_description = 2131558401;
-			
 			// aapt resource value: 0x7F0D0002
-			public const int abc_action_menu_overflow_description = 2131558402;
+			public const int abc_action_bar_home_description = 2131558402;
 			
 			// aapt resource value: 0x7F0D0003
-			public const int abc_action_mode_done = 2131558403;
-			
-			// aapt resource value: 0x7F0D0005
-			public const int abc_activitychooserview_choose_application = 2131558405;
+			public const int abc_action_bar_up_description = 2131558403;
 			
 			// aapt resource value: 0x7F0D0004
-			public const int abc_activity_chooser_view_see_all = 2131558404;
+			public const int abc_action_menu_overflow_description = 2131558404;
 			
-			// aapt resource value: 0x7F0D0006
-			public const int abc_capital_off = 2131558406;
+			// aapt resource value: 0x7F0D0005
+			public const int abc_action_mode_done = 2131558405;
 			
 			// aapt resource value: 0x7F0D0007
-			public const int abc_capital_on = 2131558407;
+			public const int abc_activitychooserview_choose_application = 2131558407;
+			
+			// aapt resource value: 0x7F0D0006
+			public const int abc_activity_chooser_view_see_all = 2131558406;
 			
 			// aapt resource value: 0x7F0D0008
-			public const int abc_menu_alt_shortcut_label = 2131558408;
+			public const int abc_capital_off = 2131558408;
 			
 			// aapt resource value: 0x7F0D0009
-			public const int abc_menu_ctrl_shortcut_label = 2131558409;
+			public const int abc_capital_on = 2131558409;
 			
 			// aapt resource value: 0x7F0D000A
-			public const int abc_menu_delete_shortcut_label = 2131558410;
+			public const int abc_menu_alt_shortcut_label = 2131558410;
 			
 			// aapt resource value: 0x7F0D000B
-			public const int abc_menu_enter_shortcut_label = 2131558411;
+			public const int abc_menu_ctrl_shortcut_label = 2131558411;
 			
 			// aapt resource value: 0x7F0D000C
-			public const int abc_menu_function_shortcut_label = 2131558412;
+			public const int abc_menu_delete_shortcut_label = 2131558412;
 			
 			// aapt resource value: 0x7F0D000D
-			public const int abc_menu_meta_shortcut_label = 2131558413;
+			public const int abc_menu_enter_shortcut_label = 2131558413;
 			
 			// aapt resource value: 0x7F0D000E
-			public const int abc_menu_shift_shortcut_label = 2131558414;
+			public const int abc_menu_function_shortcut_label = 2131558414;
 			
 			// aapt resource value: 0x7F0D000F
-			public const int abc_menu_space_shortcut_label = 2131558415;
+			public const int abc_menu_meta_shortcut_label = 2131558415;
 			
 			// aapt resource value: 0x7F0D0010
-			public const int abc_menu_sym_shortcut_label = 2131558416;
+			public const int abc_menu_shift_shortcut_label = 2131558416;
 			
 			// aapt resource value: 0x7F0D0011
-			public const int abc_prepend_shortcut_label = 2131558417;
-			
-			// aapt resource value: 0x7F0D0013
-			public const int abc_searchview_description_clear = 2131558419;
-			
-			// aapt resource value: 0x7F0D0014
-			public const int abc_searchview_description_query = 2131558420;
-			
-			// aapt resource value: 0x7F0D0015
-			public const int abc_searchview_description_search = 2131558421;
-			
-			// aapt resource value: 0x7F0D0016
-			public const int abc_searchview_description_submit = 2131558422;
-			
-			// aapt resource value: 0x7F0D0017
-			public const int abc_searchview_description_voice = 2131558423;
+			public const int abc_menu_space_shortcut_label = 2131558417;
 			
 			// aapt resource value: 0x7F0D0012
-			public const int abc_search_hint = 2131558418;
+			public const int abc_menu_sym_shortcut_label = 2131558418;
+			
+			// aapt resource value: 0x7F0D0013
+			public const int abc_prepend_shortcut_label = 2131558419;
+			
+			// aapt resource value: 0x7F0D0015
+			public const int abc_searchview_description_clear = 2131558421;
+			
+			// aapt resource value: 0x7F0D0016
+			public const int abc_searchview_description_query = 2131558422;
+			
+			// aapt resource value: 0x7F0D0017
+			public const int abc_searchview_description_search = 2131558423;
 			
 			// aapt resource value: 0x7F0D0018
-			public const int abc_shareactionprovider_share_with = 2131558424;
+			public const int abc_searchview_description_submit = 2131558424;
 			
 			// aapt resource value: 0x7F0D0019
-			public const int abc_shareactionprovider_share_with_application = 2131558425;
+			public const int abc_searchview_description_voice = 2131558425;
+			
+			// aapt resource value: 0x7F0D0014
+			public const int abc_search_hint = 2131558420;
 			
 			// aapt resource value: 0x7F0D001A
-			public const int abc_toolbar_collapse_description = 2131558426;
+			public const int abc_shareactionprovider_share_with = 2131558426;
 			
 			// aapt resource value: 0x7F0D001B
-			public const int appbar_scrolling_view_behavior = 2131558427;
+			public const int abc_shareactionprovider_share_with_application = 2131558427;
 			
 			// aapt resource value: 0x7F0D001C
-			public const int bottom_sheet_behavior = 2131558428;
+			public const int abc_toolbar_collapse_description = 2131558428;
 			
 			// aapt resource value: 0x7F0D001D
-			public const int character_counter_content_description = 2131558429;
+			public const int appbar_scrolling_view_behavior = 2131558429;
+			
+			// aapt resource value: 0x7F0D0000
+			public const int ApplicationName = 2131558400;
 			
 			// aapt resource value: 0x7F0D001E
-			public const int character_counter_overflowed_content_description = 2131558430;
+			public const int bottom_sheet_behavior = 2131558430;
 			
 			// aapt resource value: 0x7F0D001F
-			public const int character_counter_pattern = 2131558431;
+			public const int character_counter_content_description = 2131558431;
 			
 			// aapt resource value: 0x7F0D0020
-			public const int chip_text = 2131558432;
+			public const int character_counter_overflowed_content_description = 2131558432;
 			
 			// aapt resource value: 0x7F0D0021
-			public const int clear_text_end_icon_content_description = 2131558433;
+			public const int character_counter_pattern = 2131558433;
 			
 			// aapt resource value: 0x7F0D0022
-			public const int common_google_play_services_enable_button = 2131558434;
+			public const int chip_text = 2131558434;
 			
 			// aapt resource value: 0x7F0D0023
-			public const int common_google_play_services_enable_text = 2131558435;
+			public const int clear_text_end_icon_content_description = 2131558435;
 			
 			// aapt resource value: 0x7F0D0024
-			public const int common_google_play_services_enable_title = 2131558436;
+			public const int common_google_play_services_enable_button = 2131558436;
 			
 			// aapt resource value: 0x7F0D0025
-			public const int common_google_play_services_install_button = 2131558437;
+			public const int common_google_play_services_enable_text = 2131558437;
 			
 			// aapt resource value: 0x7F0D0026
-			public const int common_google_play_services_install_text = 2131558438;
+			public const int common_google_play_services_enable_title = 2131558438;
 			
 			// aapt resource value: 0x7F0D0027
-			public const int common_google_play_services_install_title = 2131558439;
+			public const int common_google_play_services_install_button = 2131558439;
 			
 			// aapt resource value: 0x7F0D0028
-			public const int common_google_play_services_notification_channel_name = 2131558440;
+			public const int common_google_play_services_install_text = 2131558440;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int common_google_play_services_notification_ticker = 2131558441;
+			public const int common_google_play_services_install_title = 2131558441;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int common_google_play_services_unknown_issue = 2131558442;
+			public const int common_google_play_services_notification_channel_name = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int common_google_play_services_unsupported_text = 2131558443;
+			public const int common_google_play_services_notification_ticker = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int common_google_play_services_update_button = 2131558444;
+			public const int common_google_play_services_unknown_issue = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int common_google_play_services_update_text = 2131558445;
+			public const int common_google_play_services_unsupported_text = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int common_google_play_services_update_title = 2131558446;
+			public const int common_google_play_services_update_button = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int common_google_play_services_updating_text = 2131558447;
+			public const int common_google_play_services_update_text = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int common_google_play_services_wear_update_text = 2131558448;
+			public const int common_google_play_services_update_title = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int common_open_on_phone = 2131558449;
+			public const int common_google_play_services_updating_text = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int common_signin_button_text = 2131558450;
+			public const int common_google_play_services_wear_update_text = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int common_signin_button_text_long = 2131558451;
+			public const int common_open_on_phone = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int copy_toast_msg = 2131558452;
+			public const int common_signin_button_text = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int default_web_client_id = 2131558453;
+			public const int common_signin_button_text_long = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int error_icon_content_description = 2131558454;
+			public const int copy_toast_msg = 2131558454;
 			
 			// aapt resource value: 0x7F0D0037
-			public const int exposed_dropdown_menu_content_description = 2131558455;
+			public const int default_web_client_id = 2131558455;
 			
 			// aapt resource value: 0x7F0D0038
-			public const int fab_transformation_scrim_behavior = 2131558456;
+			public const int error_icon_content_description = 2131558456;
 			
 			// aapt resource value: 0x7F0D0039
-			public const int fab_transformation_sheet_behavior = 2131558457;
+			public const int exposed_dropdown_menu_content_description = 2131558457;
 			
 			// aapt resource value: 0x7F0D003A
-			public const int fallback_menu_item_copy_link = 2131558458;
+			public const int fab_transformation_scrim_behavior = 2131558458;
 			
 			// aapt resource value: 0x7F0D003B
-			public const int fallback_menu_item_open_in_browser = 2131558459;
+			public const int fab_transformation_sheet_behavior = 2131558459;
 			
 			// aapt resource value: 0x7F0D003C
-			public const int fallback_menu_item_share_link = 2131558460;
+			public const int fallback_menu_item_copy_link = 2131558460;
 			
 			// aapt resource value: 0x7F0D003D
-			public const int gcm_defaultSenderId = 2131558461;
+			public const int fallback_menu_item_open_in_browser = 2131558461;
 			
 			// aapt resource value: 0x7F0D003E
-			public const int google_api_key = 2131558462;
+			public const int fallback_menu_item_share_link = 2131558462;
 			
 			// aapt resource value: 0x7F0D003F
-			public const int google_app_id = 2131558463;
+			public const int gcm_defaultSenderId = 2131558463;
 			
 			// aapt resource value: 0x7F0D0040
-			public const int google_crash_reporting_api_key = 2131558464;
+			public const int google_api_key = 2131558464;
 			
 			// aapt resource value: 0x7F0D0041
-			public const int google_storage_bucket = 2131558465;
+			public const int google_app_id = 2131558465;
 			
 			// aapt resource value: 0x7F0D0042
-			public const int hide_bottom_view_on_scroll_behavior = 2131558466;
+			public const int google_crash_reporting_api_key = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int icon_content_description = 2131558467;
+			public const int google_storage_bucket = 2131558467;
+			
+			// aapt resource value: 0x7F0D0001
+			public const int Hello = 2131558401;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int item_view_role_description = 2131558468;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int material_slider_range_end = 2131558469;
+			public const int icon_content_description = 2131558469;
 			
 			// aapt resource value: 0x7F0D0046
-			public const int material_slider_range_start = 2131558470;
+			public const int item_view_role_description = 2131558470;
 			
 			// aapt resource value: 0x7F0D0047
-			public const int mtrl_badge_numberless_content_description = 2131558471;
+			public const int material_slider_range_end = 2131558471;
 			
 			// aapt resource value: 0x7F0D0048
-			public const int mtrl_chip_close_icon_content_description = 2131558472;
+			public const int material_slider_range_start = 2131558472;
 			
 			// aapt resource value: 0x7F0D0049
-			public const int mtrl_exceed_max_badge_number_content_description = 2131558473;
+			public const int mtrl_badge_numberless_content_description = 2131558473;
 			
 			// aapt resource value: 0x7F0D004A
-			public const int mtrl_exceed_max_badge_number_suffix = 2131558474;
+			public const int mtrl_chip_close_icon_content_description = 2131558474;
 			
 			// aapt resource value: 0x7F0D004B
-			public const int mtrl_picker_a11y_next_month = 2131558475;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131558475;
 			
 			// aapt resource value: 0x7F0D004C
-			public const int mtrl_picker_a11y_prev_month = 2131558476;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131558476;
 			
 			// aapt resource value: 0x7F0D004D
-			public const int mtrl_picker_announce_current_selection = 2131558477;
+			public const int mtrl_picker_a11y_next_month = 2131558477;
 			
 			// aapt resource value: 0x7F0D004E
-			public const int mtrl_picker_cancel = 2131558478;
+			public const int mtrl_picker_a11y_prev_month = 2131558478;
 			
 			// aapt resource value: 0x7F0D004F
-			public const int mtrl_picker_confirm = 2131558479;
+			public const int mtrl_picker_announce_current_selection = 2131558479;
 			
 			// aapt resource value: 0x7F0D0050
-			public const int mtrl_picker_date_header_selected = 2131558480;
+			public const int mtrl_picker_cancel = 2131558480;
 			
 			// aapt resource value: 0x7F0D0051
-			public const int mtrl_picker_date_header_title = 2131558481;
+			public const int mtrl_picker_confirm = 2131558481;
 			
 			// aapt resource value: 0x7F0D0052
-			public const int mtrl_picker_date_header_unselected = 2131558482;
+			public const int mtrl_picker_date_header_selected = 2131558482;
 			
 			// aapt resource value: 0x7F0D0053
-			public const int mtrl_picker_day_of_week_column_header = 2131558483;
+			public const int mtrl_picker_date_header_title = 2131558483;
 			
 			// aapt resource value: 0x7F0D0054
-			public const int mtrl_picker_invalid_format = 2131558484;
+			public const int mtrl_picker_date_header_unselected = 2131558484;
 			
 			// aapt resource value: 0x7F0D0055
-			public const int mtrl_picker_invalid_format_example = 2131558485;
+			public const int mtrl_picker_day_of_week_column_header = 2131558485;
 			
 			// aapt resource value: 0x7F0D0056
-			public const int mtrl_picker_invalid_format_use = 2131558486;
+			public const int mtrl_picker_invalid_format = 2131558486;
 			
 			// aapt resource value: 0x7F0D0057
-			public const int mtrl_picker_invalid_range = 2131558487;
+			public const int mtrl_picker_invalid_format_example = 2131558487;
 			
 			// aapt resource value: 0x7F0D0058
-			public const int mtrl_picker_navigate_to_year_description = 2131558488;
+			public const int mtrl_picker_invalid_format_use = 2131558488;
 			
 			// aapt resource value: 0x7F0D0059
-			public const int mtrl_picker_out_of_range = 2131558489;
+			public const int mtrl_picker_invalid_range = 2131558489;
 			
 			// aapt resource value: 0x7F0D005A
-			public const int mtrl_picker_range_header_only_end_selected = 2131558490;
+			public const int mtrl_picker_navigate_to_year_description = 2131558490;
 			
 			// aapt resource value: 0x7F0D005B
-			public const int mtrl_picker_range_header_only_start_selected = 2131558491;
+			public const int mtrl_picker_out_of_range = 2131558491;
 			
 			// aapt resource value: 0x7F0D005C
-			public const int mtrl_picker_range_header_selected = 2131558492;
+			public const int mtrl_picker_range_header_only_end_selected = 2131558492;
 			
 			// aapt resource value: 0x7F0D005D
-			public const int mtrl_picker_range_header_title = 2131558493;
+			public const int mtrl_picker_range_header_only_start_selected = 2131558493;
 			
 			// aapt resource value: 0x7F0D005E
-			public const int mtrl_picker_range_header_unselected = 2131558494;
+			public const int mtrl_picker_range_header_selected = 2131558494;
 			
 			// aapt resource value: 0x7F0D005F
-			public const int mtrl_picker_save = 2131558495;
+			public const int mtrl_picker_range_header_title = 2131558495;
 			
 			// aapt resource value: 0x7F0D0060
-			public const int mtrl_picker_text_input_date_hint = 2131558496;
+			public const int mtrl_picker_range_header_unselected = 2131558496;
 			
 			// aapt resource value: 0x7F0D0061
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131558497;
+			public const int mtrl_picker_save = 2131558497;
 			
 			// aapt resource value: 0x7F0D0062
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131558498;
+			public const int mtrl_picker_text_input_date_hint = 2131558498;
 			
 			// aapt resource value: 0x7F0D0063
-			public const int mtrl_picker_text_input_day_abbr = 2131558499;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131558499;
 			
 			// aapt resource value: 0x7F0D0064
-			public const int mtrl_picker_text_input_month_abbr = 2131558500;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131558500;
 			
 			// aapt resource value: 0x7F0D0065
-			public const int mtrl_picker_text_input_year_abbr = 2131558501;
+			public const int mtrl_picker_text_input_day_abbr = 2131558501;
 			
 			// aapt resource value: 0x7F0D0066
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131558502;
+			public const int mtrl_picker_text_input_month_abbr = 2131558502;
 			
 			// aapt resource value: 0x7F0D0067
-			public const int mtrl_picker_toggle_to_day_selection = 2131558503;
+			public const int mtrl_picker_text_input_year_abbr = 2131558503;
 			
 			// aapt resource value: 0x7F0D0068
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131558504;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131558504;
 			
 			// aapt resource value: 0x7F0D0069
-			public const int mtrl_picker_toggle_to_year_selection = 2131558505;
+			public const int mtrl_picker_toggle_to_day_selection = 2131558505;
 			
 			// aapt resource value: 0x7F0D006A
-			public const int overflow_tab_title = 2131558506;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131558506;
 			
 			// aapt resource value: 0x7F0D006B
-			public const int password_toggle_content_description = 2131558507;
+			public const int mtrl_picker_toggle_to_year_selection = 2131558507;
 			
 			// aapt resource value: 0x7F0D006C
-			public const int path_password_eye = 2131558508;
+			public const int overflow_tab_title = 2131558508;
 			
 			// aapt resource value: 0x7F0D006D
-			public const int path_password_eye_mask_strike_through = 2131558509;
+			public const int password_toggle_content_description = 2131558509;
 			
 			// aapt resource value: 0x7F0D006E
-			public const int path_password_eye_mask_visible = 2131558510;
+			public const int path_password_eye = 2131558510;
 			
 			// aapt resource value: 0x7F0D006F
-			public const int path_password_strike_through = 2131558511;
+			public const int path_password_eye_mask_strike_through = 2131558511;
 			
 			// aapt resource value: 0x7F0D0070
-			public const int project_id = 2131558512;
+			public const int path_password_eye_mask_visible = 2131558512;
 			
 			// aapt resource value: 0x7F0D0071
-			public const int search_menu_title = 2131558513;
+			public const int path_password_strike_through = 2131558513;
 			
 			// aapt resource value: 0x7F0D0072
-			public const int status_bar_notification_info_overflow = 2131558514;
+			public const int project_id = 2131558514;
+			
+			// aapt resource value: 0x7F0D0073
+			public const int search_menu_title = 2131558515;
+			
+			// aapt resource value: 0x7F0D0074
+			public const int status_bar_notification_info_overflow = 2131558516;
 			
 			static String()
 			{

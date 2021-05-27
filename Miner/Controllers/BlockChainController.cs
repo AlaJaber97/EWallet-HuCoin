@@ -81,10 +81,12 @@ namespace Miner.Controllers
             {
                 var transaction = new Models.Transaction
                 {
+                    ID = Guid.NewGuid(),
                     Sender = "0",
                     Recipient = ownerAddress,
                     Amount = CardCharge.Value,
-                    Fees = 0
+                    Fees = 0,
+                    Date = DateTime.Now,
                 };
                 if (Recharger.UseCard(CardCharge))
                 {
@@ -113,10 +115,12 @@ namespace Miner.Controllers
         {
             var transaction = new Models.Transaction
             {
+                ID = Guid.NewGuid(),
                 Sender = ownerAddress,
                 Recipient = "0",
                 Amount = amount,
-                Fees = 0
+                Fees = 0,
+                Date = DateTime.Now
             };
             BlockChain.RechargeBalance(transaction);
             return Ok($"The cash withdrawal of {amount} HU was successful");

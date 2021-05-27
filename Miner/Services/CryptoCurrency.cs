@@ -136,9 +136,11 @@ namespace Miner.Services
             {
                 CurrentTransactions.Add(new Transaction
                 {
+                    ID = Guid.NewGuid(),
                     Sender = transaction.Sender,
                     Recipient = MinerCredential.PublicKey,
                     Amount = transaction.Fees,
+                    Date = DateTime.Now,
                 });
             }
         }

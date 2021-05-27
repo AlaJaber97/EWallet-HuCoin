@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class CashOutServicePageViewModel : ViewModels.BaseViewModel
+    public class CashOutServicePageViewModel : ViewModels.BaseViewModel, IDisposable
     {
         public ICommand CashOutServiceCommand { get; set; }
         public decimal Balance { get; set; }
@@ -56,5 +56,9 @@ namespace HuCoin.ViewModels
             }
         }
 
+        public void Dispose()
+        {
+            MessagingCenter.Unsubscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode");
+        }
     }
 }

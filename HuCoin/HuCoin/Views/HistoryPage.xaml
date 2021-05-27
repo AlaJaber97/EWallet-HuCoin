@@ -1,54 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuCoin.Views.HistoryPage">
+             x:Class="HuCoin.Views.HistoryPage"
+             xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
+             xmlns:XamEffects="clr-namespace:XamEffects;assembly=XamEffects">
+    <ContentPage.BindingContext>
+        <ViewModels:HistoryPageViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="10">
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
                 <Label Text="Transaction History" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Margin="20,10" Padding="0" Spacing="10">
-                <Frame Margin="0" Padding="10" CornerRadius="10" BackgroundColor="#F5F5F5" HasShadow="True">
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
-                            <Image Source="arrow_up" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
-                            <Label Text="100.000 HU" TextColor="#00DD80" FontAttributes="Bold"
-                                   FontSize="Medium"/>
-                        </StackLayout>
-                        <Label Text="Eenas Ahmad Ibrahim AbuMuslem" TextColor="#39374D" FontSize="Small"/>
-                        <Label FontSize="Small">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="Transaction ID " TextColor="#D3D3D3" />
-                                        <Span Text="MT-1646134315648435" TextColor="#39374D" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
+            <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="#E6611A"
+                         Command="{Binding RefreshTransactionsCommand}">
+                <ScrollView Margin="0" Padding="20,10">
+                    <StackLayout Margin="0" Padding="0" Spacing="10"
+                                 BindableLayout.ItemsSource="{Binding ListOfTransaction}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0" Padding="10" CornerRadius="10" BackgroundColor="#F5F5F5" HasShadow="True"
+                                       XamEffects:Commands.Tap="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:HistoryPageViewModel}},Path=OpenPopUpDetailCommand}"
+                                       XamEffects:Commands.TapParameter="{Binding .}">
+                                    <StackLayout Margin="0" Padding="0" Spacing="10">
+                                        <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
+                                            <Image Source="{Binding UiTransaction.ImageSource}" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
+                                            <Label Text="{Binding Amount,StringFormat='{0:F2} HU'}" TextColor="{Binding UiTransaction.TextColor}" FontAttributes="Bold" FontSize="Medium"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding .,Converter={StaticResource GetMainUserTransactionConverter}}" TextColor="#39374D" FontSize="Small"/>
+                                        <Label FontSize="Small">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span Text="Transaction ID " TextColor="#D3D3D3" />
+                                                        <Span Text="{Binding ID}" TextColor="#39374D" />
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
                     </StackLayout>
-                </Frame>
-                <Frame Margin="0" Padding="10" CornerRadius="10" BackgroundColor="#F5F5F5" HasShadow="True">
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
-                            <Image Source="arrow_down" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
-                            <Label Text="50.000 HU" TextColor="#FF7C48" FontAttributes="Bold"
-                                   FontSize="Medium"/>
-                        </StackLayout>
-                        <Label Text="Ansam Ismail Mohammad alfagih" TextColor="#39374D" FontSize="Small"/>
-                        <Label FontSize="Small">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <FormattedString.Spans>
-                                        <Span Text="Transaction ID " TextColor="#D3D3D3" />
-                                        <Span Text="MT-1646134315648435" TextColor="#39374D" />
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
+                </ScrollView>
+            </RefreshView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

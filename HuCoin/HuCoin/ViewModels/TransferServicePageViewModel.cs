@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace HuCoin.ViewModels
 {
-    public class TransferServicePageViewModel : ViewModels.BaseViewModel
+    public class TransferServicePageViewModel : ViewModels.BaseViewModel, IDisposable
     {
         public List<HuCoin.Models.Beneficiary> Beneficiaries { get; set; }
         public HuCoin.Models.Beneficiary Beneficiary { get; set; }
@@ -59,8 +59,8 @@ namespace HuCoin.ViewModels
                 using var loadingview = new Components.LoadingView();
                 var transaction = new BLL.Models.TransactionClient
                 {
-                    SenderPhoneNumber = AppStatic.User.PhoneNumber,
-                    RecipientPhoneNumber = Beneficiary.PhoneNumber,
+                    Sender = new BLL.Models.User { PhoneNumber = AppStatic.User.PhoneNumber },
+                    Recipient = new BLL.Models.User { PhoneNumber = Beneficiary.PhoneNumber },
                     Amount = Amount,
                 };
 
@@ -86,6 +86,12 @@ namespace HuCoin.ViewModels
             {
                 await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
             }
+        }
+
+        public void Dispose()
+        {
+            MessagingCenter.Unsubscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary");
+            MessagingCenter.Unsubscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode");
         }
     }
 }

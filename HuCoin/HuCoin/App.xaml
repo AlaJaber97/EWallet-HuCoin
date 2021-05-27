@@ -2,11 +2,12 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:converter="clr-namespace:HuCoin.Converter"
+             xmlns:Converter="clr-namespace:HuCoin.Converter"
              x:Class="HuCoin.App">
     <Application.Resources>
         <ResourceDictionary>
-            <converter:SafetyByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
+            <Converter:SafetyByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
+            <Converter:GetMainUserTransactionConverter x:Key="GetMainUserTransactionConverter"/>
             <xct:IsNullOrEmptyConverter x:Key="IsNullOrEmptyConverter"/>
         </ResourceDictionary>
     </Application.Resources>
