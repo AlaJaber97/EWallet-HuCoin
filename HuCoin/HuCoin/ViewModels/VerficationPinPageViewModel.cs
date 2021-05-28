@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -26,7 +27,7 @@ namespace HuCoin.ViewModels
                 CloseCurrentPage();
             }
             else
-                await DisplayAlert("Worng Pin Code", "The code you entered appears to be incorrect, please try again", "Okay");
+                await DisplayAlert(localizer.Instance["PinCodeError"], localizer.Instance["Ok"]);
         }
     }
 }

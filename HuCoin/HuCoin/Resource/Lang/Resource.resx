@@ -187,7 +187,7 @@
     <value>Email</value>
   </data>
   <data name="EmptyFields" xml:space="preserve">
-    <value>Required Fields Please Dont Leave Empty Fields</value>
+    <value> Please Dont Leave Empty Fields</value>
   </data>
   <data name="EmptyFieldsError" xml:space="preserve">
     <value>Please Don’t Leave Empty Fields Must New Password Fields Matching Conform Password Field</value>
@@ -197,6 +197,9 @@
   </data>
   <data name="FamilyName" xml:space="preserve">
     <value>Family Name</value>
+  </data>
+  <data name="FillInError" xml:space="preserve">
+    <value>Please fill in the following fields:</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>First Name</value>
@@ -228,6 +231,9 @@
   <data name="MobileNumberPos" xml:space="preserve">
     <value>Mobile Number Pos</value>
   </data>
+  <data name="MustNumber" xml:space="preserve">
+    <value>must phone number start with +9627 and not be empty field</value>
+  </data>
   <data name="MyProfile" xml:space="preserve">
     <value>My Profile</value>
   </data>
@@ -246,8 +252,17 @@
   <data name="NoBeneficiariesFound" xml:space="preserve">
     <value>No Beneficiaries Found</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>Operation successfully</value>
+  </data>
+  <data name="PasswordChangeSuccess" xml:space="preserve">
+    <value>"The password has been changed successfully"</value>
   </data>
   <data name="PinCodeError" xml:space="preserve">
     <value>Wrong PIN Code, The Code You Entered Appears To Be Incorrect Please Try Again</value>
@@ -272,6 +287,9 @@
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>Remember Me</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Required Field</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
@@ -334,7 +352,7 @@
     <value>Transfer</value>
   </data>
   <data name="UniversityId" xml:space="preserve">
-    <value>UniversityId</value>
+    <value>University Id</value>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
