@@ -21,9 +21,7 @@ namespace HuCoin.Views
             BackModalCommand = new Command(CloseCurrentModal);
             this.BindingContext = this;
         }
-        public void CloseCurrentModal()
-        {
+        public void CloseCurrentModal()=>
             Application.Current.MainPage.Navigation.PopModalAsync();
-        }
     }
 }

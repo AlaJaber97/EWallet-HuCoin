@@ -42,7 +42,7 @@ namespace API
                 .AddDefaultTokenProviders();
 
             services.AddDbContext<API.Data.APIContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("LocalDatabase")));
+                options.UseSqlServer(BLL.Settings.Connections.GetConnectionStringDatabase()));
 
             services.Configure<IdentityOptions>(options => 
             {

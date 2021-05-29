@@ -4,11 +4,9 @@ using System.Text;
 
 namespace BLL.Enums
 {
-    public enum MinerServer
+    public enum DbServer
     {
-        Miner_JO,
-        Miner_SA,
-        Development,
-        Production,
+        LocalDatabase,
+        AzureDatabase
     }
 }
