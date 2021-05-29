@@ -8,6 +8,6 @@ namespace BLL.Enums
     {
         Ansam,
         Ammar,
-        Production
+        AzureProduction
     }
 }

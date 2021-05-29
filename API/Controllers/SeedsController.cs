@@ -22,9 +22,11 @@ namespace API.Controllers
         public IActionResult GetStatusServer()
         {
             return Ok(
-                $"Name Server: {BLL.Settings.Connections.Server}" + 
+                $"API IP Server: {BLL.Settings.Connections.GetServerAddress()}"+
                 "\n" +
-                $"IP Server: {BLL.Settings.Connections.GetServerAddress()}"
+                $"Miner IP Server: {BLL.Settings.Connections.GetMinerAddress()}"+
+                "\n" +
+                $"Database Server: {BLL.Settings.Connections.GetConnectionStringDatabase()}"
                 );
         }
         [HttpGet("Fill")]

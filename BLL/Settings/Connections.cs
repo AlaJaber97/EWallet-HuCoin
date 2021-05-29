@@ -6,16 +6,16 @@ namespace BLL.Settings
 {
     public static class Connections
     {
-        public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.Ammar;
+        public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.AzureProduction;
         public static readonly BLL.Enums.MinerServer Miner = BLL.Enums.MinerServer.Development;
-        public static readonly BLL.Enums.DbServer DbServer = BLL.Enums.DbServer.LocalDatabase;
+        public static readonly BLL.Enums.DbServer DbServer = BLL.Enums.DbServer.AzureDatabase;
         public static string GetServerAddress()
         {
             return Server switch
             {
                 Enums.DevServer.Ansam => "http://192.168.0.171:5000",
                 Enums.DevServer.Ammar => "http://192.168.0.199:5000",
-                Enums.DevServer.Production => "https://hucoinapi.azurewebsites.net",
+                Enums.DevServer.AzureProduction => "https://hucoinapi.azurewebsites.net",
                 _ => "http://192.168.0.171:5000",
             };
         }
