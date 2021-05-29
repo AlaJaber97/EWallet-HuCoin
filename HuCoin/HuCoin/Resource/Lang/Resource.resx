@@ -135,6 +135,9 @@
   <data name="Beneficiaries" xml:space="preserve">
     <value>Beneficiaries</value>
   </data>
+  <data name="Beneficiary" xml:space="preserve">
+    <value>Beneficiary</value>
+  </data>
   <data name="BeneficiaryDetails" xml:space="preserve">
     <value>Beneficiary Details</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="BeneficiaryName" xml:space="preserve">
     <value>Beneficiary Name</value>
+  </data>
+  <data name="CashIn" xml:space="preserve">
+    <value>Cash in </value>
   </data>
   <data name="CashOut" xml:space="preserve">
     <value>Cash Out</value>
@@ -168,6 +174,9 @@
   <data name="Continue" xml:space="preserve">
     <value>Continue</value>
   </data>
+  <data name="CreatePIN" xml:space="preserve">
+    <value>Create pin code </value>
+  </data>
   <data name="CreatePINCode" xml:space="preserve">
     <value>Create PIN Code</value>
   </data>
@@ -179,6 +188,9 @@
   </data>
   <data name="Date" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="DigitalTransaction" xml:space="preserve">
+    <value>Digital Transaction </value>
   </data>
   <data name="DontHaveAccount" xml:space="preserve">
     <value>Don’t Have Account</value>
@@ -195,6 +207,9 @@
   <data name="EnterEmailAsk" xml:space="preserve">
     <value>Enter your email we'll email instructions on how to reset your password</value>
   </data>
+  <data name="EnterUniversityId" xml:space="preserve">
+    <value>Enter University Id</value>
+  </data>
   <data name="FamilyName" xml:space="preserve">
     <value>Family Name</value>
   </data>
@@ -202,7 +217,7 @@
     <value>First Name</value>
   </data>
   <data name="FirstPage" xml:space="preserve">
-    <value>Decentralized Application This application is found to serve many categories which they do not prefer to deal with centralized organization</value>
+    <value>Decentralized Application</value>
   </data>
   <data name="ForgetPassword?" xml:space="preserve">
     <value>Forget password?</value>
@@ -255,6 +270,9 @@
   <data name="PleaseEnterPIN" xml:space="preserve">
     <value>Please Enter Your PIN Code</value>
   </data>
+  <data name="PleaseSignUp" xml:space="preserve">
+    <value>Please sign up and have your special HU coins account to give up from traditional transaction and achieve your work more faster than any other way </value>
+  </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>Privacy Policy</value>
   </data>
@@ -289,7 +307,10 @@
     <value>Second Name</value>
   </data>
   <data name="SecondPage" xml:space="preserve">
-    <value>Pay Online Please sign up and have your special  HU coins account to give up from traditional transactions and achieve your work more faster than any other way</value>
+    <value>Pay Online </value>
+  </data>
+  <data name="SelectBeneficiary" xml:space="preserve">
+    <value>Select Beneficiary </value>
   </data>
   <data name="SelectPreferLanguage" xml:space="preserve">
     <value>Select Prefer Language</value>
@@ -313,7 +334,10 @@
     <value>Summary</value>
   </data>
   <data name="ThirdPage" xml:space="preserve">
-    <value>Digital Transactions  Take off the traditional money ,you can make your individual transactions without bank account and  any extra effort</value>
+    <value>Take off the traditional money, you can make your individual transaction without bank account and any extra effort </value>
+  </data>
+  <data name="Thisapp" xml:space="preserve">
+    <value>This application is found to serve many categories which they do not prefer to deal with centralized organization </value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Time </value>
@@ -332,6 +356,9 @@
   </data>
   <data name="Transfer" xml:space="preserve">
     <value>Transfer</value>
+  </data>
+  <data name="TransferToPerson" xml:space="preserve">
+    <value>Transfer to person </value>
   </data>
   <data name="UniversityId" xml:space="preserve">
     <value>UniversityId</value>

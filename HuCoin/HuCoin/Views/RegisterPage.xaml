@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.RegisterPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              NavigationPage.HasNavigationBar="False"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels">
     <ContentPage.BindingContext>
@@ -15,7 +16,7 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Registration" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate Registration}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <ScrollView Margin="0" Padding="10" VerticalScrollBarVisibility="Never">
                 <StackLayout Margin="0" Padding="0" Spacing="0">
@@ -57,7 +58,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="First Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate FirstName}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -73,7 +74,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Second Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate SecondName}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -90,7 +91,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Family Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate FamilyName}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -107,7 +108,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Email" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate Email}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -123,7 +124,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Mobile Number" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate MobileNumber}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -135,10 +136,10 @@
                         </StackLayout>
                         <!--University ID-->
                         <StackLayout Margin="0" Padding="0" Spacing="10">
-                            <Label FontAttributes="Bold" Text="University ID" TextColor="#2E3058"/>
+                            <Label FontAttributes="Bold" Text="{Utils:Translate UniversityId}" TextColor="#2E3058"/>
                             <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5" BorderColor="Gray">
                                 <Entry Keyboard="Numeric" MaxLength="7" Text="{Binding User.UniversityID}" 
-                                       Placeholder="Enter University ID"/>
+                                       Placeholder="{Utils:Translate EnterUniversityId}" />
                             </Frame>
                         </StackLayout>
                         <!--Password-->
@@ -147,7 +148,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Password" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate password}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -158,7 +159,7 @@
                             </Frame>
                         </StackLayout>
 
-                        <Button Text="Sing up" TextColor="White" BackgroundColor="#E6611A"
+                        <Button Text="{Utils:Translate SignUp}"  TextColor="White" BackgroundColor="#E6611A"
                                 FontAttributes="Bold" CornerRadius="5" Command="{Binding SingUpCommand}"/>
                     </StackLayout>
                 </StackLayout>

@@ -37,7 +37,7 @@
                     <Image Source="compliant" 
                            HeightRequest="32" WidthRequest="32"
                            VerticalOptions="Center" HorizontalOptions="Start"/>
-                    <Label Text="Privacy Policy" TextColor="#39374D" FontSize="Medium"
+                    <Label Text="{Utils:Translate PrivacyPolicy}" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -51,7 +51,7 @@
                     <Image Source="suggestion" 
                            HeightRequest="32" WidthRequest="32"
                            VerticalOptions="Center" HorizontalOptions="Start"/>
-                    <Label Text="Contact Us" TextColor="#39374D" FontSize="Medium"
+                    <Label Text="{Utils:Translate ContactUs}" TextColor="#39374D" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -65,7 +65,7 @@
                     <Image Source="logout" 
                            HeightRequest="32" WidthRequest="32"
                            VerticalOptions="Center" HorizontalOptions="Start"/>
-                    <Label Text="Logout" TextColor="White" FontSize="Medium"
+                    <Label Text="{Utils:Translate LogOut}" TextColor="White" FontSize="Medium"
                            VerticalTextAlignment="Center"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>

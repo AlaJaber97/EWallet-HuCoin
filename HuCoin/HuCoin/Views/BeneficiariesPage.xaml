@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.BeneficiariesPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -15,7 +16,7 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="List Beneficiaries" TextColor="#2E3058" 
+                <Label Text="{Utils:Translate ListBeneficiaries}" TextColor="#2E3058" 
                        FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <CollectionView x:Name="ListOfBeneficiary" Margin="10" ItemsSource="{Binding Beneficiaries}"
@@ -41,13 +42,13 @@
                     <StackLayout Margin="0" Padding="0" Spacing="10">
                         <Image Source="empty_list" Aspect="AspectFit"
                                Margin="50"/>
-                        <Label Text="No Beneficiaris found!" HorizontalTextAlignment="Center"
+                        <Label Text="{Utils:Translate NoBeneficiarisFound}" HorizontalTextAlignment="Center"
                                FontSize="Medium" FontAttributes="Bold"
                                TextColor="#2E3058"/>
                     </StackLayout>
                 </CollectionView.EmptyView>
                 <CollectionView.Footer>
-                    <Button Text="Add New Beneficiary" VerticalOptions="EndAndExpand"
+                    <Button Text="{Utils:Translate AddNewBeneficiary}" VerticalOptions="EndAndExpand"
                                 CornerRadius="5" BackgroundColor="#E6611A"
                                 HorizontalOptions="Center"
                                 TextTransform="None" TextColor="white"

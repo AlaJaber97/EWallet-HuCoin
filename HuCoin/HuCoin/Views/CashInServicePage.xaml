@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.CashInServicePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -15,12 +16,12 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Cash in" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate CashIn}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Margin="20" Padding="0" Spacing="80">
                 <Frame Margin="0" Padding="0" BackgroundColor="#2E3058" CornerRadius="5">
                     <StackLayout Margin="20" Padding="0" Spacing="10">
-                        <Label Text="Current Balance" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Utils:Translate CurrentBalance}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
                         <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
                             <Image Source="wallet" Aspect="AspectFit" 
                                    HorizontalOptions="Start" VerticalOptions="Center"
@@ -32,12 +33,12 @@
                 </Frame>
                 <StackLayout Margin="0" Padding="0" Spacing="20">
                     <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Recharge Number" TextColor="#2E3058" FontAttributes="Bold"/>
+                        <Label Text="{Utils:Translate RechargeNumber}" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
                             <Entry Text="{Binding CardNumber}" Keyboard="Numeric"/>
                         </Frame>
                     </StackLayout>
-                    <Button Text="Continue" CornerRadius="5" BackgroundColor="#E6611A"
+                    <Button Text="{Utils:Translate Continue}" CornerRadius="5" BackgroundColor="#E6611A"
                         TextTransform="None" TextColor="white" FontSize="Medium"
                         FontAttributes="Bold" Command="{Binding RechargeBalanceCommand}"/>
                 </StackLayout>

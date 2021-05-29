@@ -115,6 +115,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Beneficiary.
+        /// </summary>
+        internal static string Beneficiary {
+            get {
+                return ResourceManager.GetString("Beneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beneficiary Details.
         /// </summary>
         internal static string BeneficiaryDetails {
@@ -147,6 +156,15 @@ namespace HuCoin.Resource.Lang {
         internal static string BeneficiaryName {
             get {
                 return ResourceManager.GetString("BeneficiaryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash in .
+        /// </summary>
+        internal static string CashIn {
+            get {
+                return ResourceManager.GetString("CashIn", resourceCulture);
             }
         }
         
@@ -214,6 +232,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create pin code .
+        /// </summary>
+        internal static string CreatePIN {
+            get {
+                return ResourceManager.GetString("CreatePIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create PIN Code.
         /// </summary>
         internal static string CreatePINCode {
@@ -246,6 +273,15 @@ namespace HuCoin.Resource.Lang {
         internal static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digital Transaction .
+        /// </summary>
+        internal static string DigitalTransaction {
+            get {
+                return ResourceManager.GetString("DigitalTransaction", resourceCulture);
             }
         }
         
@@ -295,6 +331,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter University Id.
+        /// </summary>
+        internal static string EnterUniversityId {
+            get {
+                return ResourceManager.GetString("EnterUniversityId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Family Name.
         /// </summary>
         internal static string FamilyName {
@@ -313,7 +358,7 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Decentralized Application This application is found to serve many categories which they do not prefer to deal with centralized organization.
+        ///   Looks up a localized string similar to Decentralized Application.
         /// </summary>
         internal static string FirstPage {
             get {
@@ -475,6 +520,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please sign up and have your special HU coins account to give up from traditional transaction and achieve your work more faster than any other way .
+        /// </summary>
+        internal static string PleaseSignUp {
+            get {
+                return ResourceManager.GetString("PleaseSignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Privacy Policy.
         /// </summary>
         internal static string PrivacyPolicy {
@@ -574,11 +628,20 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pay Online Please sign up and have your special  HU coins account to give up from traditional transactions and achieve your work more faster than any other way.
+        ///   Looks up a localized string similar to Pay Online .
         /// </summary>
         internal static string SecondPage {
             get {
                 return ResourceManager.GetString("SecondPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Beneficiary .
+        /// </summary>
+        internal static string SelectBeneficiary {
+            get {
+                return ResourceManager.GetString("SelectBeneficiary", resourceCulture);
             }
         }
         
@@ -646,11 +709,20 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Digital Transactions  Take off the traditional money ,you can make your individual transactions without bank account and  any extra effort.
+        ///   Looks up a localized string similar to Take off the traditional money, you can make your individual transaction without bank account and any extra effort .
         /// </summary>
         internal static string ThirdPage {
             get {
                 return ResourceManager.GetString("ThirdPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This application is found to serve many categories which they do not prefer to deal with centralized organization .
+        /// </summary>
+        internal static string Thisapp {
+            get {
+                return ResourceManager.GetString("Thisapp", resourceCulture);
             }
         }
         
@@ -705,6 +777,15 @@ namespace HuCoin.Resource.Lang {
         internal static string Transfer {
             get {
                 return ResourceManager.GetString("Transfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer to person .
+        /// </summary>
+        internal static string TransferToPerson {
+            get {
+                return ResourceManager.GetString("TransferToPerson", resourceCulture);
             }
         }
         

@@ -2,15 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.TransactionDetailsView"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              BackgroundColor="#AAC4C4C4">
     <ContentPage.Content>
         <Frame Margin="20,10" Padding="20" CornerRadius="10" BackgroundColor="White"
                HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <StackLayout Margin="0" Padding="0" Spacing="20">
-                <Label Text="Transaction Details" FontAttributes="Bold"/>
+                <Label Text="{Utils:Translate TransactionDetails}" FontAttributes="Bold"/>
                 <StackLayout Margin="0" Padding="0" Spacing="20">
                     <StackLayout Margin="0" Padding="0" Spacing="5">
-                        <Label Text="Transaction ID"/>
+                        <Label Text="{Utils:Translate TransactionId}"/>
                         <Label Margin="10,0"  FontAttributes="Bold" Text="{Binding Transaction.ID}"/>
                     </StackLayout>
                     <BoxView HeightRequest="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Color="Gray"/>
@@ -19,27 +20,27 @@
                     <BoxView HeightRequest="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Color="Gray"/>
 
                     <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5">
-                        <Label Text="Date" HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Utils:Translate Date}"  HorizontalOptions="FillAndExpand"/>
                         <Label Margin="10,0" FontAttributes="Bold" Text="{Binding Transaction.Date,StringFormat='{0:yyyy-MM-dd}'}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5">
-                        <Label Text="Time" HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Utils:Translate Time}"  HorizontalOptions="FillAndExpand"/>
                         <Label Margin="10,0" FontAttributes="Bold" Text="{Binding Transaction.Date,StringFormat='{0:HH:mm:ss tt}'}"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5">
-                        <Label Text="Amount" HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Utils:Translate Amount}"  HorizontalOptions="FillAndExpand"/>
                         <Label Margin="10,0" FontAttributes="Bold" Text="{Binding Transaction.Amount,StringFormat='{0:F2} HU'}"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5">
-                        <Label Text="Fees" HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Utils:Translate Fees}"  HorizontalOptions="FillAndExpand"/>
                         <Label Margin="10,0" FontAttributes="Bold" Text="{Binding Transaction.Fees,StringFormat='{0:F2} HU'}"/>
                     </StackLayout>
                 </StackLayout>
                 <BoxView HeightRequest="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Color="Gray"/>
 
-                <Button Text="Close" Command="{Binding BackModalCommand}"
+                <Button Text="{Utils:Translate Close}"  Command="{Binding BackModalCommand}"
                         CornerRadius="5" TextTransform="None"
                         TextColor="White" BackgroundColor="#E6611A"/>
             </StackLayout>

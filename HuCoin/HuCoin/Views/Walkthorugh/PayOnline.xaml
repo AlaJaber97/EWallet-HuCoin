@@ -1,25 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:XFpin="clr-namespace:XFPINView;assembly=XFPINView"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              x:Class="HuCoin.Views.Walkthorugh.PayOnline">
+    
+    
     <ContentPage.Content>
         <StackLayout Margin="10" Padding="0" Spacing="0">
             <StackLayout Margin="20,0" Padding="0" Spacing="30" VerticalOptions="CenterAndExpand">
                 <Image Source="pay_online" Aspect="AspectFit" 
                    VerticalOptions="Start" HorizontalOptions="Center"
                    Margin="50,0"/>
-                <Label Text="Pay Online"                  
+                <Label Text= "{Utils:Translate SecondPage}"              
                        HorizontalTextAlignment="Center"
                        TextColor="#2E3058"
                        FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="Please Sign up and have your special Hu coins account to give up from traditional transactions and achieve your work more faster than any other way" 
+                <Label Text="{Utils:Translate PleaseSignUp}" 
                    HorizontalTextAlignment="Center"
                    TextColor="#2E3058"
                    FontSize="Medium" LineHeight="1.5"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="0" 
                          VerticalOptions="EndAndExpand">
-                <Label Text="Skip" FontSize="Medium"
+                <Label Text="{Utils:Translate Skip}" FontSize="Medium"
                        TextColor="#2E3058" FontAttributes="Bold">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding SkipCommand}"/>
@@ -27,7 +30,7 @@
                 </Label>
                 <IndicatorView IndicatorColor="#707070" SelectedIndicatorColor="#E76119" HorizontalOptions="CenterAndExpand"
                                Count="3" Position="1" IndicatorSize="15"/>
-                <Label Text="Next" FontSize="Medium"
+                <Label Text="{Utils:Translate Next}" FontSize="Medium"
                        TextColor="#2E3058" FontAttributes="Bold">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding NextCommand}"/>

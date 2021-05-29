@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.ContactUsPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -15,11 +16,11 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Contact Us" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate ContactUs}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Margin="0" Padding="0" Spacing="20">
                 <Image Source="contact_us" Aspect="AspectFit" Margin="40,0"/>
-                <Label Text="Contact Us" TextColor="#2E3058"
+                <Label Text="{Utils:Translate ContactUs}" TextColor="#2E3058"
                        FontAttributes="Bold" FontSize="Title"
                        HorizontalOptions="Center"/>
             </StackLayout>

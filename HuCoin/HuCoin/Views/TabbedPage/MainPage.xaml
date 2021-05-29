@@ -10,7 +10,7 @@
             NavigationPage.HasNavigationBar="False"
             BarBackgroundColor="#E6611A"
             BarTextColor="White">
-    <Pages:HomePage IconImageSource="home_en"/>
+    <Pages:HomePage IconImageSource="home_en"/> 
     <Pages:HistoryPage IconImageSource="history_dis"/>
     <Pages:ProfilePage IconImageSource="user_dis"/>
     <Pages:SettingsPage IconImageSource="settings_dis"/>

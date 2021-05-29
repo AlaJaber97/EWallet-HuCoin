@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              x:Class="HuCoin.Views.Walkthorugh.DecentralizedApplication">
     <ContentPage.Content>
         <StackLayout Margin="10" Padding="0" Spacing="0">
@@ -8,18 +9,18 @@
                 <Image Source="no_bank" Aspect="AspectFit" 
                    VerticalOptions="Start" HorizontalOptions="Center"
                    Margin="70,0"/>
-                <Label Text="Decentrilized Application"
+                <Label Text="{Utils:Translate FirstPage}"
                    HorizontalTextAlignment="Center"
                    TextColor="#2E3058"
                    FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="This application is found to serve Categories which they don't prefer to deal with centralized organization" 
+                <Label Text="{Utils:Translate Thisapp}"
                    HorizontalTextAlignment="Center"
                    TextColor="#2E3058"
                    FontSize="Medium" LineHeight="1.5"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="0" 
                          VerticalOptions="EndAndExpand">
-                <Label Text="Skip" FontSize="Medium"
+                <Label Text="{Utils:Translate Skip}" FontSize="Medium"
                        TextColor="#2E3058" FontAttributes="Bold">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding SkipCommand}"/>
@@ -28,7 +29,7 @@
                 <IndicatorView IndicatorColor="#707070" SelectedIndicatorColor="#E76119" 
                                HorizontalOptions="CenterAndExpand"
                                Count="3" Position="0" IndicatorSize="15"/>
-                <Label Text="Next" FontSize="Medium"
+                <Label Text="{Utils:Translate Next}" FontSize="Medium"
                        TextColor="#2E3058" FontAttributes="Bold">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NextCommand}"/>

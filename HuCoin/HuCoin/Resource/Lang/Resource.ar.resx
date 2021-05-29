@@ -135,6 +135,9 @@
   <data name="Beneficiaries" xml:space="preserve">
     <value>المنتفعين</value>
   </data>
+  <data name="Beneficiary" xml:space="preserve">
+    <value>المنتفع </value>
+  </data>
   <data name="BeneficiaryDetails" xml:space="preserve">
     <value>تفاصيل المنتفع </value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="BeneficiaryName" xml:space="preserve">
     <value>اسم المنتفع</value>
+  </data>
+  <data name="CashIn" xml:space="preserve">
+    <value>شحن </value>
   </data>
   <data name="CashOut" xml:space="preserve">
     <value>السحب نقدا</value>
@@ -168,6 +174,9 @@
   <data name="Continue" xml:space="preserve">
     <value>استمر</value>
   </data>
+  <data name="CreatePIN" xml:space="preserve">
+    <value>انشئ رمز التحقق</value>
+  </data>
   <data name="CreatePINCode" xml:space="preserve">
     <value>إنشاء رمز PINالخاص بك</value>
   </data>
@@ -179,6 +188,9 @@
   </data>
   <data name="Date" xml:space="preserve">
     <value>التاريخ</value>
+  </data>
+  <data name="DigitalTransaction" xml:space="preserve">
+    <value>المعاملات الالكترونية </value>
   </data>
   <data name="DontHaveAccount" xml:space="preserve">
     <value>لا تمتلك حساب ؟سجل الآن</value>
@@ -255,6 +267,9 @@
   <data name="PleaseEnterPIN" xml:space="preserve">
     <value>الرجاء إدخال رمز PIN الخاص بك</value>
   </data>
+  <data name="PleaseSignUp" xml:space="preserve">
+    <value>سجل وامتلك رصيد عملة الكترونية وتخلى عن المعاملات التقليدية وانجز عملك بشكل اسرع من اي طريقة اخرى </value>
+  </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>سياسة الخصوصية</value>
   </data>
@@ -289,7 +304,10 @@
     <value>الاسم الثاني</value>
   </data>
   <data name="SecondPage" xml:space="preserve">
-    <value>الدفع عبر الانترنت, سجل وامتلك حسابك الخاص في تطبيق  HuCoin للتخلى عن المعاملات المالية التقليدية وانجازها بأسرع طريقة ممكنة</value>
+    <value>ادفع الكترونيا </value>
+  </data>
+  <data name="SelectBeneficiary" xml:space="preserve">
+    <value>اختر المنتفع </value>
   </data>
   <data name="SelectPreferLanguage" xml:space="preserve">
     <value>تحديد اللغة المفضلة </value>
@@ -313,7 +331,10 @@
     <value>ملخص العملية</value>
   </data>
   <data name="ThirdPage" xml:space="preserve">
-    <value>التحويلات الرقمية, دعك من النقود التقليدية, يمكنك الان اجراء المعاملات المالية دون الحاجة لحساب بنكي ودون رسوم اضافية</value>
+    <value>تخلى عن النقود التقليدية وانشئ حوالاتك الشخصية بدون بنوك واي جهد مضاعف </value>
+  </data>
+  <data name="Thisapp" xml:space="preserve">
+    <value>هذا التطبيق وجد لخدمة الفئات التي لا تفضل التعامل مع المنظمات المركزية </value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>الوقت</value>
@@ -332,6 +353,9 @@
   </data>
   <data name="Transfer" xml:space="preserve">
     <value>تحويل</value>
+  </data>
+  <data name="TransferTOPerson" xml:space="preserve">
+    <value>تحويل الى شخص </value>
   </data>
   <data name="UniversityId" xml:space="preserve">
     <value>الرقم الجامعي</value>

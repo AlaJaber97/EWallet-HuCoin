@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.ForgetPinCodePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -15,17 +16,17 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Forget PIN Code" TextColor="#2E3058"
+                <Label Text="{Utils:Translate ForgetPINCode}" TextColor="#2E3058"
                        FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Margin="10" Padding="0" Spacing="20">
                 <StackLayout Margin="0" Padding="0" Spacing="0">
-                    <Label Text="Mobile Number" TextColor="#2E3058" FontAttributes="Bold"/>
+                    <Label Text="{Utils:Translate MobileNumber}" TextColor="#2E3058" FontAttributes="Bold"/>
                     <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="10">
                         <Entry Keyboard="Telephone" Placeholder="+9627********" Text="{Binding PhoneNumber}"/>
                     </Frame>
                 </StackLayout>
-                <Button Text="Submit" TextTransform="None" CornerRadius="5" 
+                <Button Text="{Utils:Translate Submit}" TextTransform="None" CornerRadius="5" 
                     BackgroundColor="#E6611A" TextColor="white" 
                     FontSize="Medium" FontAttributes="Bold"
                     Command="{Binding SubmitPhoneNumebrCommand}"/>

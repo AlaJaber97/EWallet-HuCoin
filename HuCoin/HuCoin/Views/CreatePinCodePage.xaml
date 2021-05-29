@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.CreatePinCodePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              xmlns:XFpin="clr-namespace:XFPINView;assembly=XFPINView"
              NavigationPage.HasNavigationBar="False">
@@ -20,9 +21,9 @@
             <StackLayout Margin="20,-120,20,0" Padding="0" Spacing="50"
                          VerticalOptions="CenterAndExpand">
                 <StackLayout Margin="0" Padding="0" Spacing="10">
-                    <Label Text="Create pin code" TextColor="#2E3058" FontAttributes="Bold"
+                    <Label Text="{Utils:Translate CreatePIN}"  TextColor="#2E3058" FontAttributes="Bold"
                            FontSize="Medium" HorizontalTextAlignment="Center"/>
-                    <Label Text="Please enter your PIN code" TextColor="#2E3058"
+                    <Label Text="{Utils:Translate PleaseEnterPIN}"  TextColor="#2E3058"
                            FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <XFpin:PINView PINInputType="Numeric" IsPassword="True" 

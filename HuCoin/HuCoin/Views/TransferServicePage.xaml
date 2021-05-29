@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.TransferServicePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -15,12 +16,12 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Transfer to Person" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate TransferToPerson}" Person TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Margin="20" Padding="0" Spacing="80">
                 <Frame Margin="0" Padding="0" BackgroundColor="#2E3058" CornerRadius="5">
                     <StackLayout Margin="20" Padding="0" Spacing="10">
-                        <Label Text="Current Balance" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Utils:Translate CuurentBalance}" TextColor="white" FontSize="Medium" FontAttributes="Bold"/>
                         <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="20">
                             <Image Source="wallet" Aspect="AspectFit" 
                                    HorizontalOptions="Start" VerticalOptions="Center"
@@ -32,13 +33,13 @@
                 </Frame>
                 <StackLayout Margin="0" Padding="0" Spacing="20">
                     <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Beneficiary" TextColor="#2E3058" FontAttributes="Bold"/>
+                        <Label Text="{Utils:Translate Beneficiary}" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
-                            <Picker Title="Select Beneficiary"
+                            <Picker Title="{Utils:Translate SelectBeneficiary}"
                                     ItemsSource="{Binding Beneficiaries}" SelectedItem="{Binding Beneficiary}"
                                     ItemDisplayBinding="{Binding Name}" />
                         </Frame>
-                        <Label Text="add new beneficiary" TextColor="#E6611A" 
+                        <Label Text="{Utils:Translate AddNewBeneficiary}" TextColor="#E6611A" 
                                FontAttributes="Bold" HorizontalTextAlignment="End">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding AddNewBeneficiaryCommand}"/>
@@ -46,12 +47,12 @@
                         </Label>
                     </StackLayout>
                     <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Amount" TextColor="#2E3058" FontAttributes="Bold"/>
+                        <Label Text="{Utils:Translate Amount}" TextColor="#2E3058" FontAttributes="Bold"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="white" CornerRadius="5">
                             <Entry Keyboard="Numeric" Placeholder="0.00" Text="{Binding Amount}"/>
                         </Frame>
                     </StackLayout>
-                    <Button Text="Transfer" CornerRadius="5" BackgroundColor="#E6611A"
+                    <Button Text="{Utils:Translate Transfer}" CornerRadius="5" BackgroundColor="#E6611A"
                             TextTransform="None" TextColor="white" FontSize="Medium"
                             FontAttributes="Bold" Command="{Binding TransferServiceCommand}"/>
                 </StackLayout>

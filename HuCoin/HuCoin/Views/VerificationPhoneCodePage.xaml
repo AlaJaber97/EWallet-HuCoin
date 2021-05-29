@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.VerificationPhoneCodePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              xmlns:XFpin="clr-namespace:XFPINView;assembly=XFPINView"
              NavigationPage.HasNavigationBar="False">
@@ -16,13 +17,13 @@
             </StackLayout>
             <StackLayout Margin="10" Padding="0" Spacing="50">
                 <StackLayout Margin="0" Padding="0" Spacing="10">
-                    <Label Text="Verification Required" TextColor="#2E3058" FontAttributes="Bold"
+                    <Label Text="{Utils:Translate VerificationRequired}"  TextColor="#2E3058" FontAttributes="Bold"
                        HorizontalTextAlignment="Center" FontSize="Medium"/>
                     <Label TextColor="#2E3058" HorizontalTextAlignment="Center" FontSize="Medium">
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="A verification code has been sent to "/>
+                                    <Span Text="{Utils:Translate VerificationCodeSent}"/>
                                     <Span Text="&#x0a;"/>
                                     <Span Text="{Binding User.PhoneNumber, StringFormat='{0}'}"/>
                                     <Span Text="&#x0a;"/>
@@ -37,10 +38,10 @@
                                BoxShape="RoundCorner" BoxSpacing="10"
                                BoxBorderColor="#E6611A" Color="#E6611A"
                                PINLength="6" PINValue="{Binding VerificationCode}"/>
-                <Button Text="Submit" TextTransform="None" CornerRadius="5" 
+                <Button Text="{Utils:Translate Submit}" TextTransform="None" CornerRadius="5" 
                         BackgroundColor="#E6611A" TextColor="white" 
                         FontSize="Medium" FontAttributes="Bold"
-                        Command="{Binding VerifyPhoneNumberCommand}" />
+                        Command="{Binding ChangeLanguageCommand}" CommandParameter="ar-JO" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

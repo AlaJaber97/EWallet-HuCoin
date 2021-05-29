@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.HistoryPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              xmlns:XamEffects="clr-namespace:XamEffects;assembly=XamEffects">
     <ContentPage.BindingContext>
@@ -10,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="10">
             <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="20">
-                <Label Text="Transaction History" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate TransactionHistory}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="#E6611A"
                          Command="{Binding RefreshTransactionsCommand}">
@@ -32,7 +33,7 @@
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
-                                                        <Span Text="Transaction ID " TextColor="#D3D3D3" />
+                                                        <Span Text="{Utils:Translate TransactionId}"  TextColor="#D3D3D3" />
                                                         <Span Text="{Binding ID}" TextColor="#39374D" />
                                                     </FormattedString.Spans>
                                                 </FormattedString>

@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuCoin.Views.ProfilePage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels">
     <ContentPage.BindingContext>
         <ViewModels:ProfilePageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="0" Padding="0" Spacing="10">
-            <Label Text="My Profile" TextColor="#2E3058" FontAttributes="Bold"
+            <Label Text="{Utils:Translate MyProfile}" TextColor="#2E3058" FontAttributes="Bold"
                        FontSize="Medium" Margin="20,10"/>
 
             <ScrollView Margin="0" Padding="20,10" VerticalScrollBarVisibility="Never">
@@ -51,7 +52,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="First Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate FirstName}" TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -67,7 +68,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Second Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate SecondName}" TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -83,7 +84,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Family Name" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate FamilyName}" TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -99,7 +100,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Mobile Number" TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate MobileNumber}" TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>
@@ -112,14 +113,14 @@
                         </StackLayout>
                         <!--University ID-->
                         <StackLayout Margin="0" Padding="0" Spacing="10">
-                            <Label FontAttributes="Bold" Text="University ID" TextColor="#2E3058"/>
+                            <Label FontAttributes="Bold" Text="{Utils:Translate UniversityId}" TextColor="#2E3058"/>
                             <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5" BorderColor="Gray">
                                 <Entry IsEnabled="False" Keyboard="Numeric"
                                        Text="{Binding User.UniversityID}"/>
                             </Frame>
                         </StackLayout>
 
-                        <Button Margin="30,0" Text="Update" TextTransform="None"
+                        <Button Margin="30,0" Text="{Utils:Translate Update}" TextTransform="None"
                                 TextColor="White" BackgroundColor="#E6611A" 
                                 FontAttributes="Bold" CornerRadius="5"
                                 Command="{Binding UpdateProfileCommand}"/>

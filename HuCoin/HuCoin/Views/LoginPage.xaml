@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
              x:Class="HuCoin.Views.LoginPage"
+             xmlns:Utils="clr-namespace:HuCoin.Utils"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
         <ViewModels:LoginPageViewModel/>
@@ -14,13 +15,13 @@
                 <StackLayout Margin="0" Padding="0" Spacing="20">
                     <Image Source="logo_hu" />
                     <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Mobile Number" TextColor="White"/>
+                        <Label Text="{Utils:Translate MobileNumber}" TextColor="White"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
                             <Entry Text="{Binding RequestLogin.Username}" Keyboard="Telephone"/>
                         </Frame>
                     </StackLayout>
                     <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="Password" TextColor="White"/>
+                        <Label Text="{Utils:Translate Password}" TextColor="White"/>
                         <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
                             <Entry Text="{Binding RequestLogin.Password}" IsPassword="True"/>
                         </Frame>
@@ -28,10 +29,10 @@
                     <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">
                         <StackLayout Orientation="Horizontal" Grid.Column="0" Margin="0" Padding="0" Spacing="10">
                             <CheckBox Color="#E6611A" IsChecked="{Binding RequestLogin.IsRememberMe}"/>
-                            <Label Text="Remember me" TextColor="White" FontAttributes="Bold"
+                            <Label Text="{Utils:Translate RememberMe}" TextColor="White" FontAttributes="Bold"
                                    VerticalTextAlignment="Center"/>
                         </StackLayout>
-                        <Label Grid.Column="1" Text="Forgot Password?" 
+                        <Label Grid.Column="1" Text="{Utils:Translate ForgetPassword}"
                                HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                                TextColor="#E6611A" FontAttributes="Bold">
                             <Label.GestureRecognizers>
@@ -39,7 +40,7 @@
                             </Label.GestureRecognizers>
                         </Label>
                     </Grid>
-                    <Button Text="Sign in" TextTransform="None" CornerRadius="5"
+                    <Button Text="{Utils:Translate SignIn}" TextTransform="None" CornerRadius="5"
                             BackgroundColor="#E6611A" TextColor="White" 
                             FontSize="Medium" FontAttributes="Bold"
                             Command="{Binding SignInCommand}"/>
@@ -49,8 +50,8 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="Don't have an account? "/>
-                            <Span Text="Register Now" TextDecorations="Underline" FontAttributes="Bold"/>
+                            <Span Text="{Utils:Translate DontHaveAccount }" />
+                            <Span Text="{Utils:Translate RegisterNow}" TextDecorations="Underline" FontAttributes="Bold"/>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
