@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 namespace HuCoin.ViewModels
 {
     public class ForgetPinCodePageViewModel : ViewModels.BaseViewModel
@@ -29,9 +29,9 @@ namespace HuCoin.ViewModels
             {
                 if (string.IsNullOrWhiteSpace(PhoneNumber) || !PhoneNumber.StartsWith("+9627"))
                 {
-                    string ErrorMessage = "Please fill in the following fields:";
-                    ErrorMessage += "\nmust phone number start with +9627 and not be empty field";
-                    await DisplayAlert("Fields Required", ErrorMessage, "Okay").ConfigureAwait(false);
+                    string ErrorMessage = localizer.Instance["FillInError"];
+                    ErrorMessage += "\n"localizer.Instance["MustNumber"];
+                    await DisplayAlert(localizer.Instance["RequiredField"], ErrorMessage, localizer.Instance["Ok"]).ConfigureAwait(false);
                     return;
                 }
                 using var loadingview = new Components.LoadingView();
@@ -41,7 +41,7 @@ namespace HuCoin.ViewModels
             }
             catch (Exception ex)
             {
-                await DisplayAlert(string.Empty, ex.ToString(), "Okay");
+                await DisplayAlert(string.Empty, ex.ToString(), localizer.Instance["Ok"]);
             }
         }
         private async Task Verification()
@@ -58,12 +58,10 @@ namespace HuCoin.ViewModels
                 }
                 else
                 {
-                    await DisplayAlert("An error occurred", "Unfortunatley, we were unable to verify your phone number, please try agin\nIf the problem recures, please contact support", "Ok").ConfigureAwait(false);
-                }
-            }
+                    await DisplayAlert(localizer.Instance["AnErrorOccurred"], localizer.Instance["VerificationError"],localizer.Instance["Ok"].ConfigureAwait(false);}
             catch (Exception ex)
             {
-                await DisplayAlert(string.Empty, ex.ToString(), "Okay").ConfigureAwait(false);
+                await DisplayAlert(string.Empty, ex.ToString(),localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
 

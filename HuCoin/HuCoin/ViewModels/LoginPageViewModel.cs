@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System.Text.Json;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -63,17 +64,17 @@ namespace HuCoin.ViewModels
                     else
                     {
                         var error = await response.Content.ReadAsStringAsync();
-                        await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                        await DisplayAlert(localizer.Instance["AnErrorOccurred"], error, localizer.Instance["Ok"]).ConfigureAwait(false);
                     }
                 }
                 else
                 {
-                    await DisplayAlert("Required Field", "Please, don't leave empty fields", "Ok").ConfigureAwait(false);
+                    await DisplayAlert(localizer.Instance["RequiredField"], localizer.Instance["EmptyFields"],localizer.Instance["Ok"]).ConfigureAwait(false);
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["AnErrorOccurred"], ex.ToString(),localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
     }

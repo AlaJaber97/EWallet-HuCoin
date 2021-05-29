@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 namespace HuCoin.ViewModels
 {
     public class HomePageViewModel : ViewModels.BaseViewModel
@@ -52,7 +52,7 @@ namespace HuCoin.ViewModels
             else
             {
                 var error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["AnErrorOccurred"], error, localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
         private void OpenCashOutService() => OpenPage(new Views.CashOutServicePage());

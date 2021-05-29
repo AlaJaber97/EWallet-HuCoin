@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -52,7 +53,7 @@ namespace HuCoin.ViewModels
             else
             {
                 var error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["AnErrorOccurred"], error, localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
         private bool IsValidUser(BLL.Models.User user)
@@ -61,18 +62,18 @@ namespace HuCoin.ViewModels
             if (string.IsNullOrWhiteSpace(user.FirstName) ||
                 string.IsNullOrWhiteSpace(user.SecondName) ||
                 string.IsNullOrWhiteSpace(user.FamilyName))
-                ErrorMessage = "Please fill in the following fields:";
+                ErrorMessage = localizer.Instance["FillInError"];
 
             if (string.IsNullOrWhiteSpace(user.FirstName))
-                ErrorMessage += "\n• First Name";
+                ErrorMessage += "\n•" localizer.Instance["FirstName"];
             if (string.IsNullOrWhiteSpace(user.SecondName))
-                ErrorMessage += "\n• Second Name";
+                ErrorMessage += "\n•"localizer.Instance["SecondName"];
             if (string.IsNullOrWhiteSpace(user.FamilyName))
-                ErrorMessage += "\n• Family Name";
+                ErrorMessage += "\n•" localizer.Instance["FamilyName"];
 
             if (ErrorMessage != null)
             {
-                DisplayAlert("Fields Required", ErrorMessage, "Okay").ConfigureAwait(false);
+                DisplayAlert(localizer.Instance["RequiredField"], ErrorMessage, localizer.Instance["Ok"]).ConfigureAwait(false);
                 return false;
             }
             return true;
@@ -87,13 +88,13 @@ namespace HuCoin.ViewModels
             var response = await httpClient.PutAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/profile", User);
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Update Profile", "Your profile information update successfully", "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["UpdateProfileAleart"], localizer.Instance["Ok"]).ConfigureAwait(false);
                 MessagingCenter.Send(this, "NotifyProfileInfromationUpdated");
             }
             else
             {
                 var error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["AnErrorOccurred"], error,  localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
     }

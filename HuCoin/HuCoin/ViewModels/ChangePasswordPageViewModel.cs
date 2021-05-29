@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -30,18 +31,18 @@ namespace HuCoin.ViewModels
                 var response = await httpClient.PostAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/changepassword", ChangePassword);
                 if (response.IsSuccessStatusCode)
                 {
-                    await DisplayAlert("Opration Successfulley", "The password has been changed successfully", "Ok").ConfigureAwait(false);
+                    await DisplayAlert(localizer.Instance["PasswordChange"], localizer.Instance["PasswordChangeSuccess"],localizer.Instance["Ok"]).ConfigureAwait(false);
                     CloseCurrentPage();
                 }
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                    await DisplayAlert(localizer.Instance["AnErrorOccurred"], error, "Ok").ConfigureAwait(false);
                 }
             }
             else
             {
-                await DisplayAlert("Required Field", "Please, don't leave empty fields and must new password field matching with confirm password field", "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["RequiredField"], localizer.Instance["EmptyFieldsError"], localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
     }

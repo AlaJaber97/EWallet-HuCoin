@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -40,7 +41,7 @@ namespace HuCoin.ViewModels
             }
             catch (Exception ex)
             {
-                await DisplayAlert(string.Empty, ex.ToString(), "Okay");
+                await DisplayAlert(string.Empty, ex.ToString(), localizer.Instance["Ok"]);
             }
         }
         private async Task PickPhotoAsync()
@@ -68,22 +69,22 @@ namespace HuCoin.ViewModels
                 string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627") ||
                 user.UniversityID.ToString().Length != 7 ||
                 string.IsNullOrWhiteSpace(user.Password))
-                ErrorMessage= "Please fill in the following fields:";
+                ErrorMessage= localizer.Instance["FillInError"];
 
             if (string.IsNullOrWhiteSpace(user.FirstName))
-                ErrorMessage += "\n• First Name";
+                ErrorMessage += "\n•" localizer.Instance["FirstName"];
             if (string.IsNullOrWhiteSpace(user.SecondName))
-                ErrorMessage += "\n• Second Name";
+                ErrorMessage += "\n•" localizer.Instance["SecondName"];
             if (string.IsNullOrWhiteSpace(user.FamilyName))
-                ErrorMessage += "\n• Family Name";
+                ErrorMessage += "\n•" localizer.Instance["FamilyName"];
             if (string.IsNullOrWhiteSpace(user.Email))
-                ErrorMessage += "\n• Email";
+                ErrorMessage += "\n•"localizer.Instance["Email"];
             if (string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627"))
-                ErrorMessage += "\n• Phone Number must start with +9627 and not be empty field";
+                ErrorMessage += "\n•" localizer.Instance["MobileNumber"];
             if (user.UniversityID.ToString().Length != 7)
-                ErrorMessage += "\n• University ID";
+                ErrorMessage += "\n•"localizer.Instance["UniversityId"];
             if (string.IsNullOrWhiteSpace(user.Password))
-                ErrorMessage += "\n• Password";
+                ErrorMessage += "\n•" localizer.Instance["Password"];
 
             if(ErrorMessage != null)
             {
@@ -114,13 +115,13 @@ namespace HuCoin.ViewModels
                     else
                     {
                         var error = await response.Content.ReadAsStringAsync();
-                        await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                        await DisplayAlert(localizer.Instance["RequiredField"], error, localizer.Instance["Ok"]).ConfigureAwait(false);
                     }
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert(string.Empty, ex.ToString(), "Okay").ConfigureAwait(false);
+                await DisplayAlert(string.Empty, ex.ToString(), localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
     }

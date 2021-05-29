@@ -199,7 +199,7 @@
     <value>البريد الاكتروني</value>
   </data>
   <data name="EmptyFields" xml:space="preserve">
-    <value>حقل مطلوب يرجى عدم ترك حقول فارغة</value>
+    <value> يرجى عدم ترك حقول فارغة</value>
   </data>
   <data name="EmptyFieldsError" xml:space="preserve">
     <value>ارجو عدم ترك حقول فارغة يجب مطابقة الحقل الخاص بكلمة المرور الجديدة والحقل الخاص بتأكيد كلمة المرور</value>
@@ -209,6 +209,9 @@
   </data>
   <data name="FamilyName" xml:space="preserve">
     <value>اسم العائلة</value>
+  </data>
+  <data name="FillInError" xml:space="preserve">
+    <value>الرجاء ملئ الحقول التالية</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>الاسم  الاول</value>
@@ -240,6 +243,9 @@
   <data name="MobileNumberPos" xml:space="preserve">
     <value>رقم الهاتف الخاص بنقطة البيع</value>
   </data>
+  <data name="MustNumber" xml:space="preserve">
+    <value>يجب أن لا يكون الحقل فارغ, ويجب ان يبدأ ب +9627</value>
+  </data>
   <data name="MyProfile" xml:space="preserve">
     <value>ملفي الشخصي</value>
   </data>
@@ -258,8 +264,17 @@
   <data name="NoBeneficiariesFound" xml:space="preserve">
     <value>لم يتم العثور على منتفع</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>تم</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>نجحت العملية</value>
+  </data>
+  <data name="PasswordChangeSuccess" xml:space="preserve">
+    <value>تم تغيير كلمة المرور بنجاح </value>
   </data>
   <data name="PinCodeError" xml:space="preserve">
     <value>رمز PIN خاطئ يبدو ان رمز PIN الخاص بك غير صحيح يرجى المحاولة مرة اخرى</value>
@@ -287,6 +302,9 @@
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>تذكرني</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>الحقل مطلوب</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>إعادة تعيين</value>

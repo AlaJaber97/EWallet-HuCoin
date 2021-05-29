@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
@@ -70,7 +71,7 @@ namespace HuCoin.ViewModels
                 if (response.IsSuccessStatusCode)
                 {
                     var message = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert(string.Empty, message, "Ok").ConfigureAwait(false);
+                    await DisplayAlert(string.Empty, message, localizer.Instance["Ok"]).ConfigureAwait(false);
                     await Services.BalanceManagment.Instance.ReLoadBalance();
                     Balance = Services.BalanceManagment.Instance.Balance;
                     OnPropertyChanged(nameof(Balance));
@@ -79,12 +80,12 @@ namespace HuCoin.ViewModels
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("An error occurred", error, "Ok").ConfigureAwait(false);
+                    await DisplayAlert(localizer.Instance["AnErrorOccurred"], error, localizer.Instance["Ok"]).ConfigureAwait(false);
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("An error occurred", ex.ToString(), "Ok").ConfigureAwait(false);
+                await DisplayAlert(localizer.Instance["AnErrorOccurred"], ex.ToString(), localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
 
