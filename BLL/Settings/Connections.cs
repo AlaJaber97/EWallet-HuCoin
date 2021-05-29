@@ -35,7 +35,7 @@ namespace BLL.Settings
             return DbServer switch
             {
                 BLL.Enums.DbServer.LocalDatabase=> "Server=(localdb)\\mssqllocaldb;Database=HuCoinDB;Trusted_Connection=True;",
-                BLL.Enums.DbServer.AzureDatabase=> "Server=tcp:hucoindbserver.database.windows.net,1433;Initial Catalog=HuCoinDB;User Id=hucoin@hucoindbserver;Password=hucoin_97;Trusted_Connection=True;",
+                BLL.Enums.DbServer.AzureDatabase=> "Server=tcp:hucoindbserver.database.windows.net,1433;Initial Catalog=HuCoinDB;Persist Security Info=False;User ID=std.hu.edu.jo;Password=hucoin_97;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
               _ => throw new NotImplementedException(),
             };
         }
