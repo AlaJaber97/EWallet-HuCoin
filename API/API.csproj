@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>a80fa91b-f29e-4617-8faa-4f462c8eb542</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/7008c7e3-4dc3-4875-b276-f7db0e683007/resourceGroups/hucoin/providers/microsoft.insights/components/HuCoin-Insights</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,6 +47,7 @@
 
   <ItemGroup>
     <PackageReference Include="MailKit" Version="2.12.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.6" />

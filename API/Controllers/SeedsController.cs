@@ -36,22 +36,10 @@ namespace API.Controllers
             {
                 _context.Users.Add(new BLL.Models.User
                 {
-                    FirstName = "Ala'",
-                    SecondName = "Saeed",
-                    FamilyName = "Jaber",
-                    PhoneNumber = "+962785461900",
-                    PhoneNumberConfirmed = true,
-                    UserName = "+962785461900",
-                    Wallet = new BLL.Models.Wallet
-                    {
-                        Credential = Utils.RSA.KeyGenerate()
-                    }
-                });
-                _context.Users.Add(new BLL.Models.User
-                {
                     FirstName = "Ammar'",
                     SecondName = "Mohammed",
                     FamilyName = "Dolat",
+                    Email= "ammardolat63@yahoo.com",
                     PhoneNumber = "+962777192116",
                     PhoneNumberConfirmed = true,
                     UserName = "+962777192116",

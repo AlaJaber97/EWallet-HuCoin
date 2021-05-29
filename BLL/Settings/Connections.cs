@@ -7,7 +7,7 @@ namespace BLL.Settings
     public static class Connections
     {
         public static readonly BLL.Enums.DevServer Server = BLL.Enums.DevServer.AzureProduction;
-        public static readonly BLL.Enums.MinerServer Miner = BLL.Enums.MinerServer.Development;
+        public static readonly BLL.Enums.MinerServer Miner = BLL.Enums.MinerServer.Production;
         public static readonly BLL.Enums.DbServer DbServer = BLL.Enums.DbServer.AzureDatabase;
         public static string GetServerAddress()
         {
@@ -24,9 +24,9 @@ namespace BLL.Settings
             return Miner switch
             {
                 BLL.Enums.MinerServer.Development=> "http://localhost:5378",
-                BLL.Enums.MinerServer.Miner_JO => "http://localhost:5555",
-                BLL.Enums.MinerServer.Miner_SA => "http://localhost:4444",
-                BLL.Enums.MinerServer.Production => "",
+                //BLL.Enums.MinerServer.Miner_JO => "http://localhost:5555",
+                //BLL.Enums.MinerServer.Miner_SA => "http://localhost:4444",
+                BLL.Enums.MinerServer.Production => "https://hucoinminer.azurewebsites.net",
                 _ => throw new NotImplementedException(),
             };
         }
