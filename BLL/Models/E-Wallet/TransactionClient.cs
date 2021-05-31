@@ -24,9 +24,9 @@ namespace BLL.Models
             {
                 return TransactionType switch
                 {
-                    Enums.TransactionType.Cashin => ("arrow_up", "#00DD80"),
-                    Enums.TransactionType.Cashout => ("arrow_down", "#FF7C48"),
-                    Enums.TransactionType.Transfer => ("arrow_transfer", "#000000"),
+                    Enums.TransactionType.Cashin => ("arrow_up.png", "#00DD80"),
+                    Enums.TransactionType.Cashout => ("arrow_down.png", "#FF7C48"),
+                    Enums.TransactionType.Transfer => ("arrow_transfer.png", "#000000"),
                     _ => default,
                 };
             }

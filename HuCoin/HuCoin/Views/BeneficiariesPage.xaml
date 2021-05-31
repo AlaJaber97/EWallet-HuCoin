@@ -4,7 +4,8 @@
              x:Class="HuCoin.Views.BeneficiariesPage"
              xmlns:Utils="clr-namespace:HuCoin.Utils"
              xmlns:ViewModels="clr-namespace:HuCoin.ViewModels"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:XamEffects="clr-namespace:XamEffects;assembly=XamEffects">
     <ContentPage.BindingContext>
         <ViewModels:BeneficiariesPageViewModel/>
     </ContentPage.BindingContext>
@@ -19,13 +20,12 @@
                 <Label Text="{Utils:Translate ListBeneficiaries}" TextColor="#2E3058" 
                        FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
-            <CollectionView x:Name="ListOfBeneficiary" Margin="10" ItemsSource="{Binding Beneficiaries}"
-                            SelectionMode="Single"
-                            SelectionChangedCommand="{Binding OpenBeneficiaryDetailsCommand}"
-                            SelectionChangedCommandParameter="{Binding SelectedItem,Source={x:Reference ListOfBeneficiary}}">
+            <CollectionView x:Name="ListOfBeneficiary" Margin="10" ItemsSource="{Binding Beneficiaries}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Margin="10" Padding="0" Spacing="20">
+                        <StackLayout Margin="10" Padding="0" Spacing="20"                                       
+                                     XamEffects:Commands.Tap="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:BeneficiariesPageViewModel}},Path=OpenBeneficiaryDetailsCommand}"
+                                     XamEffects:Commands.TapParameter="{Binding .}">
                             <Frame Margin="0" Padding="10" CornerRadius="5" BackgroundColor="white">
                                 <Grid ColumnDefinitions="*,Auto" Margin="0" Padding="0">
                                     <StackLayout Grid.Column="0" Margin="0" Padding="0" Spacing="0">

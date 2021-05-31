@@ -143,9 +143,11 @@ namespace Miner.Services
                     Date = DateTime.Now,
                 });
             }
+            Mine(); //auto-mining
         }
         public Block Mine()
         {
+            if (CurrentTransactions.Count <= 0) return null;
             int proof = ProofGenerate(LastBlock.PreviousHash);
             return CreateNewBlock(proof);
         }

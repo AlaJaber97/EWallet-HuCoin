@@ -34,10 +34,12 @@ namespace API.Controllers
             if (userRecipient?.Wallet?.Credential == null) return NotFound($"can not found recipient with phone number {transactionClient.Recipient.PhoneNumber}");
             var transactionMiner = new BLL.Models.TransactionMiner
             {
+                ID = Guid.NewGuid(),
                 Sender = userSender.Wallet.Credential.PublicKey,
                 Recipient = userRecipient.Wallet.Credential.PublicKey,
                 Amount = transactionClient.Amount,
                 Fees = transactionClient.Fees,
+                Date = DateTime.Now
             };
             transactionMiner.Signature = Utils.RSA.SignatureGenerate(userSender.Wallet.Credential.PrivateKey, transactionMiner.ToString());
 
