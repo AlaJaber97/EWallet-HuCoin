@@ -73,7 +73,10 @@ namespace API.Controllers
             }
             else
             {
-                return Problem(string.Join("\n• ", result.Errors));
+                string ErrorMessage = string.Empty;
+                foreach (var error in result.Errors)
+                    ErrorMessage += $"\n• {error.Description}";
+                return Problem(ErrorMessage);
             }
         }
 
@@ -86,7 +89,10 @@ namespace API.Controllers
             var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
             if (result.Succeeded) return Ok();
 
-            return Problem(string.Join("\n• ", result.Errors));
+            string ErrorMessage = string.Empty;
+            foreach (var error in result.Errors)
+                ErrorMessage += $"\n• {error.Description}";
+            return Problem(ErrorMessage);
         }
 
         [HttpGet("Profile")]
@@ -148,7 +154,8 @@ namespace API.Controllers
             if (user == null) return RedirectToAction(nameof(ForgotPasswordFailed));
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            var callback = $"{BLL.Settings.Connections.GetServerAddress()}/api/Account/ResetPassword?token={token}&email={user.Email}";
+
+            var callback = Url.Action(nameof(ResetPassword), "Account", new { token, email = user.Email }, Request.Scheme, BLL.Settings.Connections.GetServerAddress());
 
             var message = new Services.Message(user.Email, "Reset Password", callback);
             await _emailSender.SendEmailAsync(message);
