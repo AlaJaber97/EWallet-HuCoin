@@ -16,7 +16,7 @@ namespace BLL.Settings
                 Enums.DevServer.Ansam => "http://192.168.0.171:5000",
                 Enums.DevServer.Ammar => "http://192.168.0.199:5000",
                 Enums.DevServer.AzureProduction => "https://hucoinapi.azurewebsites.net",
-                _ => "http://192.168.0.171:5000",
+                _ => throw new NotImplementedException(),
             };
         }
         public static string GetMinerAddress()

@@ -66,25 +66,25 @@ namespace HuCoin.ViewModels
                 string.IsNullOrWhiteSpace(user.SecondName) ||
                 string.IsNullOrWhiteSpace(user.FamilyName) ||
                 string.IsNullOrWhiteSpace(user.Email) ||
-                string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627") ||
+                string.IsNullOrWhiteSpace(user.PhoneNumber) || user.PhoneNumber.Length != 13 /*|| !user.PhoneNumber.StartsWith("+9627")*/ ||
                 user.UniversityID.ToString().Length != 7 ||
                 string.IsNullOrWhiteSpace(user.Password))
                 ErrorMessage= localizer.Instance["FillInError"];
 
             if (string.IsNullOrWhiteSpace(user.FirstName))
-                ErrorMessage += "\n•" localizer.Instance["FirstName"];
+                ErrorMessage += "\n• " + localizer.Instance["FirstName"];
             if (string.IsNullOrWhiteSpace(user.SecondName))
-                ErrorMessage += "\n•" localizer.Instance["SecondName"];
+                ErrorMessage += "\n• " + localizer.Instance["SecondName"];
             if (string.IsNullOrWhiteSpace(user.FamilyName))
-                ErrorMessage += "\n•" localizer.Instance["FamilyName"];
+                ErrorMessage += "\n• " + localizer.Instance["FamilyName"];
             if (string.IsNullOrWhiteSpace(user.Email))
-                ErrorMessage += "\n•"localizer.Instance["Email"];
-            if (string.IsNullOrWhiteSpace(user.PhoneNumber) || !user.PhoneNumber.StartsWith("+9627"))
-                ErrorMessage += "\n•" localizer.Instance["MobileNumber"];
+                ErrorMessage += "\n• " + localizer.Instance["Email"];
+            if (string.IsNullOrWhiteSpace(user.PhoneNumber) || user.PhoneNumber.Length != 13 /*|| !user.PhoneNumber.StartsWith("+9627")*/)
+                ErrorMessage += "\n• " + localizer.Instance["MobileNumber"];
             if (user.UniversityID.ToString().Length != 7)
-                ErrorMessage += "\n•"localizer.Instance["UniversityId"];
+                ErrorMessage += "\n• " + localizer.Instance["UniversityId"];
             if (string.IsNullOrWhiteSpace(user.Password))
-                ErrorMessage += "\n•" localizer.Instance["Password"];
+                ErrorMessage += "\n• " + localizer.Instance["Password"];
 
             if(ErrorMessage != null)
             {

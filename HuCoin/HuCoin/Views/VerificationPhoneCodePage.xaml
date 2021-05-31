@@ -41,7 +41,7 @@
                 <Button Text="{Utils:Translate Submit}" TextTransform="None" CornerRadius="5" 
                         BackgroundColor="#E6611A" TextColor="white" 
                         FontSize="Medium" FontAttributes="Bold"
-                        Command="{Binding ChangeLanguageCommand}" CommandParameter="ar-JO" />
+                        Command="{Binding VerifyPhoneNumberCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -65,11 +65,11 @@ namespace HuCoin.ViewModels
                 ErrorMessage = localizer.Instance["FillInError"];
 
             if (string.IsNullOrWhiteSpace(user.FirstName))
-                ErrorMessage += "\n•" localizer.Instance["FirstName"];
+                ErrorMessage += "\n• "+ localizer.Instance["FirstName"];
             if (string.IsNullOrWhiteSpace(user.SecondName))
-                ErrorMessage += "\n•"localizer.Instance["SecondName"];
+                ErrorMessage += "\n• " + localizer.Instance["SecondName"];
             if (string.IsNullOrWhiteSpace(user.FamilyName))
-                ErrorMessage += "\n•" localizer.Instance["FamilyName"];
+                ErrorMessage += "\n• " + localizer.Instance["FamilyName"];
 
             if (ErrorMessage != null)
             {
@@ -88,7 +88,7 @@ namespace HuCoin.ViewModels
             var response = await httpClient.PutAsJsonAsync($"{BLL.Settings.Connections.GetServerAddress()}/api/account/profile", User);
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert(localizer.Instance["UpdateProfileAleart"], localizer.Instance["Ok"]).ConfigureAwait(false);
+                await DisplayAlert(string.Empty,localizer.Instance["UpdateProfileAleart"], localizer.Instance["Ok"]).ConfigureAwait(false);
                 MessagingCenter.Send(this, "NotifyProfileInfromationUpdated");
             }
             else

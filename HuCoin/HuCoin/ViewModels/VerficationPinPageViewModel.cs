@@ -27,7 +27,9 @@ namespace HuCoin.ViewModels
                 CloseCurrentPage();
             }
             else
-                await DisplayAlert(localizer.Instance["PinCodeError"], localizer.Instance["Ok"]);
+            {
+                await DisplayAlert(string.Empty, localizer.Instance["PinCodeError"], localizer.Instance["Ok"]);
+            }
         }
     }
 }

@@ -16,11 +16,18 @@ namespace HuCoin.Utils
         private LocalizationResourceManager() { }
         public void SetCulture(CultureInfo culture)
         {
-            CultureInfo = culture;
-            Thread.CurrentThread.CurrentUICulture = CultureInfo;
-            FlowDirection = CultureInfo.TextInfo.IsRightToLeft ? Xamarin.Forms.FlowDirection.RightToLeft : Xamarin.Forms.FlowDirection.LeftToRight;
-            Application.Current.Properties.Add(AppStatic.LanguageKey, culture.Name);
-            OnPropertyChanged();
+            try
+            {
+                CultureInfo = culture;
+                Thread.CurrentThread.CurrentUICulture = CultureInfo;
+                FlowDirection = CultureInfo.TextInfo.IsRightToLeft ? Xamarin.Forms.FlowDirection.RightToLeft : Xamarin.Forms.FlowDirection.LeftToRight;
+                Application.Current.Properties.Add(AppStatic.LanguageKey, culture.Name);
+                OnPropertyChanged();
+            }
+            catch(Exception)
+            {
+
+            }
         }
         public string this[string key]=>
             Resource.Lang.Resource.ResourceManager.GetString(key, CultureInfo);

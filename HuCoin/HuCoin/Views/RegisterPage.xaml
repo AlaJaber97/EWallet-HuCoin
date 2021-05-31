@@ -16,7 +16,7 @@
                         <TapGestureRecognizer Command="{Binding BackPageCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="{Utils:Translate Registration}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="{Utils:Translate Registeration}" TextColor="#2E3058" FontAttributes="Bold" FontSize="Medium"/>
             </StackLayout>
             <ScrollView Margin="0" Padding="10" VerticalScrollBarVisibility="Never">
                 <StackLayout Margin="0" Padding="0" Spacing="0">
@@ -148,7 +148,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="{Utils:Translate password}"  TextColor="#2E3058"/>
+                                            <Span Text="{Utils:Translate Password}"  TextColor="#2E3058"/>
                                             <Span Text="*" TextColor="#E6611A"/>
                                         </FormattedString.Spans>
                                     </FormattedString>

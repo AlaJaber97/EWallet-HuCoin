@@ -9,56 +9,58 @@
         <ViewModels:LoginPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0,-20,0,0" Padding="0,0,0,30" Spacing="10">
-            <Frame Margin="0" Padding="20,50,20,30" VerticalOptions="FillAndExpand"
+        <ScrollView Margin="0" Padding="0">
+            <StackLayout Margin="0,-20,0,0" Padding="0,0,0,30" Spacing="10">
+                <Frame Margin="0" Padding="20,50,20,30" VerticalOptions="FillAndExpand"
                    BackgroundColor="#2E3058" CornerRadius="20">
-                <StackLayout Margin="0" Padding="0" Spacing="20">
-                    <Image Source="logo_hu" />
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="{Utils:Translate MobileNumber}" TextColor="White"/>
-                        <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
-                            <Entry Text="{Binding RequestLogin.Username}" Keyboard="Telephone"/>
-                        </Frame>
-                    </StackLayout>
-                    <StackLayout Margin="0" Padding="0" Spacing="10">
-                        <Label Text="{Utils:Translate Password}" TextColor="White"/>
-                        <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
-                            <Entry Text="{Binding RequestLogin.Password}" IsPassword="True"/>
-                        </Frame>
-                    </StackLayout>
-                    <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Margin="0" Padding="0" Spacing="10">
-                            <CheckBox Color="#E6611A" IsChecked="{Binding RequestLogin.IsRememberMe}"/>
-                            <Label Text="{Utils:Translate RememberMe}" TextColor="White" FontAttributes="Bold"
-                                   VerticalTextAlignment="Center"/>
+                    <StackLayout Margin="0" Padding="0" Spacing="20">
+                        <Image Source="logo_hu" />
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label Text="{Utils:Translate MobileNumber}" TextColor="White"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
+                                <Entry Text="{Binding RequestLogin.Username}" Keyboard="Telephone"/>
+                            </Frame>
                         </StackLayout>
-                        <Label Grid.Column="1" Text="{Utils:Translate ForgetPassword}"
+                        <StackLayout Margin="0" Padding="0" Spacing="10">
+                            <Label Text="{Utils:Translate Password}" TextColor="White"/>
+                            <Frame Margin="0" Padding="0" BackgroundColor="White" CornerRadius="5">
+                                <Entry Text="{Binding RequestLogin.Password}" IsPassword="True"/>
+                            </Frame>
+                        </StackLayout>
+                        <Grid ColumnDefinitions="*,*" Margin="0" Padding="0">
+                            <StackLayout Orientation="Horizontal" Grid.Column="0" Margin="0" Padding="0" Spacing="10">
+                                <CheckBox Color="#E6611A" IsChecked="{Binding RequestLogin.IsRememberMe}"/>
+                                <Label Text="{Utils:Translate RememberMe}" TextColor="White" FontAttributes="Bold"
+                                   VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Label Grid.Column="1" Text="{Utils:Translate ForgetPassword?}"
                                HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                                TextColor="#E6611A" FontAttributes="Bold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding OpenForgotPasswordPageCommand}"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </Grid>
-                    <Button Text="{Utils:Translate SignIn}" TextTransform="None" CornerRadius="5"
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenForgotPasswordPageCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <Button Text="{Utils:Translate SignIn}" TextTransform="None" CornerRadius="5"
                             BackgroundColor="#E6611A" TextColor="White" 
                             FontSize="Medium" FontAttributes="Bold"
                             Command="{Binding SignInCommand}"/>
-                </StackLayout>
-            </Frame>
-            <Label TextColor="#2E3058" HorizontalTextAlignment="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="{Utils:Translate DontHaveAccount }" />
-                            <Span Text="{Utils:Translate RegisterNow}" TextDecorations="Underline" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OpenRegisterPageCommand}"/>
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Label TextColor="#2E3058" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Utils:Translate DontHaveAccount }" />
+                                <Span Text="{Utils:Translate RegisterNow}" TextDecorations="Underline" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenRegisterPageCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

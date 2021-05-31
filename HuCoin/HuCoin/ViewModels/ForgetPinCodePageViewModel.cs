@@ -27,10 +27,10 @@ namespace HuCoin.ViewModels
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(PhoneNumber) || !PhoneNumber.StartsWith("+9627"))
+                if (string.IsNullOrWhiteSpace(PhoneNumber) || PhoneNumber.Length != 13  /*!PhoneNumber.StartsWith("+9627")*/)
                 {
                     string ErrorMessage = localizer.Instance["FillInError"];
-                    ErrorMessage += "\n"localizer.Instance["MustNumber"];
+                    ErrorMessage += "\n"+localizer.Instance["MustNumber"];
                     await DisplayAlert(localizer.Instance["RequiredField"], ErrorMessage, localizer.Instance["Ok"]).ConfigureAwait(false);
                     return;
                 }
@@ -58,10 +58,12 @@ namespace HuCoin.ViewModels
                 }
                 else
                 {
-                    await DisplayAlert(localizer.Instance["AnErrorOccurred"], localizer.Instance["VerificationError"],localizer.Instance["Ok"].ConfigureAwait(false);}
+                    await DisplayAlert(localizer.Instance["AnErrorOccurred"], localizer.Instance["VerificationError"], localizer.Instance["Ok"]).ConfigureAwait(false);
+                }
+            }
             catch (Exception ex)
             {
-                await DisplayAlert(string.Empty, ex.ToString(),localizer.Instance["Ok"]).ConfigureAwait(false);
+                await DisplayAlert(string.Empty, ex.ToString(), localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
 
