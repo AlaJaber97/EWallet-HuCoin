@@ -16,5 +16,11 @@ namespace HuCoin.Views
         {
             InitializeComponent();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            var bindingContext = this.BindingContext as ViewModels.BaseViewModel;
+            bindingContext.BackPageCommand.Execute(null);
+            return false;
+        }
     }
 }

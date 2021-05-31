@@ -42,7 +42,7 @@ namespace HuCoin.ViewModels
             Application.Current.MainPage.Navigation.PushModalAsync(page);
         }
 
-        public void CloseCurrentPage()
+        public virtual void CloseCurrentPage()
         {
             Application.Current.MainPage.Navigation.PopAsync();
         }

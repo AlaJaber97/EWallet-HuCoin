@@ -12,7 +12,7 @@ using localizer = HuCoin.Utils.LocalizationResourceManager;
 
 namespace HuCoin.ViewModels
 {
-    public class TransferServicePageViewModel : ViewModels.BaseViewModel, IDisposable
+    public class TransferServicePageViewModel : ViewModels.BaseViewModel
     {
         public List<HuCoin.Models.Beneficiary> Beneficiaries { get; set; }
         public HuCoin.Models.Beneficiary Beneficiary { get; set; }
@@ -88,11 +88,11 @@ namespace HuCoin.ViewModels
                 await DisplayAlert(localizer.Instance["AnErrorOccurred"], ex.ToString(), localizer.Instance["Ok"]).ConfigureAwait(false);
             }
         }
-
-        public void Dispose()
+        public override void CloseCurrentPage()
         {
             MessagingCenter.Unsubscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary");
             MessagingCenter.Unsubscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode");
+            base.CloseCurrentPage();
         }
     }
 }

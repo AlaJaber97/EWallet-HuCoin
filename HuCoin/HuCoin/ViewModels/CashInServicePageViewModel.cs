@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using localizer = HuCoin.Utils.LocalizationResourceManager;
 namespace HuCoin.ViewModels
 {
-    public class CashInServicePageViewModel : ViewModels.BaseViewModel, IDisposable
+    public class CashInServicePageViewModel : ViewModels.BaseViewModel
     {
         public ICommand RechargeBalanceCommand { get; set; }
         public decimal Balance { get; set; }
@@ -29,7 +29,7 @@ namespace HuCoin.ViewModels
         }
         private async Task RechargeBalance()
         {
-            try 
+            try
             {
                 using var loadingview = new Components.LoadingView();
 
@@ -56,10 +56,10 @@ namespace HuCoin.ViewModels
                 await DisplayAlert(localizer.Instance["AnErrorOccurred"], ex.ToString(), "Ok").ConfigureAwait(false);
             }
         }
-
-        public void Dispose()
+        public override void CloseCurrentPage()
         {
-            MessagingCenter.Unsubscribe<VerficationPinPageViewModel,bool>(this, "VerficationPinCode");
+            MessagingCenter.Unsubscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode");
+            base.CloseCurrentPage();
         }
     }
 }
