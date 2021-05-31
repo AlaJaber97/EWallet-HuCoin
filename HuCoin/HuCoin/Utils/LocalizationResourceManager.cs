@@ -21,8 +21,12 @@ namespace HuCoin.Utils
                 CultureInfo = culture;
                 Thread.CurrentThread.CurrentUICulture = CultureInfo;
                 FlowDirection = CultureInfo.TextInfo.IsRightToLeft ? Xamarin.Forms.FlowDirection.RightToLeft : Xamarin.Forms.FlowDirection.LeftToRight;
-                Application.Current.Properties.Add(AppStatic.LanguageKey, culture.Name);
                 OnPropertyChanged();
+                if (!Application.Current.Properties.ContainsKey(AppStatic.LanguageKey))
+                    Application.Current.Properties.Add(AppStatic.LanguageKey, culture.Name);
+                else
+                    Application.Current.Properties[AppStatic.LanguageKey] = culture.Name;
+                Application.Current.SavePropertiesAsync();
             }
             catch(Exception)
             {

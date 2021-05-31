@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout Margin="20,10" Padding="0" Spacing="10">
             <Image Source="settings" Margin="30,10" HorizontalOptions="Center"/>
-            <Grid Margin="0" Padding="0" ColumnDefinitions="*,*" ColumnSpacing="0">
+            <Grid Margin="0" Padding="0" ColumnDefinitions="*,*" ColumnSpacing="0" FlowDirection="LeftToRight">
                 <Button Grid.Column="0" Text="English" BackgroundColor="#E6611A" TextColor="White" CornerRadius="5"
                         Command="{Binding ChangeLanguageCommand}" CommandParameter="en-US"/>
                 <Button Grid.Column="1" Text="عربي" BackgroundColor="#F5F5F5" TextColor="#39374D" CornerRadius="5"
