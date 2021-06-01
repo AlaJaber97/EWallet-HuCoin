@@ -155,8 +155,8 @@ namespace API.Controllers
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            var callback = Url.Action(nameof(ResetPassword), "Account", new { token, email = user.Email }, Request.Scheme, BLL.Settings.Connections.GetServerAddress());
-
+            //var callback = Url.Action(nameof(ResetPassword), "Account", new { token, email = user.Email }, Request.Scheme, BLL.Settings.Connections.GetServerAddress());
+            var callback = $"{BLL.Settings.Connections.GetServerAddress()}/{Url.Action(nameof(ResetPassword), "Account", new { token, email = user.Email })}";
             var message = new Services.Message(user.Email, "Reset Password", callback);
             await _emailSender.SendEmailAsync(message);
 
