@@ -27,7 +27,11 @@ namespace HuCoin.ViewModels
             TransferServiceCommand = new Command(TransferService);
             LoadBeneficiaries().ConfigureAwait(false);
             Balance = Services.BalanceManagment.Instance.Balance;
-            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => LoadBeneficiaries().ConfigureAwait(false));
+            MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) => 
+            {
+                CloseCurrentModal();
+                LoadBeneficiaries().ConfigureAwait(false); 
+            });
             MessagingCenter.Subscribe<VerficationPinPageViewModel, bool>(this, "VerficationPinCode", (sender, isSuccessed) =>
             {
                 if (isSuccessed) SendTransaction().ConfigureAwait(false);

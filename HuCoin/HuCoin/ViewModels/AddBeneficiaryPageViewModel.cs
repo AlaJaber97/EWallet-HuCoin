@@ -26,7 +26,6 @@ namespace HuCoin.ViewModels
                 db.Beneficiaries.Add(Beneficiary);
                 if (await db.SaveChangesAsync() > 0)
                 {   
-                    CloseCurrentModal();
                     MessagingCenter.Send(this, "AddNewBeneficiary");
                 }
                 else

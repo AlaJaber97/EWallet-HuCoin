@@ -23,16 +23,13 @@
             <CollectionView x:Name="ListOfBeneficiary" Margin="10" ItemsSource="{Binding Beneficiaries}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Margin="10" Padding="0" Spacing="20"                                       
-                                     XamEffects:Commands.Tap="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:BeneficiariesPageViewModel}},Path=OpenBeneficiaryDetailsCommand}"
-                                     XamEffects:Commands.TapParameter="{Binding .}">
+                        <StackLayout Margin="10" Padding="0" Spacing="20">
                             <Frame Margin="0" Padding="10" CornerRadius="5" BackgroundColor="white">
                                 <Grid ColumnDefinitions="*,Auto" Margin="0" Padding="0">
                                     <StackLayout Grid.Column="0" Margin="0" Padding="0" Spacing="0">
                                         <Label Text="{Binding PhoneNumber}" TextColor="#2E3058" FontSize="Medium" FontAttributes="Bold"/>
                                         <Label Text="{Binding Name}" TextColor="#2E3058"/>
                                     </StackLayout>
-                                    <Image Grid.Column="1" Source="arrow_to_right" Aspect="AspectFit"/>
                                 </Grid>
                             </Frame>
                         </StackLayout>
