@@ -97,6 +97,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to must be set amount that it will be send to this beneficiary.
+        /// </summary>
+        internal static string AmountIsRequired {
+            get {
+                return ResourceManager.GetString("AmountIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An Error Occurred.
         /// </summary>
         internal static string AnErrorOccurred {
@@ -129,6 +138,15 @@ namespace HuCoin.Resource.Lang {
         internal static string BeneficiaryDetails {
             get {
                 return ResourceManager.GetString("BeneficiaryDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to must be set beneficiary who receives this transaction.
+        /// </summary>
+        internal static string BeneficiaryIsRequired {
+            get {
+                return ResourceManager.GetString("BeneficiaryIsRequired", resourceCulture);
             }
         }
         
@@ -304,7 +322,7 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Required Fields Please Dont Leave Empty Fields.
+        ///   Looks up a localized string similar to  Please Dont Leave Empty Fields.
         /// </summary>
         internal static string EmptyFields {
             get {
@@ -345,6 +363,24 @@ namespace HuCoin.Resource.Lang {
         internal static string FamilyName {
             get {
                 return ResourceManager.GetString("FamilyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Required.
+        /// </summary>
+        internal static string FieldRequired {
+            get {
+                return ResourceManager.GetString("FieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please fill in the following fields:.
+        /// </summary>
+        internal static string FillInError {
+            get {
+                return ResourceManager.GetString("FillInError", resourceCulture);
             }
         }
         
@@ -439,6 +475,15 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to must phone number start with +9627 and not be empty field.
+        /// </summary>
+        internal static string MustNumber {
+            get {
+                return ResourceManager.GetString("MustNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Profile.
         /// </summary>
         internal static string MyProfile {
@@ -493,11 +538,38 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        internal static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation successfully.
+        /// </summary>
+        internal static string PasswordChange {
+            get {
+                return ResourceManager.GetString("PasswordChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;The password has been changed successfully&quot;.
+        /// </summary>
+        internal static string PasswordChangeSuccess {
+            get {
+                return ResourceManager.GetString("PasswordChangeSuccess", resourceCulture);
             }
         }
         
@@ -579,6 +651,15 @@ namespace HuCoin.Resource.Lang {
         internal static string RememberMe {
             get {
                 return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Required Field.
+        /// </summary>
+        internal static string RequiredField {
+            get {
+                return ResourceManager.GetString("RequiredField", resourceCulture);
             }
         }
         
@@ -790,7 +871,7 @@ namespace HuCoin.Resource.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UniversityId.
+        ///   Looks up a localized string similar to University Id.
         /// </summary>
         internal static string UniversityId {
             get {

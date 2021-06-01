@@ -129,6 +129,9 @@
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
   </data>
+  <data name="AmountIsRequired" xml:space="preserve">
+    <value>must be set amount that it will be send to this beneficiary</value>
+  </data>
   <data name="AnErrorOccurred" xml:space="preserve">
     <value>An Error Occurred</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="BeneficiaryDetails" xml:space="preserve">
     <value>Beneficiary Details</value>
+  </data>
+  <data name="BeneficiaryIsRequired" xml:space="preserve">
+    <value>must be set beneficiary who receives this transaction</value>
   </data>
   <data name="BeneficiaryList" xml:space="preserve">
     <value>Beneficiary List</value>
@@ -212,6 +218,9 @@
   </data>
   <data name="FamilyName" xml:space="preserve">
     <value>Family Name</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>Field Required</value>
   </data>
   <data name="FillInError" xml:space="preserve">
     <value>Please fill in the following fields:</value>

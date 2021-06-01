@@ -55,12 +55,21 @@ namespace HuCoin.ViewModels
         }
         private void TransferService()
         {
+            if (Beneficiary != null)
             OpenPage(new Views.VerficationPinPage());
+            else
+            {
+                if (Beneficiary == null)
+                    DisplayAlert(localizer.Instance["FieldRequired"], localizer.Instance["BeneficiaryIsRequired"], localizer.Instance["Ok"]);
+                else if (Amount <= 0)
+                    DisplayAlert(localizer.Instance["FieldRequired"], localizer.Instance["AmountIsRequired"], localizer.Instance["Ok"]);
+            }
         }
         private async Task SendTransaction()
         {
             try
             {
+                if (Beneficiary == null) return;
                 using var loadingview = new Components.LoadingView();
                 var transaction = new BLL.Models.TransactionClient
                 {

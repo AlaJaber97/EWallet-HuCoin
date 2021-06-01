@@ -8,114 +8,119 @@
         <ViewModels:HomePageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="0" Padding="10,20" Spacing="20">
-            <Frame Margin="0" Padding="20" BackgroundColor="#F5F5F5"
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="#E6611A"
+                         Command="{Binding RefreshBalanceCommand}">
+            <ScrollView Margin="0" Padding="0">
+                <StackLayout Margin="0" Padding="10,20" Spacing="20">
+                    <Frame Margin="0" Padding="20" BackgroundColor="#F5F5F5"
                    CornerRadius="10" HasShadow="True">
-                <StackLayout Margin="0" Padding="0" Spacing="20">
-                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="30">
-                        <Image Source="{Binding User.Image,ConverterParameter='unkown_user',Converter={StaticResource ByteArrayToImageSourceConverter}}"
+                        <StackLayout Margin="0" Padding="0" Spacing="20">
+                            <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="30">
+                                <Image Source="{Binding User.Image,ConverterParameter='unkown_user',Converter={StaticResource ByteArrayToImageSourceConverter}}"
                                    Aspect="AspectFill"
                                    HeightRequest="60" WidthRequest="60"
                                    VerticalOptions="Start" HorizontalOptions="Start"
                                    Grid.Column="0" Grid.ColumnSpan="2"
                                    Grid.Row="0" Grid.RowSpan="3">
-                            <Image.Clip>
-                                <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
-                            </Image.Clip>
-                        </Image>
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
+                                    </Image.Clip>
+                                </Image>
 
-                        <Label TextColor="#2E3058" FontSize="Medium"
+                                <Label TextColor="#2E3058" FontSize="Medium"
                                FontAttributes="Bold" VerticalOptions="Center">
-                            <Label.Text>
-                                <MultiBinding StringFormat="{}{0} {1}">
-                                    <Binding Path="User.FirstName"/>
-                                    <Binding Path="User.FamilyName"/>
-                                </MultiBinding>
-                            </Label.Text>
-                        </Label>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="0">
-                        <StackLayout Margin="0" Padding="0" Spacing="5" HorizontalOptions="StartAndExpand">
-                            <Label Text="{Utils:Translate UniversityId}" TextColor="#2E3058"
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="User.FirstName"/>
+                                            <Binding Path="User.FamilyName"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="0">
+                                <StackLayout Margin="0" Padding="0" Spacing="5" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Utils:Translate UniversityId}" TextColor="#2E3058"
                                FontAttributes="Bold" VerticalOptions="Center"/>
-                            <Label Text="{Binding User.UniversityID}" TextColor="#2E3058" HorizontalTextAlignment="Center"
+                                    <Label Text="{Binding User.UniversityID}" TextColor="#2E3058" HorizontalTextAlignment="Center"
                                FontAttributes="Bold" VerticalOptions="Center"/>
-                        </StackLayout>
-                        <StackLayout Margin="0" Padding="0" Spacing="5" HorizontalOptions="EndAndExpand">
-                            <Label Text="{Utils:Translate MobileNumber}" TextColor="#2E3058"
+                                </StackLayout>
+                                <StackLayout Margin="0" Padding="0" Spacing="5" HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Utils:Translate MobileNumber}" TextColor="#2E3058"
                                     FontAttributes="Bold" VerticalOptions="Center"/>
-                            <Label Text="{Binding User.PhoneNumber}" TextColor="#2E3058" HorizontalTextAlignment="Center"
+                                    <Label Text="{Binding User.PhoneNumber}" TextColor="#2E3058" HorizontalTextAlignment="Center"
                                     FontAttributes="Bold" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="0">
-                        <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5" HorizontalOptions="StartAndExpand">
-                            <Image Source="wallet" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="0">
+                                <StackLayout Orientation="Horizontal" Margin="0" Padding="0" Spacing="5" HorizontalOptions="StartAndExpand">
+                                    <Image Source="wallet" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"
                                    VerticalOptions="Start" HorizontalOptions="Center"/>
-                            <Label Text="{Utils:Translate CurrentBalance}" TextColor="#2E3058"
+                                    <Label Text="{Utils:Translate CurrentBalance}" TextColor="#2E3058"
                                FontAttributes="Bold" VerticalOptions="Center"/>
-                        </StackLayout>
-                        <Label TextColor="#2E3058" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"
+                                </StackLayout>
+                                <Label TextColor="#2E3058" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"
                                Text="{Binding Balance,StringFormat='{0:F2} HU'}" />
-                    </StackLayout>
-                </StackLayout>
-            </Frame>
-            <Grid Margin="0" Padding="0" ColumnSpacing="10" RowSpacing="30"
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Grid Margin="0" Padding="0" ColumnSpacing="10" RowSpacing="30"
                   HorizontalOptions="Center"
                   ColumnDefinitions="*,*" RowDefinitions="*,*">
-                <Frame Grid.Column="0" Grid.Row="0"
+                        <Frame Grid.Column="0" Grid.Row="0"
                        HeightRequest="120" WidthRequest="120"
                        VerticalOptions="Start" HorizontalOptions="Center"
                        Margin="0" Padding="10" BackgroundColor="#2E3058" CornerRadius="10">
-                    <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
-                        <Image Source="withdraw" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
-                        <Label Text="{Utils:Translate CashOut}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
+                            <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
+                                <Image Source="withdraw" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
+                                <Label Text="{Utils:Translate CashOut}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenCashOutServiceCommand}"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <Frame Grid.Column="1" Grid.Row="0" 
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCashOutServiceCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="0" 
                        HeightRequest="120" WidthRequest="120"
                        VerticalOptions="Start" HorizontalOptions="Center"
                        Margin="0" Padding="10" BackgroundColor="#2E3058" CornerRadius="10">
-                    <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
-                        <Image Source="recharge" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
-                        <Label Text="{Utils:Translate Recharge}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
+                            <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
+                                <Image Source="recharge" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
+                                <Label Text="{Utils:Translate Recharge}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenCashInServiceCommand}"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <Frame Grid.Column="0" Grid.Row="1" 
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenCashInServiceCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Column="0" Grid.Row="1" 
                        HeightRequest="120" WidthRequest="120"
                        VerticalOptions="Start" HorizontalOptions="Center"
                        Margin="0" Padding="10" BackgroundColor="#2E3058" CornerRadius="10">
-                    <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
-                        <Image Source="transfer" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
-                        <Label Text="{Utils:Translate Transfer}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
+                            <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
+                                <Image Source="transfer" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
+                                <Label Text="{Utils:Translate Transfer}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenTransferServiceCommand}"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <Frame Grid.Column="1" Grid.Row="1" 
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenTransferServiceCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="1" 
                        HeightRequest="120" WidthRequest="120"
                        VerticalOptions="Start" HorizontalOptions="Center"
                        Margin="0" Padding="10" BackgroundColor="#2E3058" CornerRadius="10">
-                    <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
-                        <Image Source="favorites" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
-                        <Label Text="{Utils:Translate Beneficiaries}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
+                            <StackLayout Margin="0" Padding="0" Spacing="10" VerticalOptions="Center">
+                                <Image Source="favorites" Aspect="AspectFit" HeightRequest="60" WidthRequest="60"/>
+                                <Label Text="{Utils:Translate Beneficiaries}" TextColor="White" FontSize="Medium" FontAttributes="Bold"
                                HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenBeneficiariesCommand}"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </Grid>
-        </StackLayout>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenBeneficiariesCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
     </ContentPage.Content>
 </ContentPage>

@@ -129,6 +129,9 @@
   <data name="Amount" xml:space="preserve">
     <value>القيمة</value>
   </data>
+  <data name="AmountIsRequired" xml:space="preserve">
+    <value>يجب تحديد المبلغ الذي سيتم إرساله إلى هذا المستفيد</value>
+  </data>
   <data name="AnErrorOccurred" xml:space="preserve">
     <value>هناك خطأ</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="BeneficiaryDetails" xml:space="preserve">
     <value>تفاصيل المنتفع </value>
+  </data>
+  <data name="BeneficiaryIsRequired" xml:space="preserve">
+    <value>يجب تعيين المستفيد الذي يستلم هذه المعاملة</value>
   </data>
   <data name="BeneficiaryList" xml:space="preserve">
     <value>قائمة المنتفعين</value>
@@ -209,6 +215,9 @@
   </data>
   <data name="FamilyName" xml:space="preserve">
     <value>اسم العائلة</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>حقل مطلوب</value>
   </data>
   <data name="FillInError" xml:space="preserve">
     <value>الرجاء ملئ الحقول التالية</value>

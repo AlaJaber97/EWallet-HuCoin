@@ -12,11 +12,9 @@ namespace HuCoin.ViewModels
     {
         public List<Models.Beneficiary> Beneficiaries { get; set; }
         public ICommand AddNewBeneficiaryCommand { get; set; }
-        public ICommand OpenBeneficiaryDetailsCommand { get; set; }
         public BeneficiariesPageViewModel()
         {
             AddNewBeneficiaryCommand = new Command(AddNewBeneficiary);
-            OpenBeneficiaryDetailsCommand = new Command<Models.Beneficiary>(beneficiary=> OpenBeneficiaryDetails(beneficiary));
             LoadBeneficiaries().ConfigureAwait(false);
             MessagingCenter.Subscribe<AddBeneficiaryPageViewModel>(this, "AddNewBeneficiary", (sender) =>
             {

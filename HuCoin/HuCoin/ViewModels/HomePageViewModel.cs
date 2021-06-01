@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -14,20 +16,30 @@ namespace HuCoin.ViewModels
         public ICommand OpenCashInServiceCommand { get; set; }
         public ICommand OpenTransferServiceCommand { get; set; }
         public ICommand OpenBeneficiariesCommand { get; set; }
+        public ICommand RefreshBalanceCommand { get; set; }
         public BLL.Models.User User { get; set; }
         public decimal Balance { get; set; }
+        public bool IsRefreshing { get; set; }
         public HomePageViewModel()
         {
             OpenCashOutServiceCommand = new Command(OpenCashOutService);
             OpenCashInServiceCommand = new Command(OpenCashInService);
             OpenTransferServiceCommand = new Command(OpenTransferService);
             OpenBeneficiariesCommand = new Command(OpenBeneficiaries);
+            RefreshBalanceCommand = new Command(()=> RefreshBalance().ConfigureAwait(false));
             LoadUserProfile().ConfigureAwait(false);
             Balance = Services.BalanceManagment.Instance.Balance;
             MessagingCenter.Subscribe<ProfilePageViewModel>(this, "NotifyProfileInfromationUpdated", (sender) => LoadUserProfile().ConfigureAwait(false));
             MessagingCenter.Subscribe<TransferServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
             MessagingCenter.Subscribe<CashInServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
             MessagingCenter.Subscribe<CashOutServicePageViewModel>(this, "UpdateBalance",(sender)=> UpdateBalance());
+        }
+        private async Task RefreshBalance()
+        {
+            await Services.BalanceManagment.Instance.ReLoadBalance();
+            UpdateBalance();
+            IsRefreshing = false;
+            OnPropertyChanged(nameof(IsRefreshing));
         }
         private void UpdateBalance()
         {
@@ -59,5 +71,6 @@ namespace HuCoin.ViewModels
         private void OpenCashInService() => OpenPage(new Views.CashInServicePage());
         private void OpenTransferService() => OpenPage(new Views.TransferServicePage());
         private void OpenBeneficiaries() => OpenPage(new Views.BeneficiariesPage());
+
     }
 }
